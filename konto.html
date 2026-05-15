@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <!-- Meta-Daten, Seitentitel und Formular-Styles -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konto anlegen — Growease</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <!-- Seitenkopf mit kurzer Beschreibung -->
+      <header class="account-header">
+        <p class="eyebrow">Mein Konto</p>
+        <h1>Konto anlegen</h1>
+        <p class="lead">
+          Erstelle ein persönliches Konto, um Bestellungen, Favoriten und
+          Einstellungen zu verwalten.
+        </p>
+      </header>
+
+      <!-- Registrierungsformular für die Kontoerstellung -->
+      <section class="account-card" aria-labelledby="konto-title">
+        <h2 id="konto-title" class="visually-hidden">Registrierungsformular</h2>
+
+        <!-- Kontoformular: keine HTML5-Validierung, Validierung nur per JavaScript -->
+        <form id="accountForm" novalidate>
+          <div class="form-grid">
+            <!-- Vorname -->
+            <div class="form-field">
+              <label for="vorname">Vorname</label>
+              <input
+                id="vorname"
+                name="vorname"
+                type="text"
+                placeholder="Max"
+              />
+              <div class="error-msg" aria-live="polite"></div>
+            </div>
+
+            <!-- Nachname -->
+            <div class="form-field">
+              <label for="nachname">Nachname</label>
+              <input
+                id="nachname"
+                name="nachname"
+                type="text"
+                placeholder="Mustermann"
+              />
+              <div class="error-msg" aria-live="polite"></div>
+            </div>
+
+            <!-- Benutzername -->
+            <div class="form-field full">
+              <label for="benutzername">Benutzername</label>
+              <input
+                id="benutzername"
+                name="benutzername"
+                type="text"
+                placeholder="dein_name"
+              />
+              <div class="error-msg" aria-live="polite"></div>
+            </div>
+
+            <!-- E-Mail-Adresse -->
+            <div class="form-field full">
+              <label for="email">E-Mail-Adresse</label>
+              <input
+                id="email"
+                name="email"
+                type="text"
+                placeholder="max@beispiel.ch"
+              />
+              <div class="error-msg" aria-live="polite"></div>
+            </div>
+
+            <!-- Passwort -->
+            <div class="form-field">
+              <label for="passwort">Passwort</label>
+              <input
+                id="passwort"
+                name="passwort"
+                type="password"
+                placeholder="Mind. 8 Zeichen"
+              />
+              <div class="error-msg" aria-live="polite"></div>
+            </div>
+
+            <!-- Passwort-Wiederholung -->
+            <div class="form-field">
+              <label for="passwortWiederholen">Passwort wiederholen</label>
+              <input
+                id="passwortWiederholen"
+                name="passwortWiederholen"
+                type="password"
+                placeholder="Passwort bestätigen"
+              />
+              <div class="error-msg" aria-live="polite"></div>
+            </div>
+
+            <!-- Optionaler Hinweis -->
+            <div class="form-field full">
+              <label for="hinweis">Kurzer Hinweis</label>
+              <textarea
+                id="hinweis"
+                name="hinweis"
+                rows="5"
+                placeholder="Optional: Was möchtest du uns noch mitteilen?"
+              ></textarea>
+              <div class="error-msg" aria-live="polite"></div>
+            </div>
+
+            <!-- Absenden und Feedback -->
+            <div class="form-actions full">
+              <button type="submit" class="btn">Konto erstellen</button>
+              <div id="formFeedback" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Gemeinsame Navigation und Formularvalidierung -->
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

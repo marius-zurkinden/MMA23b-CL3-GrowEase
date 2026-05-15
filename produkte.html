@@ -1,154 +1,302 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Growease – Produkte</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-
-<div class="page-layout">
-  <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar">
-    <h3>Filter</h3>
-    <div id="categoryFilters">
-      <label><input type="checkbox" value="" checked onchange="applyFilters()"> Alle</label>
-    </div>
-  </aside>
-
-  <!-- Main content -->
-  <main class="main-content">
-    <div class="products-toolbar">
-      <input type="search" class="search-bar" id="searchInput" placeholder="Produkte suchen..." oninput="applyFilters()"/>
-    </div>
-
-    <div class="products-grid" id="productGrid">
-      <!-- Skeleton -->
-      ${Array(6).fill(0).map(() => `
-        <div class="product-card">
-          <div class="product-img loading-placeholder" style="height:200px;"></div>
-          <div class="loading-placeholder" style="height:16px;width:60%;border-radius:4px;margin-top:8px;"></div>
-          <div class="loading-placeholder" style="height:12px;width:80%;border-radius:4px;margin-top:6px;"></div>
+  <head>
+    <!-- Meta-Daten und Global-Styles für die Produktseite -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produkte</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <!-- Filter-Sidebar und Produktbereich -->
+    <div class="page-layout">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <h3>Filter</h3>
+        <div id="categoryFilters">
+          <label
+            ><input
+              type="checkbox"
+              value=""
+              checked
+              onchange="applyFilters()"
+            />
+            Alle</label
+          >
         </div>
-      `).join('')}
+      </aside>
+
+      <!-- Main content -->
+      <!-- Hauptbereich mit Suche und Produktliste -->
+      <main class="main-content">
+        <div class="products-toolbar">
+          <input
+            type="search"
+            class="search-bar"
+            id="searchInput"
+            placeholder="Produkte suchen..."
+            oninput="applyFilters()"
+          />
+        </div>
+
+        <div class="products-grid" id="productGrid">
+          <!-- Skeleton -->
+          ${Array(6).fill(0).map(() => `
+          <div class="product-card">
+            <div
+              class="product-img loading-placeholder"
+              style="height: 200px"
+            ></div>
+            <div
+              class="loading-placeholder"
+              style="
+                height: 16px;
+                width: 60%;
+                border-radius: 4px;
+                margin-top: 8px;
+              "
+            ></div>
+            <div
+              class="loading-placeholder"
+              style="
+                height: 12px;
+                width: 80%;
+                border-radius: 4px;
+                margin-top: 6px;
+              "
+            ></div>
+          </div>
+          `).join('')}
+        </div>
+        <p
+          id="emptyMsg"
+          style="
+            display: none;
+            color: var(--text-muted);
+            text-align: center;
+            padding: 48px 0;
+          "
+        >
+          Keine Produkte gefunden.
+        </p>
+      </main>
     </div>
-    <p id="emptyMsg" style="display:none;color:var(--text-muted);text-align:center;padding:48px 0;">Keine Produkte gefunden.</p>
-  </main>
-</div>
 
-<footer>
-  <div class="footer-grid">
-    <div class="footer-col"><h4>Growease</h4><ul><li><a href="index.html">Startseite</a></li><li><a href="produkte.html">Produkte</a></li></ul></div>
-    <div class="footer-col"><h4>Service</h4><ul><li><a href="bestellungen.html">Bestellungen</a></li><li><a href="kunden.html">Kunden</a></li></ul></div>
-    <div class="footer-col"><h4>Info</h4><ul><li><a href="#">Über uns</a></li><li><a href="#">AGB</a></li></ul></div>
-    <div class="footer-col"><h4>Folge uns</h4><div class="footer-social"><div class="social-dot">in</div><div class="social-dot">fb</div><div class="social-dot">tk</div><div class="social-dot">pt</div></div></div>
-  </div>
-  <div class="footer-bottom">© 2025 Growease. Alle Rechte vorbehalten.</div>
-</footer>
+    <!-- Seitenfuß mit Navigationslinks -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Growease</h4>
+          <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="produkte.html">Produkte</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Service</h4>
+          <ul>
+            <li><a href="bestellungen.html">Bestellungen</a></li>
+            <li><a href="kunden.html">Kunden</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="#">Über uns</a></li>
+            <li><a href="#">AGB</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Folge uns</h4>
+          <div class="footer-social">
+            <div class="social-dot">in</div>
+            <div class="social-dot">fb</div>
+            <div class="social-dot">tk</div>
+            <div class="social-dot">pt</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 Growease. Alle Rechte vorbehalten.</div>
+    </footer>
 
-<script src="assets/js/nav.js"></script>
-<script>
-const API_BASE = "http://localhost:8081/api.php/records";
-let allProducts = [];
+    <!-- Navigation und Produktdatenlogik -->
+    <script src="assets/js/nav.js"></script>
+    <script>
+      const API_BASE = "http://localhost:8081/api.php/records";
+      let allProducts = [];
 
-async function loadProducts() {
-  const grid = document.getElementById('productGrid');
-  try {
-    const res = await fetch(`${API_BASE}/Produkt?limit=50`);
-    if (!res.ok) throw new Error('Netzwerkfehler');
-    const data = await res.json();
-    allProducts = data.records || [];
-    buildCategoryFilters(allProducts);
-    renderProducts(allProducts);
-  } catch (e) {
-    // Fallback dummy data
-    allProducts = [
-      { id: 1, Name: 'Pflanzerde Premium', Beschreibung: 'Nährstoffreiche Erde für Topfpflanzen', Kategorie: 'Erde', Preis: 12.90 },
-      { id: 2, Name: 'Bio-Dünger Set', Beschreibung: 'Organischer Dünger für alle Pflanzentypen', Kategorie: 'Dünger', Preis: 18.50 },
-      { id: 3, Name: 'Kräuter-Starter Kit', Beschreibung: 'Alles für die erste Kräuterküche', Kategorie: 'Sets', Preis: 29.90 },
-      { id: 4, Name: 'Anzuchttöpfe 12er Set', Beschreibung: 'Biologisch abbaubare Töpfe', Kategorie: 'Zubehör', Preis: 8.90 },
-      { id: 5, Name: 'Tomaten Mix Samen', Beschreibung: 'Bunte Vielfalt für den Garten', Kategorie: 'Samen', Preis: 6.50 },
-      { id: 6, Name: 'Hochbeet Erde', Beschreibung: 'Spezialerde für Hochbeete', Kategorie: 'Erde', Preis: 22.00 },
-      { id: 7, Name: 'Gießkanne 5L', Beschreibung: 'Ergonomische Gießkanne mit Brause', Kategorie: 'Zubehör', Preis: 15.90 },
-      { id: 8, Name: 'Blumenerde Universal', Beschreibung: 'Für Zimmer- und Balkonpflanzen', Kategorie: 'Erde', Preis: 9.90 },
-      { id: 9, Name: 'Rosendünger', Beschreibung: 'Spezialdünger für Rosen', Kategorie: 'Dünger', Preis: 11.50 },
-    ];
-    buildCategoryFilters(allProducts);
-    renderProducts(allProducts);
-  }
-}
+      async function loadProducts() {
+        const grid = document.getElementById("productGrid");
+        try {
+          const res = await fetch(`${API_BASE}/Produkt?limit=50`);
+          if (!res.ok) throw new Error("Netzwerkfehler");
+          const data = await res.json();
+          allProducts = data.records || [];
+          buildCategoryFilters(allProducts);
+          renderProducts(allProducts);
+        } catch (e) {
+          // Fallback dummy data
+          allProducts = [
+            {
+              id: 1,
+              Name: "Pflanzerde Premium",
+              Beschreibung: "Nährstoffreiche Erde für Topfpflanzen",
+              Kategorie: "Erde",
+              Preis: 12.9,
+            },
+            {
+              id: 2,
+              Name: "Bio-Dünger Set",
+              Beschreibung: "Organischer Dünger für alle Pflanzentypen",
+              Kategorie: "Dünger",
+              Preis: 18.5,
+            },
+            {
+              id: 3,
+              Name: "Kräuter-Starter Kit",
+              Beschreibung: "Alles für die erste Kräuterküche",
+              Kategorie: "Sets",
+              Preis: 29.9,
+            },
+            {
+              id: 4,
+              Name: "Anzuchttöpfe 12er Set",
+              Beschreibung: "Biologisch abbaubare Töpfe",
+              Kategorie: "Zubehör",
+              Preis: 8.9,
+            },
+            {
+              id: 5,
+              Name: "Tomaten Mix Samen",
+              Beschreibung: "Bunte Vielfalt für den Garten",
+              Kategorie: "Samen",
+              Preis: 6.5,
+            },
+            {
+              id: 6,
+              Name: "Hochbeet Erde",
+              Beschreibung: "Spezialerde für Hochbeete",
+              Kategorie: "Erde",
+              Preis: 22.0,
+            },
+            {
+              id: 7,
+              Name: "Gießkanne 5L",
+              Beschreibung: "Ergonomische Gießkanne mit Brause",
+              Kategorie: "Zubehör",
+              Preis: 15.9,
+            },
+            {
+              id: 8,
+              Name: "Blumenerde Universal",
+              Beschreibung: "Für Zimmer- und Balkonpflanzen",
+              Kategorie: "Erde",
+              Preis: 9.9,
+            },
+            {
+              id: 9,
+              Name: "Rosendünger",
+              Beschreibung: "Spezialdünger für Rosen",
+              Kategorie: "Dünger",
+              Preis: 11.5,
+            },
+          ];
+          buildCategoryFilters(allProducts);
+          renderProducts(allProducts);
+        }
+      }
 
-function buildCategoryFilters(products) {
-  const cats = [...new Set(products.map(p => p.Kategorie || p.Kategorie_id || 'Sonstige').filter(Boolean))];
-  const container = document.getElementById('categoryFilters');
-  container.innerHTML = `<label><input type="checkbox" value="" checked onchange="applyFilters()"> Alle</label>`;
-  cats.forEach(cat => {
-    const lbl = document.createElement('label');
-    lbl.innerHTML = `<input type="checkbox" value="${cat}" onchange="applyFilters()"> ${cat}`;
-    container.appendChild(lbl);
-  });
-}
+      function buildCategoryFilters(products) {
+        const cats = [
+          ...new Set(
+            products
+              .map((p) => p.Kategorie || p.Kategorie_id || "Sonstige")
+              .filter(Boolean),
+          ),
+        ];
+        const container = document.getElementById("categoryFilters");
+        container.innerHTML = `<label><input type="checkbox" value="" checked onchange="applyFilters()"> Alle</label>`;
+        cats.forEach((cat) => {
+          const lbl = document.createElement("label");
+          lbl.innerHTML = `<input type="checkbox" value="${cat}" onchange="applyFilters()"> ${cat}`;
+          container.appendChild(lbl);
+        });
+      }
 
-function applyFilters() {
-  const query = document.getElementById('searchInput').value.toLowerCase();
-  const checkboxes = document.querySelectorAll('#categoryFilters input[type=checkbox]');
-  const allChecked = document.querySelector('#categoryFilters input[value=""]').checked;
-  const selectedCats = [...checkboxes].filter(cb => cb.checked && cb.value).map(cb => cb.value);
+      function applyFilters() {
+        const query = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const checkboxes = document.querySelectorAll(
+          "#categoryFilters input[type=checkbox]",
+        );
+        const allChecked = document.querySelector(
+          '#categoryFilters input[value=""]',
+        ).checked;
+        const selectedCats = [...checkboxes]
+          .filter((cb) => cb.checked && cb.value)
+          .map((cb) => cb.value);
 
-  const filtered = allProducts.filter(p => {
-    const name = (p.Name || p.Bezeichnung || '').toLowerCase();
-    const desc = (p.Beschreibung || '').toLowerCase();
-    const matchSearch = !query || name.includes(query) || desc.includes(query);
-    const cat = p.Kategorie || 'Sonstige';
-    const matchCat = allChecked || selectedCats.includes(cat);
-    return matchSearch && matchCat;
-  });
+        const filtered = allProducts.filter((p) => {
+          const name = (p.Name || p.Bezeichnung || "").toLowerCase();
+          const desc = (p.Beschreibung || "").toLowerCase();
+          const matchSearch =
+            !query || name.includes(query) || desc.includes(query);
+          const cat = p.Kategorie || "Sonstige";
+          const matchCat = allChecked || selectedCats.includes(cat);
+          return matchSearch && matchCat;
+        });
 
-  renderProducts(filtered);
-}
+        renderProducts(filtered);
+      }
 
-function renderProducts(products) {
-  const grid = document.getElementById('productGrid');
-  const empty = document.getElementById('emptyMsg');
+      function renderProducts(products) {
+        const grid = document.getElementById("productGrid");
+        const empty = document.getElementById("emptyMsg");
 
-  if (products.length === 0) {
-    grid.innerHTML = '';
-    empty.style.display = 'block';
-    return;
-  }
-  empty.style.display = 'none';
+        if (products.length === 0) {
+          grid.innerHTML = "";
+          empty.style.display = "block";
+          return;
+        }
+        empty.style.display = "none";
 
-  grid.innerHTML = products.map(p => {
-    const name = p.Name || p.Bezeichnung || 'Produkt';
-    const desc = p.Beschreibung || '';
-    const price = p.Preis != null ? `CHF ${parseFloat(p.Preis).toFixed(2)}` : '';
-    return `
+        grid.innerHTML = products
+          .map((p) => {
+            const name = p.Name || p.Bezeichnung || "Produkt";
+            const desc = p.Beschreibung || "";
+            const price =
+              p.Preis != null ? `CHF ${parseFloat(p.Preis).toFixed(2)}` : "";
+            return `
       <div class="product-card">
         <div class="product-img img-container" style="height:200px;">
-          ${p.Bild ? `<img src="${p.Bild}" alt="${name}" onerror="this.parentElement.querySelector('.placeholder-img').style.display='flex';this.style.display='none'"/>` : ''}
-          <div class="placeholder-img" style="width:100%;height:200px;${p.Bild ? 'display:none' : 'display:flex'}">🌿</div>
+          ${p.Bild ? `<img src="${p.Bild}" alt="${name}" onerror="this.parentElement.querySelector('.placeholder-img').style.display='flex';this.style.display='none'"/>` : ""}
+          <div class="placeholder-img" style="width:100%;height:200px;${p.Bild ? "display:none" : "display:flex"}">🌿</div>
         </div>
         <h3>${name}</h3>
-        ${price ? `<p style="font-weight:600;color:var(--green-dark);">${price}</p>` : ''}
+        ${price ? `<p style="font-weight:600;color:var(--green-dark);">${price}</p>` : ""}
         <p>${desc}</p>
-        <button class="btn btn-outline" onclick="addToCart(${p.id || 0}, '${name.replace(/'/g,"\\'")}')">
+        <button class="btn btn-outline" onclick="addToCart(${p.id || 0}, '${name.replace(/'/g, "\\'")}')">
           In den Warenkorb →
         </button>
       </div>
     `;
-  }).join('');
-}
+          })
+          .join("");
+      }
 
-function addToCart(id, name) {
-  // Basic cart feedback
-  const btn = event.target;
-  btn.textContent = '✓ Hinzugefügt';
-  btn.style.background = 'var(--green-pale)';
-  setTimeout(() => { btn.textContent = 'In den Warenkorb →'; btn.style.background = ''; }, 2000);
-}
+      function addToCart(id, name) {
+        // Basic cart feedback
+        const btn = event.target;
+        btn.textContent = "✓ Hinzugefügt";
+        btn.style.background = "var(--green-pale)";
+        setTimeout(() => {
+          btn.textContent = "In den Warenkorb →";
+          btn.style.background = "";
+        }, 2000);
+      }
 
-loadProducts();
-</script>
-</body>
+      loadProducts();
+    </script>
+  </body>
 </html>
