@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Growease – Bestellungen</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .page-header { padding: 48px 80px 0; }
+    .page-header h1 { font-family: var(--font-display); font-size: 32px; }
+    .orders-wrapper { padding: 32px 80px 72px; overflow-x: auto; }
+    .status-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 32px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .status-offen { background: #fff3cd; color: #856404; }
+    .status-versandt { background: var(--green-pale); color: var(--green-dark); }
+    .status-abgeschlossen { background: #d1e7dd; color: #0a3622; }
+    @media (max-width: 900px) {
+      .page-header { padding: 32px 24px 0; }
+      .orders-wrapper { padding: 24px 16px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Bestellungen</h1>
+</div>
+<div class="orders-wrapper">
+  <table class="orders-table" id="ordersTable">
+    <thead>
+      <tr>
+        <th>Nr.</th>
+        <th>Kunde</th>
+        <th>Produkt</th>
+        <th>Menge</th>
+        <th>Datum</th>
+        <th>Status</th>
+        <th>Betrag</th>
+      </tr>
+    </thead>
+    <tbody id="ordersBody">
+      <tr><td colspan="7" style="text-align:center;padding:32px;color:var(--text-muted);">Lade Bestellungen…</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>Growease</h4><ul><li><a href="index.html">Startseite</a></li><li><a href="produkte.html">Produkte</a></li></ul></div>
+    <div class="footer-col"><h4>Service</h4><ul><li><a href="bestellungen.html">Bestellungen</a></li><li><a href="kunden.html">Kunden</a></li></ul></div>
+    <div class="footer-col"><h4>Info</h4><ul><li><a href="#">Über uns</a></li><li><a href="#">AGB</a></li></ul></div>
+    <div class="footer-col"><h4>Folge uns</h4><div class="footer-social"><div class="social-dot">in</div><div class="social-dot">fb</div><div class="social-dot">tk</div><div class="social-dot">pt</div></div></div>
+  </div>
+  <div class="footer-bottom">© 2025 Growease. Alle Rechte vorbehalten.</div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script>
+const API_BASE = "http://localhost:8081/api.php/records";
+
+function statusBadge(s) {
+  const map = { 'offen': 'offen', 'versandt': 'versandt', 'abgeschlossen': 'abgeschlossen' };
+  const cls = map[(s||'').toLowerCase()] || 'offen';
+  return `<span class="status-badge status-${cls}">${s || 'offen'}</span>`;
+}
+
+async function loadOrders() {
+  const tbody = document.getElementById('ordersBody');
+  try {
+    const res = await fetch(`${API_BASE}/Bestellung?limit=50`);
+    if (!res.ok) throw new Error();
+    const data = await res.json();
+    const records = data.records || [];
+    if (records.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:32px;color:var(--text-muted);">Keine Bestellungen vorhanden.</td></tr>';
+      return;
+    }
+    tbody.innerHTML = records.map(r => `
+      <tr>
+        <td>#${r.id || r.Bestellung_id || '–'}</td>
+        <td>${r.Kunde || r.Kunde_id || '–'}</td>
+        <td>${r.Produkt || r.Produkt_id || '–'}</td>
+        <td>${r.Menge || r.Anzahl || '–'}</td>
+        <td>${r.Datum ? new Date(r.Datum).toLocaleDateString('de-CH') : '–'}</td>
+        <td>${statusBadge(r.Status)}</td>
+        <td>${r.Betrag != null ? 'CHF ' + parseFloat(r.Betrag).toFixed(2) : '–'}</td>
+      </tr>
+    `).join('');
+  } catch {
+    // Demo fallback
+    const demos = [
+      { id: 1001, kunde: 'Anna Müller', produkt: 'Pflanzerde Premium', menge: 2, datum: '2025-05-10', status: 'versandt', betrag: 25.80 },
+      { id: 1002, kunde: 'Beat Keller', produkt: 'Bio-Dünger Set', menge: 1, datum: '2025-05-12', status: 'abgeschlossen', betrag: 18.50 },
+      { id: 1003, kunde: 'Carmen Huber', produkt: 'Kräuter-Starter Kit', menge: 3, datum: '2025-05-14', status: 'offen', betrag: 89.70 },
+    ];
+    tbody.innerHTML = demos.map(r => `
+      <tr>
+        <td>#${r.id}</td>
+        <td>${r.kunde}</td>
+        <td>${r.produkt}</td>
+        <td>${r.menge}</td>
+        <td>${new Date(r.datum).toLocaleDateString('de-CH')}</td>
+        <td>${statusBadge(r.status)}</td>
+        <td>CHF ${r.betrag.toFixed(2)}</td>
+      </tr>
+    `).join('');
+  }
+}
+
+loadOrders();
+</script>
+</body>
+</html>
