@@ -1111,3 +1111,168 @@ footer {
 .nav-icon-btn:hover {
   color: var(--green-dark);
 }
+
+/* ─────────────────────────────────────────────
+   CSS-EFFEKTE – Hover, Rahmen, Hintergrund, Animationen
+   ───────────────────────────────────────────── */
+
+/* Hintergrundeffekt: dezenter Gradient auf Hero und Quiz */
+.hero,
+.quiz-hero {
+  background:
+    radial-gradient(circle at top left, rgba(200, 216, 192, 0.55), transparent 32%),
+    linear-gradient(135deg, var(--warm-white) 0%, var(--green-pale) 100%);
+}
+
+/* Animation: Begrüssungs-/Teaser-Animation auf der Startseite */
+.hero-content h1,
+.quiz-intro h1 {
+  animation: fadeSlideUp 0.8s ease both;
+}
+
+.hero-content p,
+.quiz-intro p {
+  animation: fadeSlideUp 0.9s ease both;
+  animation-delay: 0.12s;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover-Effekte: Navigation und Buttons wirken lebendiger */
+.nav-links a,
+.mobile-menu a,
+.btn,
+.nav-icon-btn {
+  transition:
+    color var(--transition),
+    background var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+.nav-links a:hover,
+.mobile-menu a:hover {
+  color: var(--green-dark);
+  transform: translateY(-2px);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(45, 74, 45, 0.18);
+}
+
+.nav-icon-btn:hover {
+  transform: scale(1.08);
+}
+
+/* Rahmen + Schatten: moderne Karten mit Tiefe */
+.product-card,
+.quiz-card,
+.kunden-card,
+.order-search-card,
+.order-result-card,
+.service-item,
+.feature-center-img {
+  border-radius: 14px;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+.product-card,
+.kunden-card,
+.quiz-card,
+.order-search-card,
+.order-result-card {
+  border: 1px solid rgba(45, 74, 45, 0.12);
+  box-shadow: 0 6px 20px rgba(26, 26, 26, 0.06);
+}
+
+.product-card:hover,
+.kunden-card:hover,
+.service-item:hover,
+.order-search-card:hover,
+.order-result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(45, 74, 45, 0.16);
+  border-color: var(--green-light);
+}
+
+.product-img,
+.service-img,
+.feature-center-img,
+.hero-image {
+  border: 1px solid rgba(45, 74, 45, 0.14);
+  box-shadow: 0 8px 22px rgba(45, 74, 45, 0.1);
+}
+
+/* Bild-Hover: leichtes Zoomen für mehr Dynamik */
+.product-img img,
+.service-img img,
+.hero-image img,
+.feature-center-img img {
+  transition: transform 0.45s ease;
+}
+
+.product-card:hover .product-img img,
+.service-row:hover .service-img img,
+.hero-image:hover img,
+.feature-center-img:hover img {
+  transform: scale(1.06);
+}
+
+/* Animiertes Promotion-Element */
+.promo-banner {
+  background: linear-gradient(90deg, var(--green-dark), var(--green-mid), var(--green-dark));
+  background-size: 220% 100%;
+  animation: promoGradientMove 6s ease infinite;
+}
+
+.promo-banner a {
+  display: inline-block;
+  transition: transform var(--transition);
+}
+
+.promo-banner a:hover {
+  transform: scale(1.05);
+}
+
+@keyframes promoGradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Kleiner Fokus-Effekt für Formularfelder */
+input:focus,
+.search-bar:focus {
+  box-shadow: 0 0 0 4px rgba(74, 124, 74, 0.14);
+}
+
+/* Animation respektieren, falls Nutzer reduzierte Bewegung eingestellt haben */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
