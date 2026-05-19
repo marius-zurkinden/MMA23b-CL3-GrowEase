@@ -17,6 +17,80 @@
         padding: 32px 80px 72px;
         overflow-x: auto;
       }
+      .order-search-card,
+      .order-result-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 32px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .order-search-card h2 {
+        font-family: var(--font-display);
+        font-size: 26px;
+        margin-bottom: 12px;
+      }
+      .order-search-card p {
+        color: var(--text-muted);
+        font-size: 14px;
+        margin-bottom: 24px;
+      }
+      .order-form {
+        display: flex;
+        gap: 12px;
+        align-items: flex-end;
+        flex-wrap: wrap;
+      }
+      .order-field {
+        flex: 1;
+        min-width: 240px;
+      }
+      .order-field label {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+      .order-field input {
+        width: 100%;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 12px 16px;
+        font-family: var(--font-body);
+        font-size: 15px;
+        background: var(--warm-white);
+        outline: none;
+        transition: border-color var(--transition);
+      }
+      .order-field input:focus {
+        border-color: var(--green-mid);
+      }
+      .order-message {
+        display: none;
+        color: #8a1f1f;
+        font-size: 14px;
+        margin-top: 14px;
+      }
+      .order-result-card {
+        display: none;
+        margin-top: 24px;
+        max-width: 1100px;
+      }
+      .order-result-card.is-visible {
+        display: block;
+      }
+      .order-result-card h2 {
+        font-family: var(--font-display);
+        font-size: 26px;
+        margin-bottom: 16px;
+      }
+      .order-placeholder-note {
+        color: var(--text-muted);
+        font-size: 13px;
+        margin-top: 16px;
+      }
       .status-badge {
         display: inline-block;
         padding: 3px 10px;
@@ -42,6 +116,14 @@
         }
         .orders-wrapper {
           padding: 24px 16px 48px;
+        }
+        .order-search-card,
+        .order-result-card {
+          padding: 24px;
+        }
+        .order-form {
+          flex-direction: column;
+          align-items: stretch;
         }
       }
     </style>
@@ -103,7 +185,7 @@
         <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
         <!-- <li><a href="quiz.html">Quiz</a></li> -->
         <!-- <li><a href="bestellungen.html">Bestellungen</a></li> -->
-        <!-- <li><a href="kunden.html">Kunden</a></li> -->
+        <!-- <li><a href="kunden.html">Mein Konto</a></li> -->
       </ul>
       <div class="nav-actions">
         <a href="bestellungen.html" class="nav-icon-btn" title="Warenkorb">
@@ -177,38 +259,61 @@
       <a href="dienstleistungen.html">Dienstleistungen</a>
       <a href="quiz.html">Quiz</a>
       <a href="bestellungen.html">Bestellungen</a>
-      <a href="kunden.html">Kunden</a>
+      <a href="kunden.html">Mein Konto</a>
     </div>
 
     <div class="page-header"><h1>Bestellungen</h1></div>
     <div class="orders-wrapper">
-      <table class="orders-table">
-        <thead>
-          <tr>
-            <th>Nr.</th>
-            <th>Kunde</th>
-            <th>Produkt</th>
-            <th>Menge</th>
-            <th>Datum</th>
-            <th>Status</th>
-            <th>Betrag</th>
-          </tr>
-        </thead>
-        <tbody id="ordersBody">
-          <tr>
-            <td
-              colspan="7"
-              style="
-                text-align: center;
-                padding: 32px;
-                color: var(--text-muted);
-              "
-            >
-              Lade Bestellungen…
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="order-search-card">
+        <h2>Bestellung suchen</h2>
+        <p>
+          Gib deine Bestellnummer ein. Danach wird deine Bestellung darunter
+          angezeigt. Später kann dieser Bereich mit der Datenbank verknüpft
+          werden.
+        </p>
+
+        <form class="order-form" id="orderSearchForm">
+          <div class="order-field">
+            <label for="orderNumber">Bestellnummer</label>
+            <input
+              type="text"
+              id="orderNumber"
+              name="orderNumber"
+              placeholder="z.B. 1001"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Bestellung anzeigen →
+          </button>
+        </form>
+
+        <p class="order-message" id="orderMessage">
+          Bitte gib eine Bestellnummer ein.
+        </p>
+      </div>
+
+      <div class="order-result-card" id="orderResult">
+        <h2>Gefundene Bestellung</h2>
+        <table class="orders-table">
+          <thead>
+            <tr>
+              <th>Nr.</th>
+              <th>Kunde</th>
+              <th>Produkt</th>
+              <th>Menge</th>
+              <th>Datum</th>
+              <th>Status</th>
+              <th>Betrag</th>
+            </tr>
+          </thead>
+          <tbody id="ordersBody"></tbody>
+        </table>
+        <p class="order-placeholder-note">
+          Platzhalter: Diese Daten sind aktuell noch Beispielwerte. Später
+          können sie durch echte Daten aus der Datenbank ersetzt werden.
+        </p>
+      </div>
     </div>
 
     <!-- FOOTER -->
@@ -251,7 +356,7 @@
       <div class="footer-bottom">© 2025 Growease. Alle Rechte vorbehalten.</div>
     </footer>
 
-    <script src="assets/js/nav.js"></script>
+    <script src="nav.js"></script>
     <script>
       function statusBadge(s) {
         var cls =
@@ -260,6 +365,7 @@
             versandt: "versandt",
             abgeschlossen: "abgeschlossen",
           }[(s || "").toLowerCase()] || "offen";
+
         return (
           '<span class="status-badge status-' +
           cls +
@@ -268,99 +374,88 @@
           "</span>"
         );
       }
-      async function loadOrders() {
+
+      // Platzhalter-Daten: später durch Datenbank/API ersetzen
+      var demoOrders = [
+        {
+          id: "1001",
+          kunde: "Anna Müller",
+          produkt: "Pflanzerde Premium",
+          menge: 2,
+          datum: "2025-05-10",
+          status: "versandt",
+          betrag: 25.8,
+        },
+        {
+          id: "1002",
+          kunde: "Beat Keller",
+          produkt: "Bio-Dünger Set",
+          menge: 1,
+          datum: "2025-05-12",
+          status: "abgeschlossen",
+          betrag: 18.5,
+        },
+        {
+          id: "1003",
+          kunde: "Carmen Huber",
+          produkt: "Kräuter-Starter Kit",
+          menge: 3,
+          datum: "2025-05-14",
+          status: "offen",
+          betrag: 89.7,
+        },
+      ];
+
+      function showOrder(order) {
         var tbody = document.getElementById("ordersBody");
-        try {
-          var res = await fetch(
-            "http://localhost:8081/api.php/records/Bestellung?limit=50",
-          );
-          if (!res.ok) throw new Error();
-          var data = await res.json();
-          var records = data.records || [];
-          if (!records.length) {
-            tbody.innerHTML =
-              '<tr><td colspan="7" style="text-align:center;padding:32px;color:var(--text-muted);">Keine Bestellungen vorhanden.</td></tr>';
+        var resultBox = document.getElementById("orderResult");
+
+        tbody.innerHTML =
+          "<tr><td>#" +
+          order.id +
+          "</td><td>" +
+          order.kunde +
+          "</td><td>" +
+          order.produkt +
+          "</td><td>" +
+          order.menge +
+          "</td><td>" +
+          new Date(order.datum).toLocaleDateString("de-CH") +
+          "</td><td>" +
+          statusBadge(order.status) +
+          "</td><td>CHF " +
+          Number(order.betrag).toFixed(2) +
+          "</td></tr>";
+
+        resultBox.classList.add("is-visible");
+      }
+
+      document
+        .getElementById("orderSearchForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var orderNumber = document
+            .getElementById("orderNumber")
+            .value.trim()
+            .replace("#", "");
+          var message = document.getElementById("orderMessage");
+
+          if (orderNumber === "") {
+            message.textContent = "Bitte gib eine Bestellnummer ein.";
+            message.style.display = "block";
             return;
           }
-          tbody.innerHTML = records
-            .map(function (r) {
-              return (
-                "<tr><td>#" +
-                (r.id || "–") +
-                "</td><td>" +
-                (r.Kunde || r.Kunde_id || "–") +
-                "</td><td>" +
-                (r.Produkt || r.Produkt_id || "–") +
-                "</td><td>" +
-                (r.Menge || r.Anzahl || "–") +
-                "</td><td>" +
-                (r.Datum
-                  ? new Date(r.Datum).toLocaleDateString("de-CH")
-                  : "–") +
-                "</td><td>" +
-                statusBadge(r.Status) +
-                "</td><td>" +
-                (r.Betrag != null
-                  ? "CHF " + parseFloat(r.Betrag).toFixed(2)
-                  : "–") +
-                "</td></tr>"
-              );
-            })
-            .join("");
-        } catch (e) {
-          var demos = [
-            {
-              id: 1001,
-              kunde: "Anna Müller",
-              produkt: "Pflanzerde Premium",
-              menge: 2,
-              datum: "2025-05-10",
-              status: "versandt",
-              betrag: 25.8,
-            },
-            {
-              id: 1002,
-              kunde: "Beat Keller",
-              produkt: "Bio-Dünger Set",
-              menge: 1,
-              datum: "2025-05-12",
-              status: "abgeschlossen",
-              betrag: 18.5,
-            },
-            {
-              id: 1003,
-              kunde: "Carmen Huber",
-              produkt: "Kräuter-Starter Kit",
-              menge: 3,
-              datum: "2025-05-14",
-              status: "offen",
-              betrag: 89.7,
-            },
-          ];
-          tbody.innerHTML = demos
-            .map(function (r) {
-              return (
-                "<tr><td>#" +
-                r.id +
-                "</td><td>" +
-                r.kunde +
-                "</td><td>" +
-                r.produkt +
-                "</td><td>" +
-                r.menge +
-                "</td><td>" +
-                new Date(r.datum).toLocaleDateString("de-CH") +
-                "</td><td>" +
-                statusBadge(r.status) +
-                "</td><td>CHF " +
-                r.betrag.toFixed(2) +
-                "</td></tr>"
-              );
-            })
-            .join("");
-        }
-      }
-      loadOrders();
+
+          // Platzhalter-Logik: später mit Datenbankabfrage ersetzen
+          var foundOrder =
+            demoOrders.find(function (order) {
+              return order.id === orderNumber;
+            }) || demoOrders[0];
+
+          message.style.display = "none";
+          showOrder(foundOrder);
+        });
     </script>
   </body>
 </html>

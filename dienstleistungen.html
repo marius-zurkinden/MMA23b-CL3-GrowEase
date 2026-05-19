@@ -65,7 +65,7 @@
         </li>
         <!-- <li><a href="quiz.html">Quiz</a></li> -->
         <!-- <li><a href="bestellungen.html">Bestellungen</a></li> -->
-        <!-- <li><a href="kunden.html">Kunden</a></li> -->
+        <!-- <li><a href="kunden.html">Mein Konto</a></li> -->
       </ul>
       <div class="nav-actions">
         <a href="bestellungen.html" class="nav-icon-btn" title="Warenkorb">
@@ -139,7 +139,7 @@
       <a href="dienstleistungen.html">Dienstleistungen</a>
       <a href="quiz.html">Quiz</a>
       <a href="bestellungen.html">Bestellungen</a>
-      <a href="kunden.html">Kunden</a>
+      <a href="kunden.html">Mein Konto</a>
     </div>
 
     <section style="padding: 72px 80px; max-width: 1200px; margin: 0 auto">
@@ -202,7 +202,7 @@
       <div class="footer-bottom">© 2025 Growease. Alle Rechte vorbehalten.</div>
     </footer>
 
-    <script src="assets/js/nav.js"></script>
+    <script src="nav.js"></script>
     <script>
       async function loadServices() {
         var list = document.getElementById("servicesList");
@@ -245,22 +245,73 @@
           ]);
         }
       }
+      function escapeHTML(text) {
+        return String(text || "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
+      function getServiceDetail(s) {
+        var name = s.Name || s.Bezeichnung || "Dienstleistung";
+        var description = s.Beschreibung || "";
+
+        // Falls die Datenbank später ein längeres Textfeld hat, wird dieses automatisch verwendet.
+        var apiDetail =
+          s.Detailtext ||
+          s.Details ||
+          s.Langbeschreibung ||
+          s.Zusatztext ||
+          s.Text ||
+          s.Mehrtext;
+
+        if (apiDetail) return apiDetail;
+
+        return (
+          "Bei " +
+          name +
+          " unterstützen wir Sie persönlich und passend zu Ihrer Situation. " +
+          description +
+          ". Wir beraten Sie verständlich, planen die nächsten Schritte und achten darauf, " +
+          "dass die Lösung nachhaltig, praktisch und einfach umsetzbar ist."
+        );
+      }
+
       function renderServices(services) {
         document.getElementById("servicesList").innerHTML = services
-          .map(function (s) {
+          .map(function (s, i) {
+            var name = escapeHTML(s.Name || s.Bezeichnung || "Dienstleistung");
+            var description = escapeHTML(s.Beschreibung || "");
+            var detail = escapeHTML(getServiceDetail(s));
+
             return (
-              '<div class="service-row">' +
-              '<div class="service-img" style="display:flex;align-items:center;justify-content:center;color:var(--green-mid);">🌿</div>' +
+              '<div class="service-item" id="service' +
+              i +
+              '">' +
+              '<button class="service-row" type="button" onclick="toggleService(' +
+              i +
+              ')">' +
+              '<div class="service-img">🌿</div>' +
               '<div class="service-info"><h3>' +
-              (s.Name || s.Bezeichnung || "") +
+              name +
               "</h3><p>" +
-              (s.Beschreibung || "") +
+              description +
               "</p></div>" +
-              '<span class="service-arrow">›</span></div>'
+              '<span class="service-arrow">›</span></button>' +
+              '<div class="service-detail"><p>' +
+              detail +
+              "</p></div></div>"
             );
           })
           .join("");
       }
+
+      function toggleService(i) {
+        document.getElementById("service" + i).classList.toggle("open");
+      }
+
       loadServices();
     </script>
   </body>

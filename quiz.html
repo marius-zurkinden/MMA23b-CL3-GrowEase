@@ -61,9 +61,9 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="produkte.html">Produkte</a></li>
         <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
-        <li><a href="quiz.html" class="active">Quiz</a></li>
-        <li><a href="bestellungen.html">Bestellungen</a></li>
-        <li><a href="kunden.html">Kunden</a></li>
+        <!-- <li><a href="quiz.html" class="active">Quiz</a></li> -->
+        <!-- <li><a href="bestellungen.html">Bestellungen</a></li> -->
+        <!-- <li><a href="kunden.html">Mein Konto</a></li> -->
       </ul>
       <div class="nav-actions">
         <a href="bestellungen.html" class="nav-icon-btn" title="Warenkorb">
@@ -135,9 +135,9 @@
       <a href="index.html">Home</a>
       <a href="produkte.html">Produkte</a>
       <a href="dienstleistungen.html">Dienstleistungen</a>
-      <!-- <li><a href="quiz.html">Quiz</a></li> -->
-      <!-- <li><a href="bestellungen.html">Bestellungen</a></li> -->
-      <!-- <li><a href="kunden.html">Kunden</a></li> -->
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="bestellungen.html">Bestellungen</a></li>
+      <li><a href="kunden.html">Mein Konto</a></li>
     </div>
 
     <section class="quiz-hero">
@@ -148,14 +148,25 @@
           dir passen – und gewinne attraktive Preise!
         </p>
       </div>
-      <div class="quiz-card">
+
+      <form
+        class="quiz-card quiz-form"
+        id="quizForm"
+        action="quiz-submit.php"
+        method="post"
+      >
+        <input type="hidden" name="frage_1" id="answer0" />
+        <input type="hidden" name="frage_2" id="answer1" />
+        <input type="hidden" name="frage_3" id="answer2" />
+
         <div class="quiz-progress" id="quizProgress">Frage 1/3</div>
         <div class="quiz-question" id="quizQuestion"></div>
         <div class="quiz-options" id="quizOptions"></div>
         <div class="quiz-dots" id="quizDots"></div>
+
         <div
-          id="quizResult"
-          style="display: none; text-align: center; padding-top: 16px"
+          id="quizEmailStep"
+          style="display: none; text-align: center; padding-top: 8px"
         >
           <h3
             style="
@@ -164,19 +175,67 @@
               margin-bottom: 12px;
             "
           >
-            🎉 Vielen Dank!
+            Fast geschafft!
           </h3>
-          <p style="color: var(--text-muted)">
-            Ihre Antworten wurden gespeichert. Sie nehmen am Gewinnspiel teil!
-          </p>
-          <a
-            href="produkte.html"
-            class="btn btn-primary"
-            style="margin-top: 20px; display: inline-flex"
-            >Zu den Produkten →</a
+          <p
+            style="
+              color: var(--text-muted);
+              font-size: 14px;
+              max-width: 520px;
+              margin: 0 auto 24px;
+            "
           >
+            Gib deine E-Mail-Adresse ein und sende das Quiz ab. Nach der
+            erfolgreichen Prüfung bekommst du eine Bestätigung per Mail.
+          </p>
+
+          <label
+            for="quizEmail"
+            style="
+              display: block;
+              text-align: left;
+              max-width: 420px;
+              margin: 0 auto 8px;
+              font-size: 14px;
+              font-weight: 500;
+            "
+            >E-Mail-Adresse</label
+          >
+          <input
+            type="text"
+            id="quizEmail"
+            name="email"
+            placeholder="dein.name@mail.ch"
+            required
+            style="
+              display: block;
+              width: 100%;
+              max-width: 420px;
+              margin: 0 auto 12px;
+              border: 1px solid var(--border);
+              border-radius: var(--radius);
+              padding: 12px 16px;
+              font-family: var(--font-body);
+              font-size: 15px;
+              background: var(--warm-white);
+              outline: none;
+            "
+          />
+
+          <p
+            id="quizError"
+            style="
+              display: none;
+              color: #8a1f1f;
+              font-size: 14px;
+              margin: 0 auto 16px;
+              max-width: 420px;
+            "
+          ></p>
+
+          <button type="submit" class="btn btn-primary">Quiz absenden →</button>
         </div>
-      </div>
+      </form>
     </section>
 
     <section class="faq-section">
@@ -224,7 +283,7 @@
       <div class="footer-bottom">© 2025 Growease. Alle Rechte vorbehalten.</div>
     </footer>
 
-    <script src="assets/js/nav.js"></script>
+    <script src="nav.js"></script>
     <script>
       var questions = [
         {
@@ -240,17 +299,21 @@
           options: ["Kein Außenbereich", "Kleiner Balkon", "Garten"],
         },
       ];
+
       var currentQ = 0;
+      var answers = [];
 
       function renderQuiz() {
         var q = questions[currentQ];
+
         document.getElementById("quizProgress").textContent =
           "Frage " + (currentQ + 1) + "/" + questions.length;
         document.getElementById("quizQuestion").textContent = q.q;
+
         document.getElementById("quizOptions").innerHTML = q.options
           .map(function (o, i) {
             return (
-              '<button class="quiz-option" onclick="selectOption(' +
+              '<button type="button" class="quiz-option" onclick="selectOption(' +
               i +
               ')">' +
               o +
@@ -258,6 +321,7 @@
             );
           })
           .join("");
+
         document.getElementById("quizDots").innerHTML = questions
           .map(function (_, i) {
             return (
@@ -270,23 +334,93 @@
       }
 
       function selectOption(idx) {
-        document.querySelectorAll(".quiz-option").forEach(function (b, i) {
-          b.classList.toggle("selected", i === idx);
+        var selectedAnswer = questions[currentQ].options[idx];
+        answers[currentQ] = selectedAnswer;
+        document.getElementById("answer" + currentQ).value = selectedAnswer;
+
+        document.querySelectorAll(".quiz-option").forEach(function (button, i) {
+          button.classList.toggle("selected", i === idx);
         });
+
         setTimeout(function () {
           if (currentQ < questions.length - 1) {
             currentQ++;
             renderQuiz();
           } else {
-            ["quizProgress", "quizQuestion", "quizOptions", "quizDots"].forEach(
-              function (id) {
-                document.getElementById(id).style.display = "none";
-              },
-            );
-            document.getElementById("quizResult").style.display = "block";
+            showEmailStep();
           }
         }, 400);
       }
+
+      function showEmailStep() {
+        ["quizProgress", "quizQuestion", "quizOptions", "quizDots"].forEach(
+          function (id) {
+            document.getElementById(id).style.display = "none";
+          },
+        );
+
+        document.getElementById("quizEmailStep").style.display = "block";
+        document.getElementById("quizEmail").focus();
+      }
+
+      function showSuccessMessage() {
+        var quizForm = document.getElementById("quizForm");
+
+        quizForm.innerHTML =
+          '<div style="text-align:center; padding:16px 0;">' +
+          '<h3 style="font-family: var(--font-display); font-size: 26px; margin-bottom: 12px;">🎉 Quiz erfolgreich abgeschlossen!</h3>' +
+          '<p style="color: var(--text-muted); max-width: 520px; margin: 0 auto;">Vielen Dank für deine Teilnahme. Du bekommst eine Bestätigung per Mail.</p>' +
+          "</div>";
+      }
+
+      document
+        .getElementById("quizForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          var emailInput = document.getElementById("quizEmail");
+          var errorBox = document.getElementById("quizError");
+          var submitButton = this.querySelector('button[type="submit"]');
+
+          if (!emailInput || emailInput.value.trim() === "") {
+            errorBox.textContent = "Bitte gib deine E-Mail-Adresse ein.";
+            errorBox.style.display = "block";
+            return;
+          }
+
+          errorBox.style.display = "none";
+          submitButton.disabled = true;
+          submitButton.textContent = "Wird geprüft...";
+
+          var formData = new FormData();
+          formData.append("email", emailInput.value.trim());
+
+          fetch("quiz-submit.php", {
+            method: "POST",
+            body: formData,
+          })
+            .then(function (response) {
+              return response.json();
+            })
+            .then(function (data) {
+              if (data.success) {
+                showSuccessMessage();
+              } else {
+                errorBox.textContent =
+                  data.message || "Bitte gib eine gültige E-Mail-Adresse ein.";
+                errorBox.style.display = "block";
+                submitButton.disabled = false;
+                submitButton.textContent = "Quiz absenden →";
+              }
+            })
+            .catch(function () {
+              errorBox.textContent =
+                "Das Formular konnte nicht abgesendet werden. Prüfe, ob die Datei quiz-submit.php im gleichen Ordner liegt.";
+              errorBox.style.display = "block";
+              submitButton.disabled = false;
+              submitButton.textContent = "Quiz absenden →";
+            });
+        });
 
       renderQuiz();
 
