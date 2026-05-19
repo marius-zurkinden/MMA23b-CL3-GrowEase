@@ -136,7 +136,9 @@ img { max-width: 100%; display: block; }
   cursor: pointer;
   flex-direction: column;
   gap: 5px;
-  padding: 4px;
+  padding: 8px;
+  z-index: 10;
+  position: relative;
 }
 .nav-hamburger span {
   display: block;
@@ -160,13 +162,12 @@ img { max-width: 100%; display: block; }
   position: fixed;
   inset: 0;
   background: var(--warm-white);
-  z-index: 200;
+  z-index: 500;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 32px;
 }
-.mobile-menu.open { display: flex; }
 .mobile-menu a {
   font-family: var(--font-display);
   font-size: 28px;

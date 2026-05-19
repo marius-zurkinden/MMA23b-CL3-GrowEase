@@ -1,19 +1,22 @@
-// nav.js – Burger-Menu Logik (Navigation ist direkt im HTML)
-(function () {
+// nav.js – Burger-Menu Logik
+document.addEventListener('DOMContentLoaded', function () {
   var hamburgerBtn = document.getElementById('hamburgerBtn');
   var mobileMenu   = document.getElementById('mobileMenu');
   var mobileClose  = document.getElementById('mobileClose');
 
-  if (!hamburgerBtn || !mobileMenu) return;
+  if (!hamburgerBtn || !mobileMenu || !mobileClose) {
+    console.warn('nav.js: Elemente nicht gefunden');
+    return;
+  }
 
   function openMenu() {
-    mobileMenu.classList.add('open');
+    mobileMenu.style.display = 'flex';
     hamburgerBtn.classList.add('is-open');
     document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
-    mobileMenu.classList.remove('open');
+    mobileMenu.style.display = 'none';
     hamburgerBtn.classList.remove('is-open');
     document.body.style.overflow = '';
   }
@@ -25,8 +28,7 @@
     a.addEventListener('click', closeMenu);
   });
 
-  // Schliessen bei Klick auf den dunklen Hintergrund
   mobileMenu.addEventListener('click', function (e) {
     if (e.target === mobileMenu) closeMenu();
   });
-})();
+});
