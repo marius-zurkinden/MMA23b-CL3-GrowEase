@@ -8,16 +8,73 @@
 </head>
 <body>
 
-<!-- ── QUIZ HERO ── -->
+<div class="promo-banner"><a href="quiz.html">Quiz ausfüllen</a> und gewinnen 🌱</div>
+
+<nav class="main-nav">
+  <a href="index.html" class="nav-logo">
+    <svg class="nav-logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <path d="M16 4 C16 4, 28 8, 28 20 C28 26, 22 30, 16 30 C10 30, 4 26, 4 20 C4 8, 16 4, 16 4Z" fill="#2d4a2d"/>
+      <path d="M16 28 L16 10" stroke="#c8d8c0" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M16 22 C16 22, 12 20, 9 17" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
+      <path d="M16 22 C16 22, 20 20, 23 17" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
+      <path d="M16 17 C16 17, 12 15, 10 12" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
+      <path d="M16 17 C16 17, 20 15, 22 12" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
+    </svg>
+    <span class="nav-logo-text">Growease</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="produkte.html">Produkte</a></li>
+    <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
+    <li><a href="quiz.html" class="active">Quiz</a></li>
+    <li><a href="bestellungen.html">Bestellungen</a></li>
+    <li><a href="kunden.html">Kunden</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="bestellungen.html" class="nav-icon-btn" title="Warenkorb">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+    </a>
+    <a href="kunden.html" class="nav-icon-btn nav-action-desktop" title="Konto">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+      </svg>
+    </a>
+  </div>
+  <button class="nav-hamburger" id="hamburgerBtn" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileClose">✕</button>
+  <a href="index.html" class="nav-logo" style="margin-bottom:16px;">
+    <svg width="40" height="40" viewBox="0 0 32 32" fill="none">
+      <path d="M16 4 C16 4, 28 8, 28 20 C28 26, 22 30, 16 30 C10 30, 4 26, 4 20 C4 8, 16 4, 16 4Z" fill="#2d4a2d"/>
+      <path d="M16 28 L16 10" stroke="#c8d8c0" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M16 22 C16 22, 12 20, 9 17" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
+      <path d="M16 22 C16 22, 20 20, 23 17" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
+    </svg>
+    <span class="nav-logo-text">Growease</span>
+  </a>
+  <a href="index.html">Home</a>
+  <a href="produkte.html">Produkte</a>
+  <a href="dienstleistungen.html">Dienstleistungen</a>
+  <a href="quiz.html">Quiz</a>
+  <a href="bestellungen.html">Bestellungen</a>
+  <a href="kunden.html">Kunden</a>
+</div>
+
 <section class="quiz-hero">
   <div class="quiz-intro">
     <h1>Wissen Sie, was Ihre Pflanzen brauchen?</h1>
     <p>Beantworte drei kurze Fragen und erfahre, welche Produkte am besten zu dir passen – und gewinne attraktive Preise!</p>
   </div>
-
   <div class="quiz-card">
     <div class="quiz-progress" id="quizProgress">Frage 1/3</div>
-    <div class="quiz-question" id="quizQuestion">Wie viel Erfahrung haben Sie mit Gärtnern?</div>
+    <div class="quiz-question" id="quizQuestion"></div>
     <div class="quiz-options" id="quizOptions"></div>
     <div class="quiz-dots" id="quizDots"></div>
     <div id="quizResult" style="display:none;text-align:center;padding-top:16px;">
@@ -28,7 +85,6 @@
   </div>
 </section>
 
-<!-- ── FAQ ── -->
 <section class="faq-section">
   <h2 class="section-title">Häufige Fragen</h2>
   <div class="faq-list" id="faqList"></div>
@@ -46,57 +102,35 @@
 
 <script src="assets/js/nav.js"></script>
 <script>
-// ── QUIZ LOGIC ──
-const questions = [
-  {
-    q: 'Wie viel Erfahrung haben Sie mit Gärtnern?',
-    options: ['Anfänger', 'Hobbyist', 'Profi']
-  },
-  {
-    q: 'Welche Art von Pflanzen interessiert Sie am meisten?',
-    options: ['Gemüse', 'Kräuter', 'Blumen', 'Zimmerpflanzen']
-  },
-  {
-    q: 'Wie groß ist Ihr Garten / Balkon?',
-    options: ['Kein Außenbereich', 'Kleiner Balkon', 'Garten']
-  }
+var questions = [
+  {q:'Wie viel Erfahrung haben Sie mit Gärtnern?', options:['Anfänger','Hobbyist','Profi']},
+  {q:'Welche Art von Pflanzen interessiert Sie am meisten?', options:['Gemüse','Kräuter','Blumen','Zimmerpflanzen']},
+  {q:'Wie groß ist Ihr Garten / Balkon?', options:['Kein Außenbereich','Kleiner Balkon','Garten']}
 ];
-
-let currentQ = 0;
-const answers = [];
+var currentQ = 0;
 
 function renderQuiz() {
-  const q = questions[currentQ];
-  document.getElementById('quizProgress').textContent = `Frage ${currentQ + 1}/${questions.length}`;
+  var q = questions[currentQ];
+  document.getElementById('quizProgress').textContent = 'Frage ' + (currentQ+1) + '/' + questions.length;
   document.getElementById('quizQuestion').textContent = q.q;
-
-  const opts = document.getElementById('quizOptions');
-  opts.innerHTML = q.options.map((o, i) => `
-    <button class="quiz-option" onclick="selectOption(${i}, '${o.replace(/'/g,"\\'")}')"> ${o} </button>
-  `).join('');
-
-  // Dots
-  const dots = document.getElementById('quizDots');
-  dots.innerHTML = questions.map((_, i) =>
-    `<button class="hero-dot ${i === currentQ ? 'active' : ''}" style="cursor:default;"></button>`
-  ).join('');
+  document.getElementById('quizOptions').innerHTML = q.options.map(function(o, i) {
+    return '<button class="quiz-option" onclick="selectOption(' + i + ')">' + o + '</button>';
+  }).join('');
+  document.getElementById('quizDots').innerHTML = questions.map(function(_, i) {
+    return '<span class="hero-dot' + (i===currentQ?' active':'') + '" style="cursor:default;"></span>';
+  }).join('');
 }
 
-function selectOption(idx, value) {
-  document.querySelectorAll('.quiz-option').forEach(b => b.classList.remove('selected'));
-  document.querySelectorAll('.quiz-option')[idx].classList.add('selected');
-  answers[currentQ] = value;
-
-  setTimeout(() => {
+function selectOption(idx) {
+  document.querySelectorAll('.quiz-option').forEach(function(b,i){ b.classList.toggle('selected', i===idx); });
+  setTimeout(function() {
     if (currentQ < questions.length - 1) {
       currentQ++;
       renderQuiz();
     } else {
-      // Show result
-      document.getElementById('quizProgress').style.display = 'none';
-      document.getElementById('quizQuestion').style.display = 'none';
-      document.getElementById('quizOptions').style.display = 'none';
-      document.getElementById('quizDots').style.display = 'none';
+      ['quizProgress','quizQuestion','quizOptions','quizDots'].forEach(function(id){
+        document.getElementById(id).style.display = 'none';
+      });
       document.getElementById('quizResult').style.display = 'block';
     }
   }, 400);
@@ -104,27 +138,20 @@ function selectOption(idx, value) {
 
 renderQuiz();
 
-// ── FAQ ──
-const faqs = [
-  { q: 'Wie nehme ich am Gewinnspiel teil?', a: 'Fülle das Quiz komplett aus. Danach bist du automatisch dabei. Die Gewinner werden per E-Mail benachrichtigt.' },
-  { q: 'Wie oft kann ich am Quiz teilnehmen?', a: 'Du kannst einmal pro Woche teilnehmen. Mehrfachanmeldungen mit der gleichen E-Mail-Adresse werden nicht berücksichtigt.' },
-  { q: 'Wann werden die Gewinner bekannt gegeben?', a: 'Die Ziehung erfolgt jeweils am ersten Montag des Monats. Alle Gewinner werden per E-Mail informiert.' },
+var faqs = [
+  {q:'Wie nehme ich am Gewinnspiel teil?', a:'Fülle das Quiz komplett aus. Danach bist du automatisch dabei. Die Gewinner werden per E-Mail benachrichtigt.'},
+  {q:'Wie oft kann ich am Quiz teilnehmen?', a:'Du kannst einmal pro Woche teilnehmen. Mehrfachanmeldungen mit der gleichen E-Mail werden nicht berücksichtigt.'},
+  {q:'Wann werden die Gewinner bekannt gegeben?', a:'Die Ziehung erfolgt jeweils am ersten Montag des Monats. Alle Gewinner werden per E-Mail informiert.'},
 ];
 
-const faqList = document.getElementById('faqList');
-faqList.innerHTML = faqs.map((f, i) => `
-  <div class="faq-item" id="faq${i}">
-    <button class="faq-q" onclick="toggleFaq(${i})">
-      ${f.q}
-      <span class="faq-icon">+</span>
-    </button>
-    <div class="faq-answer">${f.a}</div>
-  </div>
-`).join('');
+document.getElementById('faqList').innerHTML = faqs.map(function(f, i) {
+  return '<div class="faq-item" id="faq' + i + '">' +
+    '<button class="faq-q" onclick="toggleFaq(' + i + ')">' + f.q + '<span class="faq-icon">+</span></button>' +
+    '<div class="faq-answer">' + f.a + '</div></div>';
+}).join('');
 
 function toggleFaq(i) {
-  const item = document.getElementById('faq' + i);
-  item.classList.toggle('open');
+  document.getElementById('faq' + i).classList.toggle('open');
 }
 </script>
 </body>

@@ -1,335 +1,229 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Growease – Startseite</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Navigation is injected by nav.js -->
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Growease – Startseite</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
 
-    <!-- ── HERO SLIDER ── -->
-    <section class="hero">
-      <div class="hero-slides" id="heroSlides">
-        <div class="hero-slide">
-          <div class="hero-content">
-            <h1>Natürlich wachsen mit Growease</h1>
-            <p>
-              Entdecke unsere Produkte und Dienstleistungen rund ums nachhaltige
-              Gärtnern.
-            </p>
-            <a href="produkte.html" class="btn btn-primary">Jetzt shoppen →</a>
-          </div>
-          <div class="hero-image img-container" style="min-height: 320px">
-            <!-- Replace src with your image. Any size works – it will cover the container. -->
-            <img
-              src="assets/images/hero1.jpg"
-              alt="Hero Bild 1"
-              onerror="this.style.display = 'none'"
-            />
-            <div
-              class="placeholder-img"
-              style="position: relative; width: 100%; height: 320px"
-            >
-              🌿 Ihr Bild hier (assets/images/hero1.jpg)
-            </div>
-          </div>
-        </div>
+<!-- PROMO BANNER -->
+<div class="promo-banner">
+  <a href="quiz.html">Quiz ausfüllen</a> und gewinnen 🌱
+</div>
 
-        <div class="hero-slide">
-          <div class="hero-content">
-            <h1>Grüne Vielfalt für jeden Garten</h1>
-            <p>
-              Hochwertige Pflanzen, Erde und Zubehör – direkt zu Ihnen nach
-              Hause geliefert.
-            </p>
-            <a href="produkte.html" class="btn btn-primary"
-              >Sortiment ansehen →</a
-            >
-          </div>
-          <div class="hero-image img-container" style="min-height: 320px">
-            <img
-              src="assets/images/hero2.jpg"
-              alt="Hero Bild 2"
-              onerror="this.style.display = 'none'"
-            />
-            <div
-              class="placeholder-img"
-              style="position: relative; width: 100%; height: 320px"
-            >
-              🌱 Ihr Bild hier (assets/images/hero2.jpg)
-            </div>
-          </div>
-        </div>
+<!-- NAVIGATION -->
+<nav class="main-nav">
+  <a href="index.html" class="nav-logo">
+    <svg class="nav-logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M16 4 C16 4, 28 8, 28 20 C28 26, 22 30, 16 30 C10 30, 4 26, 4 20 C4 8, 16 4, 16 4Z" fill="#2d4a2d"/>
+      <path d="M16 28 L16 10" stroke="#c8d8c0" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M16 22 C16 22, 12 20, 9 17" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
+      <path d="M16 22 C16 22, 20 20, 23 17" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
+      <path d="M16 17 C16 17, 12 15, 10 12" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
+      <path d="M16 17 C16 17, 20 15, 22 12" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
+    </svg>
+    <span class="nav-logo-text">Growease</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="produkte.html">Produkte</a></li>
+    <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="bestellungen.html">Bestellungen</a></li>
+    <li><a href="kunden.html">Kunden</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="bestellungen.html" class="nav-icon-btn" title="Warenkorb">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+    </a>
+    <a href="kunden.html" class="nav-icon-btn nav-action-desktop" title="Konto">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+      </svg>
+    </a>
+  </div>
+  <button class="nav-hamburger" id="hamburgerBtn" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-        <div class="hero-slide">
-          <div class="hero-content">
-            <h1>Quiz ausfüllen und Preis gewinnen</h1>
-            <p>
-              Beantworte drei kurze Fragen und gewinne attraktive Preise aus
-              unserem Shop.
-            </p>
-            <a href="quiz.html" class="btn btn-primary">Quiz starten →</a>
-          </div>
-          <div class="hero-image img-container" style="min-height: 320px">
-            <img
-              src="assets/images/hero3.jpg"
-              alt="Hero Bild 3"
-              onerror="this.style.display = 'none'"
-            />
-            <div
-              class="placeholder-img"
-              style="position: relative; width: 100%; height: 320px"
-            >
-              🎁 Ihr Bild hier (assets/images/hero3.jpg)
-            </div>
-          </div>
-        </div>
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileClose" aria-label="Menü schliessen">✕</button>
+  <a href="index.html" class="nav-logo" style="margin-bottom:16px;">
+    <svg width="40" height="40" viewBox="0 0 32 32" fill="none">
+      <path d="M16 4 C16 4, 28 8, 28 20 C28 26, 22 30, 16 30 C10 30, 4 26, 4 20 C4 8, 16 4, 16 4Z" fill="#2d4a2d"/>
+      <path d="M16 28 L16 10" stroke="#c8d8c0" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M16 22 C16 22, 12 20, 9 17" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
+      <path d="M16 22 C16 22, 20 20, 23 17" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
+    </svg>
+    <span class="nav-logo-text">Growease</span>
+  </a>
+  <a href="index.html">Home</a>
+  <a href="produkte.html">Produkte</a>
+  <a href="dienstleistungen.html">Dienstleistungen</a>
+  <a href="quiz.html">Quiz</a>
+  <a href="bestellungen.html">Bestellungen</a>
+  <a href="kunden.html">Kunden</a>
+</div>
+
+<!-- HERO SLIDER -->
+<section class="hero">
+  <div class="hero-slides" id="heroSlides">
+
+    <div class="hero-slide">
+      <div class="hero-image img-container">
+        <img src="assets/images/hero1.jpg" alt="Natürlich wachsen" onerror="this.style.display='none'"/>
+        <div class="placeholder-img">🌿 assets/images/hero1.jpg</div>
       </div>
-      <button class="hero-arrow left" id="heroPrev">‹</button>
-      <button class="hero-arrow right" id="heroNext">›</button>
-      <div class="hero-dots" id="heroDots"></div>
-    </section>
-
-    <!-- ── FEATURES SECTION ── -->
-    <section class="features-section">
-      <h2 class="section-title" id="featTitle">Unsere Stärken</h2>
-      <div class="features-layout" id="featureGrid">
-        <!-- Top-left, Bottom-left loaded from DB or static -->
-        <div class="feature-item">
-          <div class="feature-icon">🌿</div>
-          <div>
-            <h4>Nachhaltig</h4>
-            <p>
-              Alle Produkte kommen aus nachhaltiger Produktion und schonen die
-              Umwelt.
-            </p>
-          </div>
-        </div>
-
-        <!-- Center image -->
-        <div class="feature-center-img img-container">
-          <img
-            src="assets/images/feature-center.jpg"
-            alt="Feature Bild"
-            onerror="this.style.display = 'none'"
-          />
-          <div class="placeholder-img" style="width: 100%; height: 360px">
-            🖼 assets/images/feature-center.jpg
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon">🚚</div>
-          <div>
-            <h4>Schnelle Lieferung</h4>
-            <p>Bestellungen bis 12 Uhr werden noch am selben Tag versandt.</p>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon">💬</div>
-          <div>
-            <h4>Persönliche Beratung</h4>
-            <p>Unser Experten-Team steht Ihnen bei jeder Frage zur Seite.</p>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon">🏅</div>
-          <div>
-            <h4>Qualität garantiert</h4>
-            <p>
-              Geprüfte Qualität bei jedem einzelnen Produkt – mit
-              Zufriedenheitsgarantie.
-            </p>
-          </div>
-        </div>
+      <div class="hero-content">
+        <h1>Natürlich wachsen mit Growease</h1>
+        <p>Entdecke unsere Produkte und Dienstleistungen rund ums nachhaltige Gärtnern.</p>
+        <a href="produkte.html" class="btn btn-primary">Jetzt shoppen →</a>
       </div>
-    </section>
+    </div>
 
-    <!-- ── FEATURED PRODUCTS ── -->
-    <section class="products-section">
-      <h2 class="section-title">Unsere Produkte</h2>
-      <div class="products-grid" id="homeProductGrid">
-        <!-- Skeleton loaders -->
-        <div class="product-card">
-          <div
-            class="product-img loading-placeholder"
-            style="height: 200px"
-          ></div>
-          <div
-            class="loading-placeholder"
-            style="height: 16px; width: 60%; border-radius: 4px"
-          ></div>
-          <div
-            class="loading-placeholder"
-            style="height: 12px; width: 80%; border-radius: 4px"
-          ></div>
-        </div>
-        <div class="product-card">
-          <div
-            class="product-img loading-placeholder"
-            style="height: 200px"
-          ></div>
-          <div
-            class="loading-placeholder"
-            style="height: 16px; width: 60%; border-radius: 4px"
-          ></div>
-          <div
-            class="loading-placeholder"
-            style="height: 12px; width: 80%; border-radius: 4px"
-          ></div>
-        </div>
-        <div class="product-card">
-          <div
-            class="product-img loading-placeholder"
-            style="height: 200px"
-          ></div>
-          <div
-            class="loading-placeholder"
-            style="height: 16px; width: 60%; border-radius: 4px"
-          ></div>
-          <div
-            class="loading-placeholder"
-            style="height: 12px; width: 80%; border-radius: 4px"
-          ></div>
-        </div>
+    <div class="hero-slide">
+      <div class="hero-image img-container">
+        <img src="assets/images/hero2.jpg" alt="Grüne Vielfalt" onerror="this.style.display='none'"/>
+        <div class="placeholder-img">🌱 assets/images/hero2.jpg</div>
       </div>
-      <div style="text-align: center; margin-top: 40px">
-        <a href="produkte.html" class="btn btn-outline"
-          >Alle Produkte ansehen →</a
-        >
+      <div class="hero-content">
+        <h1>Grüne Vielfalt für jeden Garten</h1>
+        <p>Hochwertige Pflanzen, Erde und Zubehör – direkt zu Ihnen nach Hause geliefert.</p>
+        <a href="produkte.html" class="btn btn-primary">Sortiment ansehen →</a>
       </div>
-    </section>
+    </div>
 
-    <!-- ── FOOTER ── -->
-    <footer>
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Growease</h4>
-          <ul>
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="produkte.html">Produkte</a></li>
-            <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Service</h4>
-          <ul>
-            <li><a href="bestellungen.html">Bestellungen</a></li>
-            <li><a href="kunden.html">Mein Konto</a></li>
-            <li><a href="quiz.html">Quiz & Aktionen</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Information</h4>
-          <ul>
-            <li><a href="#">Über uns</a></li>
-            <li><a href="#">Datenschutz</a></li>
-            <li><a href="#">AGB</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Folge uns</h4>
-          <div class="footer-social">
-            <div class="social-dot" title="Instagram">in</div>
-            <div class="social-dot" title="Facebook">fb</div>
-            <div class="social-dot" title="TikTok">tk</div>
-            <div class="social-dot" title="Pinterest">pt</div>
-          </div>
-        </div>
+    <div class="hero-slide">
+      <div class="hero-image img-container">
+        <img src="assets/images/hero3.jpg" alt="Quiz und Gewinnspiel" onerror="this.style.display='none'"/>
+        <div class="placeholder-img">🎁 assets/images/hero3.jpg</div>
       </div>
-      <div class="footer-bottom">© 2025 Growease. Alle Rechte vorbehalten.</div>
-    </footer>
-
-    <script src="assets/js/nav.js"></script>
-    <script>
-      const API_BASE = "http://localhost:8081/api.php/records";
-
-      // ── HERO SLIDER ──
-      const slides = document.getElementById("heroSlides");
-      const dotsContainer = document.getElementById("heroDots");
-      let current = 0;
-      const total = document.querySelectorAll(".hero-slide").length;
-
-      // Build dots
-      for (let i = 0; i < total; i++) {
-        const d = document.createElement("button");
-        d.className = "hero-dot" + (i === 0 ? " active" : "");
-        d.addEventListener("click", () => goTo(i));
-        dotsContainer.appendChild(d);
-      }
-
-      function goTo(n) {
-        current = (n + total) % total;
-        slides.style.transform = `translateX(-${current * 100}%)`;
-        document
-          .querySelectorAll(".hero-dot")
-          .forEach((d, i) => d.classList.toggle("active", i === current));
-      }
-
-      document
-        .getElementById("heroPrev")
-        .addEventListener("click", () => goTo(current - 1));
-      document
-        .getElementById("heroNext")
-        .addEventListener("click", () => goTo(current + 1));
-      setInterval(() => goTo(current + 1), 5000);
-
-      // ── LOAD PRODUCTS ──
-      async function loadHomeProducts() {
-        const grid = document.getElementById("homeProductGrid");
-        try {
-          const res = await fetch(`${API_BASE}/Produkt?limit=3`);
-          if (!res.ok) throw new Error("API error");
-          const data = await res.json();
-          const records = data.records || [];
-
-          if (records.length === 0) {
-            grid.innerHTML =
-              '<p style="color:var(--text-muted);grid-column:1/-1;text-align:center;">Keine Produkte gefunden.</p>';
-            return;
-          }
-
-          grid.innerHTML = records
-            .map(
-              (p) => `
-      <div class="product-card" onclick="location.href='produkte.html'">
-        <div class="product-img img-container" style="height:200px;">
-          ${p.Bild ? `<img src="${p.Bild}" alt="${p.Name || "Produkt"}" onerror="this.style.display='none'"/>` : ""}
-          <div class="placeholder-img" style="width:100%;height:200px;${p.Bild ? "display:none" : ""}">🌿</div>
-        </div>
-        <h3>${p.Name || p.Bezeichnung || "Produkt"}</h3>
-        <p>${p.Beschreibung || ""}</p>
-        <a href="produkte.html" class="btn btn-outline">In den Warenkorb →</a>
+      <div class="hero-content">
+        <h1>Quiz ausfüllen und Preis gewinnen</h1>
+        <p>Beantworte drei kurze Fragen und gewinne attraktive Preise aus unserem Shop.</p>
+        <a href="quiz.html" class="btn btn-primary">Quiz starten →</a>
       </div>
-    `,
-            )
-            .join("");
-        } catch (e) {
-          // Show static placeholder cards if API is unreachable
-          grid.innerHTML = [
-            "Pflanzerde Premium",
-            "Bio-Dünger Set",
-            "Kräuter-Starter Kit",
-          ]
-            .map(
-              (name) => `
-      <div class="product-card">
-        <div class="product-img" style="height:200px;background:var(--green-pale);display:flex;align-items:center;justify-content:center;color:var(--green-mid);">🌿</div>
-        <h3>${name}</h3>
-        <p>Hochwertiges Produkt aus unserem Sortiment.</p>
-        <a href="produkte.html" class="btn btn-outline">Ansehen →</a>
-      </div>
-    `,
-            )
-            .join("");
-        }
-      }
+    </div>
 
-      loadHomeProducts();
-    </script>
-  </body>
+  </div>
+  <button class="hero-arrow left" id="heroPrev" aria-label="Vorheriges Bild">‹</button>
+  <button class="hero-arrow right" id="heroNext" aria-label="Nächstes Bild">›</button>
+  <div class="hero-dots" id="heroDots"></div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section">
+  <h2 class="section-title">Unsere Stärken</h2>
+  <div class="features-layout">
+    <div class="feature-item">
+      <div class="feature-icon">🌿</div>
+      <div><h4>Nachhaltig</h4><p>Alle Produkte kommen aus nachhaltiger Produktion und schonen die Umwelt.</p></div>
+    </div>
+    <div class="feature-center-img img-container">
+      <img src="assets/images/feature-center.jpg" alt="Unsere Stärken" onerror="this.style.display='none'"/>
+      <div class="placeholder-img">🖼 assets/images/feature-center.jpg</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🚚</div>
+      <div><h4>Schnelle Lieferung</h4><p>Bestellungen bis 12 Uhr werden noch am selben Tag versandt.</p></div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">💬</div>
+      <div><h4>Persönliche Beratung</h4><p>Unser Experten-Team steht Ihnen bei jeder Frage zur Seite.</p></div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🏅</div>
+      <div><h4>Qualität garantiert</h4><p>Geprüfte Qualität bei jedem einzelnen Produkt – mit Zufriedenheitsgarantie.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="products-section">
+  <h2 class="section-title">Unsere Produkte</h2>
+  <div class="products-grid" id="homeProductGrid">
+    <div class="product-card"><div class="product-img loading-placeholder" style="height:200px;"></div><div class="loading-placeholder" style="height:16px;width:60%;border-radius:4px;margin-top:8px;"></div></div>
+    <div class="product-card"><div class="product-img loading-placeholder" style="height:200px;"></div><div class="loading-placeholder" style="height:16px;width:60%;border-radius:4px;margin-top:8px;"></div></div>
+    <div class="product-card"><div class="product-img loading-placeholder" style="height:200px;"></div><div class="loading-placeholder" style="height:16px;width:60%;border-radius:4px;margin-top:8px;"></div></div>
+  </div>
+  <div style="text-align:center;margin-top:40px;">
+    <a href="produkte.html" class="btn btn-outline">Alle Produkte ansehen →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>Growease</h4><ul><li><a href="index.html">Startseite</a></li><li><a href="produkte.html">Produkte</a></li><li><a href="dienstleistungen.html">Dienstleistungen</a></li></ul></div>
+    <div class="footer-col"><h4>Service</h4><ul><li><a href="bestellungen.html">Bestellungen</a></li><li><a href="kunden.html">Mein Konto</a></li><li><a href="quiz.html">Quiz & Aktionen</a></li></ul></div>
+    <div class="footer-col"><h4>Information</h4><ul><li><a href="#">Über uns</a></li><li><a href="#">Datenschutz</a></li><li><a href="#">AGB</a></li></ul></div>
+    <div class="footer-col"><h4>Folge uns</h4><div class="footer-social"><div class="social-dot">in</div><div class="social-dot">fb</div><div class="social-dot">tk</div><div class="social-dot">pt</div></div></div>
+  </div>
+  <div class="footer-bottom">© 2025 Growease. Alle Rechte vorbehalten.</div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script>
+const API_BASE = "http://localhost:8081/api.php/records";
+
+// HERO SLIDER
+(function() {
+  var slides = document.getElementById('heroSlides');
+  var dotsContainer = document.getElementById('heroDots');
+  var current = 0;
+  var total = document.querySelectorAll('.hero-slide').length;
+  for (var i = 0; i < total; i++) {
+    var d = document.createElement('button');
+    d.className = 'hero-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Slide ' + (i+1));
+    (function(idx){ d.addEventListener('click', function(){ goTo(idx); }); })(i);
+    dotsContainer.appendChild(d);
+  }
+  function goTo(n) {
+    current = (n + total) % total;
+    slides.style.transform = 'translateX(-' + (current * 100) + '%)';
+    document.querySelectorAll('.hero-dot').forEach(function(d, i){ d.classList.toggle('active', i === current); });
+  }
+  document.getElementById('heroPrev').addEventListener('click', function(){ goTo(current - 1); });
+  document.getElementById('heroNext').addEventListener('click', function(){ goTo(current + 1); });
+  setInterval(function(){ goTo(current + 1); }, 5000);
+})();
+
+// LOAD PRODUCTS
+async function loadHomeProducts() {
+  var grid = document.getElementById('homeProductGrid');
+  try {
+    var res = await fetch(API_BASE + '/Produkt?limit=3');
+    if (!res.ok) throw new Error();
+    var data = await res.json();
+    var records = data.records || [];
+    if (!records.length) throw new Error();
+    grid.innerHTML = records.map(function(p) {
+      var name = p.Name || p.Bezeichnung || 'Produkt';
+      return '<div class="product-card" onclick="location.href=\'produkte.html\'">' +
+        '<div class="product-img img-container" style="height:200px;">' +
+        (p.Bild ? '<img src="' + p.Bild + '" alt="' + name + '" onerror="this.style.display=\'none\'">' : '') +
+        '<div class="placeholder-img" style="width:100%;height:200px;">🌿</div></div>' +
+        '<h3>' + name + '</h3>' +
+        '<p>' + (p.Beschreibung || '') + '</p>' +
+        '<a href="produkte.html" class="btn btn-outline">Ansehen →</a></div>';
+    }).join('');
+  } catch(e) {
+    grid.innerHTML = ['Pflanzerde Premium','Bio-Dünger Set','Kräuter-Starter Kit'].map(function(name) {
+      return '<div class="product-card"><div class="product-img" style="height:200px;display:flex;align-items:center;justify-content:center;color:var(--green-mid);">🌿</div>' +
+        '<h3>' + name + '</h3><p>Hochwertiges Produkt aus unserem Sortiment.</p>' +
+        '<a href="produkte.html" class="btn btn-outline">Ansehen →</a></div>';
+    }).join('');
+  }
+}
+loadHomeProducts();
+</script>
+</body>
 </html>

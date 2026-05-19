@@ -722,13 +722,3 @@ footer {
   .quiz-options { flex-direction: column; }
   .quiz-option { text-align: center; }
 }
-
-/* ── NAV ICON BUTTONS (links, not buttons) ── */
-.nav-icon-btn {
-  display: flex;
-  align-items: center;
-  color: var(--text-dark);
-  transition: color var(--transition);
-  text-decoration: none;
-}
-.nav-icon-btn:hover { color: var(--green-dark); }
