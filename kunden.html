@@ -1,139 +1,333 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Growease – Kunden</title>
-  <link rel="stylesheet" href="style.css"/>
-  <style>
-    .page-header{padding:48px 80px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
-    .page-header h1{font-family:var(--font-display);font-size:32px;}
-    .kunden-wrapper{padding:32px 80px 72px;}
-    @media(max-width:900px){.page-header{padding:32px 24px 0;}.kunden-wrapper{padding:24px 24px 48px;}}
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Growease – Kunden</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .page-header {
+        padding: 48px 80px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .page-header h1 {
+        font-family: var(--font-display);
+        font-size: 32px;
+      }
+      .kunden-wrapper {
+        padding: 32px 80px 72px;
+      }
+      @media (max-width: 900px) {
+        .page-header {
+          padding: 32px 24px 0;
+        }
+        .kunden-wrapper {
+          padding: 24px 24px 48px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="promo-banner">
+      <a href="quiz.html">Quiz ausfüllen</a> und gewinnen 🌱
+    </div>
 
-<div class="promo-banner"><a href="quiz.html">Quiz ausfüllen</a> und gewinnen 🌱</div>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-logo">
+        <svg
+          class="nav-logo-icon"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+        >
+          <path
+            d="M16 4 C16 4, 28 8, 28 20 C28 26, 22 30, 16 30 C10 30, 4 26, 4 20 C4 8, 16 4, 16 4Z"
+            fill="#2d4a2d"
+          />
+          <path
+            d="M16 28 L16 10"
+            stroke="#c8d8c0"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M16 22 C16 22, 12 20, 9 17"
+            stroke="#c8d8c0"
+            stroke-width="1"
+            stroke-linecap="round"
+          />
+          <path
+            d="M16 22 C16 22, 20 20, 23 17"
+            stroke="#c8d8c0"
+            stroke-width="1"
+            stroke-linecap="round"
+          />
+          <path
+            d="M16 17 C16 17, 12 15, 10 12"
+            stroke="#c8d8c0"
+            stroke-width="1"
+            stroke-linecap="round"
+          />
+          <path
+            d="M16 17 C16 17, 20 15, 22 12"
+            stroke="#c8d8c0"
+            stroke-width="1"
+            stroke-linecap="round"
+          />
+        </svg>
+        <span class="nav-logo-text">Growease</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produkte.html">Produkte</a></li>
+        <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="bestellungen.html">Bestellungen</a></li>
+        <li><a href="kunden.html" class="active">Kunden</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="bestellungen.html" class="nav-icon-btn" title="Warenkorb">
+          <svg
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            viewBox="0 0 24 24"
+          >
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 01-8 0" />
+          </svg>
+        </a>
+        <a
+          href="kunden.html"
+          class="nav-icon-btn nav-action-desktop"
+          title="Konto"
+        >
+          <svg
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            viewBox="0 0 24 24"
+          >
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        </a>
+      </div>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
 
-<nav class="main-nav">
-  <a href="index.html" class="nav-logo">
-    <svg class="nav-logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
-      <path d="M16 4 C16 4, 28 8, 28 20 C28 26, 22 30, 16 30 C10 30, 4 26, 4 20 C4 8, 16 4, 16 4Z" fill="#2d4a2d"/>
-      <path d="M16 28 L16 10" stroke="#c8d8c0" stroke-width="1.5" stroke-linecap="round"/>
-      <path d="M16 22 C16 22, 12 20, 9 17" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
-      <path d="M16 22 C16 22, 20 20, 23 17" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
-      <path d="M16 17 C16 17, 12 15, 10 12" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
-      <path d="M16 17 C16 17, 20 15, 22 12" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
-    </svg>
-    <span class="nav-logo-text">Growease</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="produkte.html">Produkte</a></li>
-    <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
-    <li><a href="quiz.html">Quiz</a></li>
-    <li><a href="bestellungen.html">Bestellungen</a></li>
-    <li><a href="kunden.html" class="active">Kunden</a></li>
-  </ul>
-  <div class="nav-actions">
-    <a href="bestellungen.html" class="nav-icon-btn" title="Warenkorb">
-      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/>
-        <path d="M16 10a4 4 0 01-8 0"/>
-      </svg>
-    </a>
-    <a href="kunden.html" class="nav-icon-btn nav-action-desktop" title="Konto">
-      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
-      </svg>
-    </a>
-  </div>
-  <button class="nav-hamburger" id="hamburgerBtn" aria-label="Menü öffnen">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-menu-close" id="mobileClose">✕</button>
+      <a href="index.html" class="nav-logo" style="margin-bottom: 16px">
+        <svg width="40" height="40" viewBox="0 0 32 32" fill="none">
+          <path
+            d="M16 4 C16 4, 28 8, 28 20 C28 26, 22 30, 16 30 C10 30, 4 26, 4 20 C4 8, 16 4, 16 4Z"
+            fill="#2d4a2d"
+          />
+          <path
+            d="M16 28 L16 10"
+            stroke="#c8d8c0"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M16 22 C16 22, 12 20, 9 17"
+            stroke="#c8d8c0"
+            stroke-width="1"
+            stroke-linecap="round"
+          />
+          <path
+            d="M16 22 C16 22, 20 20, 23 17"
+            stroke="#c8d8c0"
+            stroke-width="1"
+            stroke-linecap="round"
+          />
+        </svg>
+        <span class="nav-logo-text">Growease</span>
+      </a>
+      <a href="index.html">Home</a>
+      <a href="produkte.html">Produkte</a>
+      <a href="dienstleistungen.html">Dienstleistungen</a>
+      <!-- <li><a href="quiz.html">Quiz</a></li> -->
+      <!-- <li><a href="bestellungen.html">Bestellungen</a></li> -->
+      <!-- <li><a href="kunden.html">Kunden</a></li> -->
+    </div>
 
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-menu-close" id="mobileClose">✕</button>
-  <a href="index.html" class="nav-logo" style="margin-bottom:16px;">
-    <svg width="40" height="40" viewBox="0 0 32 32" fill="none">
-      <path d="M16 4 C16 4, 28 8, 28 20 C28 26, 22 30, 16 30 C10 30, 4 26, 4 20 C4 8, 16 4, 16 4Z" fill="#2d4a2d"/>
-      <path d="M16 28 L16 10" stroke="#c8d8c0" stroke-width="1.5" stroke-linecap="round"/>
-      <path d="M16 22 C16 22, 12 20, 9 17" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
-      <path d="M16 22 C16 22, 20 20, 23 17" stroke="#c8d8c0" stroke-width="1" stroke-linecap="round"/>
-    </svg>
-    <span class="nav-logo-text">Growease</span>
-  </a>
-  <a href="index.html">Home</a>
-  <a href="produkte.html">Produkte</a>
-  <a href="dienstleistungen.html">Dienstleistungen</a>
-  <a href="quiz.html">Quiz</a>
-  <a href="bestellungen.html">Bestellungen</a>
-  <a href="kunden.html">Kunden</a>
-</div>
+    <div class="page-header">
+      <h1>Kunden</h1>
+      <input
+        type="search"
+        class="search-bar"
+        id="kundenSearch"
+        placeholder="Kunden suchen…"
+        oninput="filterKunden()"
+      />
+    </div>
+    <div class="kunden-wrapper">
+      <div class="kunden-grid" id="kundenGrid">
+        <div
+          class="loading-placeholder"
+          style="height: 100px; border-radius: 8px"
+        ></div>
+        <div
+          class="loading-placeholder"
+          style="height: 100px; border-radius: 8px"
+        ></div>
+        <div
+          class="loading-placeholder"
+          style="height: 100px; border-radius: 8px"
+        ></div>
+      </div>
+    </div>
 
-<div class="page-header">
-  <h1>Kunden</h1>
-  <input type="search" class="search-bar" id="kundenSearch" placeholder="Kunden suchen…" oninput="filterKunden()"/>
-</div>
-<div class="kunden-wrapper">
-  <div class="kunden-grid" id="kundenGrid">
-    <div class="loading-placeholder" style="height:100px;border-radius:8px;"></div>
-    <div class="loading-placeholder" style="height:100px;border-radius:8px;"></div>
-    <div class="loading-placeholder" style="height:100px;border-radius:8px;"></div>
-  </div>
-</div>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Growease</h4>
+          <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="produkte.html">Produkte</a></li>
+            <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Service</h4>
+          <ul>
+            <li><a href="bestellungen.html">Bestellungen</a></li>
+            <li><a href="kunden.html">Mein Konto</a></li>
+            <li><a href="quiz.html">Quiz & Aktionen</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#">Über uns</a></li>
+            <li><a href="#">Datenschutz</a></li>
+            <li><a href="#">AGB</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Folge uns</h4>
+          <div class="footer-social">
+            <div class="social-dot">in</div>
+            <div class="social-dot">fb</div>
+            <div class="social-dot">tk</div>
+            <div class="social-dot">pt</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 Growease. Alle Rechte vorbehalten.</div>
+    </footer>
 
-<footer>
-  <div class="footer-grid">
-    <div class="footer-col"><h4>Growease</h4><ul><li><a href="index.html">Startseite</a></li><li><a href="produkte.html">Produkte</a></li></ul></div>
-    <div class="footer-col"><h4>Service</h4><ul><li><a href="bestellungen.html">Bestellungen</a></li><li><a href="kunden.html">Kunden</a></li></ul></div>
-    <div class="footer-col"><h4>Info</h4><ul><li><a href="#">Über uns</a></li><li><a href="#">AGB</a></li></ul></div>
-    <div class="footer-col"><h4>Folge uns</h4><div class="footer-social"><div class="social-dot">in</div><div class="social-dot">fb</div><div class="social-dot">tk</div><div class="social-dot">pt</div></div></div>
-  </div>
-  <div class="footer-bottom">© 2025 Growease. Alle Rechte vorbehalten.</div>
-</footer>
-
-<script src="assets/js/nav.js"></script>
-<script>
-var allKunden = [];
-async function loadKunden() {
-  try {
-    var res = await fetch('http://localhost:8081/api.php/records/Kunde?limit=50');
-    if (!res.ok) throw new Error();
-    var data = await res.json();
-    allKunden = data.records || [];
-    if (!allKunden.length) throw new Error();
-  } catch(e) {
-    allKunden = [
-      {id:1,Vorname:'Anna',Nachname:'Müller',Email:'anna.mueller@example.com',Ort:'Zürich'},
-      {id:2,Vorname:'Beat',Nachname:'Keller',Email:'beat.keller@example.com',Ort:'Bern'},
-      {id:3,Vorname:'Carmen',Nachname:'Huber',Email:'carmen.huber@example.com',Ort:'Luzern'},
-      {id:4,Vorname:'David',Nachname:'Schneider',Email:'david.schneider@example.com',Ort:'Basel'},
-      {id:5,Vorname:'Eva',Nachname:'Fischer',Email:'eva.fischer@example.com',Ort:'Winterthur'},
-      {id:6,Vorname:'Franz',Nachname:'Weber',Email:'franz.weber@example.com',Ort:'St. Gallen'},
-    ];
-  }
-  renderKunden(allKunden);
-}
-function filterKunden() {
-  var q = document.getElementById('kundenSearch').value.toLowerCase();
-  renderKunden(allKunden.filter(function(k) {
-    return (k.Vorname+' '+k.Nachname).toLowerCase().includes(q) || (k.Email||'').toLowerCase().includes(q) || (k.Ort||'').toLowerCase().includes(q);
-  }));
-}
-function renderKunden(list) {
-  var grid = document.getElementById('kundenGrid');
-  if (!list.length) { grid.innerHTML = '<p style="color:var(--text-muted);grid-column:1/-1;text-align:center;padding:48px 0;">Keine Kunden gefunden.</p>'; return; }
-  grid.innerHTML = list.map(function(k) {
-    return '<div class="kunden-card"><h3>' + (k.Vorname||'') + ' ' + (k.Nachname||k.Name||'') + '</h3>' +
-      (k.Email ? '<p>✉ ' + k.Email + '</p>' : '') +
-      (k.Telefon ? '<p>📞 ' + k.Telefon + '</p>' : '') +
-      (k.Ort ? '<p>📍 ' + k.Ort + '</p>' : '') + '</div>';
-  }).join('');
-}
-loadKunden();
-</script>
-</body>
+    <script src="assets/js/nav.js"></script>
+    <script>
+      var allKunden = [];
+      async function loadKunden() {
+        try {
+          var res = await fetch(
+            "http://localhost:8081/api.php/records/Kunde?limit=50",
+          );
+          if (!res.ok) throw new Error();
+          var data = await res.json();
+          allKunden = data.records || [];
+          if (!allKunden.length) throw new Error();
+        } catch (e) {
+          allKunden = [
+            {
+              id: 1,
+              Vorname: "Anna",
+              Nachname: "Müller",
+              Email: "anna.mueller@example.com",
+              Ort: "Zürich",
+            },
+            {
+              id: 2,
+              Vorname: "Beat",
+              Nachname: "Keller",
+              Email: "beat.keller@example.com",
+              Ort: "Bern",
+            },
+            {
+              id: 3,
+              Vorname: "Carmen",
+              Nachname: "Huber",
+              Email: "carmen.huber@example.com",
+              Ort: "Luzern",
+            },
+            {
+              id: 4,
+              Vorname: "David",
+              Nachname: "Schneider",
+              Email: "david.schneider@example.com",
+              Ort: "Basel",
+            },
+            {
+              id: 5,
+              Vorname: "Eva",
+              Nachname: "Fischer",
+              Email: "eva.fischer@example.com",
+              Ort: "Winterthur",
+            },
+            {
+              id: 6,
+              Vorname: "Franz",
+              Nachname: "Weber",
+              Email: "franz.weber@example.com",
+              Ort: "St. Gallen",
+            },
+          ];
+        }
+        renderKunden(allKunden);
+      }
+      function filterKunden() {
+        var q = document.getElementById("kundenSearch").value.toLowerCase();
+        renderKunden(
+          allKunden.filter(function (k) {
+            return (
+              (k.Vorname + " " + k.Nachname).toLowerCase().includes(q) ||
+              (k.Email || "").toLowerCase().includes(q) ||
+              (k.Ort || "").toLowerCase().includes(q)
+            );
+          }),
+        );
+      }
+      function renderKunden(list) {
+        var grid = document.getElementById("kundenGrid");
+        if (!list.length) {
+          grid.innerHTML =
+            '<p style="color:var(--text-muted);grid-column:1/-1;text-align:center;padding:48px 0;">Keine Kunden gefunden.</p>';
+          return;
+        }
+        grid.innerHTML = list
+          .map(function (k) {
+            return (
+              '<div class="kunden-card"><h3>' +
+              (k.Vorname || "") +
+              " " +
+              (k.Nachname || k.Name || "") +
+              "</h3>" +
+              (k.Email ? "<p>✉ " + k.Email + "</p>" : "") +
+              (k.Telefon ? "<p>📞 " + k.Telefon + "</p>" : "") +
+              (k.Ort ? "<p>📍 " + k.Ort + "</p>" : "") +
+              "</div>"
+            );
+          })
+          .join("");
+      }
+      loadKunden();
+    </script>
+  </body>
 </html>
