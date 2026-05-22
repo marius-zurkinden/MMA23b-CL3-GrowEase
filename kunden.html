@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Growease – Mein Konto</title>
+    <title>Growease – Konto Anlegen</title>
     <link rel="stylesheet" href="common.css" />
     <style>
       .page-header {
@@ -247,11 +247,10 @@
     </div>
 
     <div class="page-header">
-      <h1>Mein Konto</h1>
+      <h1>Konto anlegen</h1>
       <p>
-        Gib deine E-Mail-Adresse und Telefonnummer ein. Danach wird unten ein
-        Platzhalter-Konto angezeigt. Später kann dieser Bereich mit der
-        Datenbank verbunden werden.
+        Erstelle ein persönliches Konto, um Bestellungen, Favoriten und
+        Einstellungen zu verwalten.
       </p>
     </div>
 
@@ -264,28 +263,75 @@
 
         <div class="konto-form-grid">
           <div class="konto-field">
-            <label for="kontoEmail">E-Mail-Adresse</label>
+            <label for="vorname">Vorname</label>
+            <input id="vorname" name="vorname" type="text" placeholder="Max" />
+          </div>
+          <div class="konto-field">
+            <label for="nachname">Nachname</label>
             <input
-              type="email"
-              id="kontoEmail"
-              name="email"
-              placeholder="dein.name@mail.ch"
-              required
+              id="nachname"
+              name="nachname"
+              type="text"
+              placeholder="Mustermann"
             />
           </div>
           <div class="konto-field">
-            <label for="kontoTelefon">Telefonnummer</label>
+            <label for="benutzername">Benutzername</label>
             <input
-              type="tel"
-              id="kontoTelefon"
-              name="telefon"
-              placeholder="079 123 45 67"
-              required
+              id="benutzername"
+              name="benutzername"
+              type="text"
+              placeholder="dein_name"
             />
+          </div>
+          <div class="konto-field">
+            <label for="email">E-Mail-Adresse</label>
+            <input
+              id="email"
+              name="email"
+              type="text"
+              placeholder="max@beispiel.ch"
+            />
+          </div>
+          <div class="konto-field">
+            <label for="passwort">Passwort</label>
+            <input
+              id="passwort"
+              name="passwort"
+              type="password"
+              placeholder="Mind. 8 Zeichen"
+            />
+          </div>
+          <div class="konto-field">
+            <label for="passwortWiederholen">Passwort wiederholen</label>
+            <input
+              id="passwortWiederholen"
+              name="passwortWiederholen"
+              type="password"
+              placeholder="Passwort bestätigen"
+            />
+          </div>
+          <div class="konto-field">
+            <label for="passwortWiederholen">Passwort wiederholen</label>
+            <input
+              id="passwortWiederholen"
+              name="passwortWiederholen"
+              type="password"
+              placeholder="Passwort bestätigen"
+            />
+          </div>
+          <div class="konto-field">
+            <label for="hinweis">Kurzer Hinweis</label>
+            <textarea
+              id="hinweis"
+              name="hinweis"
+              rows="5"
+              placeholder="Optional: Was möchtest du uns noch mitteilen?"
+            ></textarea>
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Konto anzeigen →</button>
+        <button type="submit" class="btn btn-primary">Konto anlegen →</button>
       </form>
 
       <div class="konto-result-card" id="kontoResult">
