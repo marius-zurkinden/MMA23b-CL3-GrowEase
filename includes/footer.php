@@ -33,5 +33,10 @@
     </footer>
 
     <script src="assets/js/common.js"></script>
+    <?php if (!empty($extraJs)) { ?>
+        <?php foreach ($extraJs as $jsFile) { ?>
+            <script src="<?= htmlspecialchars($jsFile) ?>"></script>
+        <?php } ?>
+    <?php } ?>
 </body>
 </html>

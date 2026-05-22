@@ -13,6 +13,11 @@ if (!isset($activePage)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($pageTitle) ?></title>
     <link rel="stylesheet" href="assets/css/common.css">
+    <?php if (!empty($extraCss)) { ?>
+        <?php foreach ($extraCss as $cssFile) { ?>
+            <link rel="stylesheet" href="<?= htmlspecialchars($cssFile) ?>">
+        <?php } ?>
+    <?php } ?>
 </head>
 <body>
     <div class="game-bar">
