@@ -346,21 +346,26 @@
           </div>
         </div>
       </div>
-      <div class="footer-bottom">Das ist ein Schulprojekt und keine reale Website. Mitglieder: Alexandra, Leandra, Marius</div>
+      <div class="footer-bottom">
+        Das ist ein Schulprojekt und keine reale Website. Mitglieder: Alexandra,
+        Leandra, Marius
+      </div>
     </footer>
 
     <script src="common.js"></script>
     <script>
-      document.getElementById("kontoForm").addEventListener("submit", function (e) {
-        e.preventDefault();
+      document
+        .getElementById("kontoForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
 
-        var email = document.getElementById("kontoEmail").value.trim();
-        var telefon = document.getElementById("kontoTelefon").value.trim();
+          var email = document.getElementById("kontoEmail").value.trim();
+          var telefon = document.getElementById("kontoTelefon").value.trim();
 
-        document.getElementById("resultEmail").textContent = email;
-        document.getElementById("resultTelefon").textContent = telefon;
-        document.getElementById("kontoResult").classList.add("is-visible");
-      });
+          document.getElementById("resultEmail").textContent = email;
+          document.getElementById("resultTelefon").textContent = telefon;
+          document.getElementById("kontoResult").classList.add("is-visible");
+        });
     </script>
   </body>
 </html>
