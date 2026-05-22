@@ -16,52 +16,101 @@
       }
       .page-header p {
         color: var(--text-muted);
-        max-width: 620px;
+        max-width: 680px;
         font-size: 15px;
       }
       .konto-wrapper {
         padding: 32px 80px 72px;
-        max-width: 900px;
+        max-width: 980px;
         margin: 0 auto;
       }
       .konto-form-card,
       .konto-result-card {
         background: #fff;
         border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 32px;
-        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+        border-radius: 16px;
+        padding: 34px;
+        box-shadow: 0 12px 34px rgba(45, 74, 45, 0.1);
       }
-      .konto-form-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        margin-bottom: 24px;
+      .konto-form-card {
+        position: relative;
+        overflow: hidden;
       }
-      .konto-field label {
-        display: block;
-        font-size: 14px;
-        font-weight: 500;
-        margin-bottom: 8px;
-      }
-      .konto-field input {
-        width: 100%;
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        padding: 12px 16px;
-        font-family: var(--font-body);
-        font-size: 15px;
-        background: var(--warm-white);
-        outline: none;
-        transition: border-color var(--transition);
-      }
-      .konto-field input:focus {
-        border-color: var(--green-mid);
+      .konto-form-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 6px;
+        background: linear-gradient(90deg, var(--green-dark), var(--green-light));
       }
       .konto-help {
         color: var(--text-muted);
         font-size: 14px;
-        margin-bottom: 24px;
+        margin-bottom: 26px;
+        max-width: 720px;
+      }
+      .konto-form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+        margin-bottom: 26px;
+      }
+      .konto-field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .konto-field.konto-field-full {
+        grid-column: 1 / -1;
+      }
+      .konto-field label {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-dark);
+      }
+      .konto-field input,
+      .konto-field textarea {
+        width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 13px 16px;
+        font-family: var(--font-body);
+        font-size: 15px;
+        background: var(--warm-white);
+        color: var(--text-dark);
+        outline: none;
+        transition:
+          border-color var(--transition),
+          box-shadow var(--transition),
+          background var(--transition);
+      }
+      .konto-field input:focus,
+      .konto-field textarea:focus {
+        border-color: var(--green-mid);
+        background: #fff;
+        box-shadow: 0 0 0 4px rgba(74, 124, 74, 0.12);
+      }
+      .konto-field textarea {
+        min-height: 130px;
+        resize: vertical;
+        line-height: 1.6;
+      }
+      .konto-field small {
+        color: var(--text-muted);
+        font-size: 12px;
+      }
+      .konto-error {
+        display: none;
+        background: #fff3f3;
+        border: 1px solid #f0b8b8;
+        color: #8a1f1f;
+        border-radius: 12px;
+        padding: 12px 14px;
+        font-size: 14px;
+        margin-bottom: 18px;
+      }
+      .konto-error.is-visible {
+        display: block;
       }
       .konto-result-card {
         display: none;
@@ -72,23 +121,40 @@
       }
       .konto-result-card h2 {
         font-family: var(--font-display);
-        font-size: 26px;
-        margin-bottom: 12px;
+        font-size: 28px;
+        margin-bottom: 10px;
       }
-      .konto-person-box {
-        background: var(--green-pale);
-        border-radius: var(--radius);
-        padding: 20px;
-        margin-top: 16px;
-      }
-      .konto-person-box h3 {
-        font-size: 18px;
-        margin-bottom: 8px;
-      }
-      .konto-person-box p {
+      .konto-result-card > p {
         color: var(--text-muted);
         font-size: 14px;
+        margin-bottom: 18px;
+      }
+      .konto-overview {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        background: var(--green-pale);
+        border: 1px solid var(--green-light);
+        border-radius: 14px;
+        padding: 20px;
+      }
+      .konto-overview-item {
+        background: #fff;
+        border-radius: 10px;
+        padding: 14px;
+        border: 1px solid rgba(45, 74, 45, 0.08);
+      }
+      .konto-overview-item strong {
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--text-muted);
         margin-bottom: 4px;
+      }
+      .konto-overview-item span {
+        font-size: 15px;
+        color: var(--text-dark);
       }
       .konto-placeholder-note {
         margin-top: 14px;
@@ -102,7 +168,8 @@
         .konto-wrapper {
           padding: 24px 24px 48px;
         }
-        .konto-form-grid {
+        .konto-form-grid,
+        .konto-overview {
           grid-template-columns: 1fr;
         }
         .konto-form-card,
@@ -255,17 +322,33 @@
     </div>
 
     <div class="konto-wrapper">
-      <form class="konto-form-card" id="kontoForm">
+      <form
+        class="konto-form-card"
+        id="kontoForm"
+        action="kunden-submit.php"
+        method="post"
+        novalidate
+      >
         <p class="konto-help">
-          Diese Eingabe ist aktuell nur ein Platzhalter. Die Suche kann später
-          durch eine echte Datenbank-Abfrage ersetzt werden.
+          Fülle die Felder aus, um ein Konto anzulegen. Die Eingaben werden im
+          Backend mit PHP validiert. Später kann dieser Bereich direkt mit der
+          Datenbank verbunden werden.
         </p>
+
+        <div class="konto-error" id="kontoError"></div>
 
         <div class="konto-form-grid">
           <div class="konto-field">
             <label for="vorname">Vorname</label>
-            <input id="vorname" name="vorname" type="text" placeholder="Max" />
+            <input
+              id="vorname"
+              name="vorname"
+              type="text"
+              placeholder="Max"
+              autocomplete="given-name"
+            />
           </div>
+
           <div class="konto-field">
             <label for="nachname">Nachname</label>
             <input
@@ -273,17 +356,22 @@
               name="nachname"
               type="text"
               placeholder="Mustermann"
+              autocomplete="family-name"
             />
           </div>
+
           <div class="konto-field">
             <label for="benutzername">Benutzername</label>
             <input
               id="benutzername"
               name="benutzername"
               type="text"
-              placeholder="dein_name"
+              placeholder="max_muster"
+              autocomplete="username"
             />
+            <small>4–20 Zeichen, erlaubt: Buchstaben, Zahlen, Punkt, Unterstrich, Bindestrich.</small>
           </div>
+
           <div class="konto-field">
             <label for="email">E-Mail-Adresse</label>
             <input
@@ -291,8 +379,21 @@
               name="email"
               type="text"
               placeholder="max@beispiel.ch"
+              autocomplete="email"
             />
           </div>
+
+          <div class="konto-field">
+            <label for="telefon">Telefonnummer</label>
+            <input
+              id="telefon"
+              name="telefon"
+              type="text"
+              placeholder="+41 79 123 45 67"
+              autocomplete="tel"
+            />
+          </div>
+
           <div class="konto-field">
             <label for="passwort">Passwort</label>
             <input
@@ -300,8 +401,10 @@
               name="passwort"
               type="password"
               placeholder="Mind. 8 Zeichen"
+              autocomplete="new-password"
             />
           </div>
+
           <div class="konto-field">
             <label for="passwortWiederholen">Passwort wiederholen</label>
             <input
@@ -309,18 +412,11 @@
               name="passwortWiederholen"
               type="password"
               placeholder="Passwort bestätigen"
+              autocomplete="new-password"
             />
           </div>
-          <div class="konto-field">
-            <label for="passwortWiederholen">Passwort wiederholen</label>
-            <input
-              id="passwortWiederholen"
-              name="passwortWiederholen"
-              type="password"
-              placeholder="Passwort bestätigen"
-            />
-          </div>
-          <div class="konto-field">
+
+          <div class="konto-field konto-field-full">
             <label for="hinweis">Kurzer Hinweis</label>
             <textarea
               id="hinweis"
@@ -328,31 +424,16 @@
               rows="5"
               placeholder="Optional: Was möchtest du uns noch mitteilen?"
             ></textarea>
+            <small>Optional, maximal 300 Zeichen.</small>
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Konto anlegen →</button>
+        <button type="submit" class="btn btn-primary" id="kontoSubmitBtn">
+          Konto anlegen →
+        </button>
       </form>
 
-      <div class="konto-result-card" id="kontoResult">
-        <h2>Gefundene Person</h2>
-        <p>
-          Dieser Bereich ist vorbereitet und kann später mit echten Kundendaten
-          aus der Datenbank ersetzt werden.
-        </p>
-
-        <div class="konto-person-box">
-          <h3 id="kontoName">Max Muster</h3>
-          <p><strong>E-Mail:</strong> <span id="resultEmail">-</span></p>
-          <p><strong>Telefon:</strong> <span id="resultTelefon">-</span></p>
-          <p><strong>Status:</strong> Platzhalter-Konto</p>
-        </div>
-
-        <p class="konto-placeholder-note">
-          Später kann hier z.B. per PHP/API nach der Person gesucht und das
-          echte Konto angezeigt werden.
-        </p>
-      </div>
+      <div class="konto-result-card" id="kontoResult" aria-live="polite"></div>
     </div>
 
     <!-- FOOTER -->
@@ -400,17 +481,94 @@
 
     <script src="common.js"></script>
     <script>
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+      function showKontoError(message) {
+        var errorBox = document.getElementById("kontoError");
+        errorBox.textContent = message;
+        errorBox.classList.add("is-visible");
+      }
+
+      function hideKontoError() {
+        var errorBox = document.getElementById("kontoError");
+        errorBox.textContent = "";
+        errorBox.classList.remove("is-visible");
+      }
+
+      function showKontoOverview(konto) {
+        var result = document.getElementById("kontoResult");
+
+        result.innerHTML =
+          "<h2>✅ Konto erfolgreich erstellt</h2>" +
+          "<p>Die Angaben wurden erfolgreich validiert. Unten siehst du die Übersicht des gerade erstellten Kontos.</p>" +
+          '<div class="konto-overview">' +
+          '<div class="konto-overview-item"><strong>Name</strong><span>' +
+          escapeHtml(konto.vorname) +
+          " " +
+          escapeHtml(konto.nachname) +
+          "</span></div>" +
+          '<div class="konto-overview-item"><strong>Benutzername</strong><span>' +
+          escapeHtml(konto.benutzername) +
+          "</span></div>" +
+          '<div class="konto-overview-item"><strong>E-Mail</strong><span>' +
+          escapeHtml(konto.email) +
+          "</span></div>" +
+          '<div class="konto-overview-item"><strong>Telefon</strong><span>' +
+          escapeHtml(konto.telefon) +
+          "</span></div>" +
+          '<div class="konto-overview-item"><strong>Status</strong><span>Platzhalter-Konto</span></div>' +
+          '<div class="konto-overview-item"><strong>Hinweis</strong><span>' +
+          escapeHtml(konto.hinweis || "Kein Hinweis eingetragen") +
+          "</span></div>" +
+          "</div>" +
+          '<p class="konto-placeholder-note">Platzhalter: Später kann dieses Konto in der Datenbank gespeichert und von dort wieder geladen werden.</p>';
+
+        result.classList.add("is-visible");
+      }
+
       document
         .getElementById("kontoForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
 
-          var email = document.getElementById("kontoEmail").value.trim();
-          var telefon = document.getElementById("kontoTelefon").value.trim();
+          hideKontoError();
 
-          document.getElementById("resultEmail").textContent = email;
-          document.getElementById("resultTelefon").textContent = telefon;
-          document.getElementById("kontoResult").classList.add("is-visible");
+          var form = this;
+          var submitBtn = document.getElementById("kontoSubmitBtn");
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Wird geprüft...";
+
+          fetch("kunden-submit.php", {
+            method: "POST",
+            body: new FormData(form),
+          })
+            .then(function (response) {
+              return response.json();
+            })
+            .then(function (data) {
+              if (data.success) {
+                showKontoOverview(data.konto);
+                form.reset();
+              } else {
+                showKontoError(data.message || "Bitte prüfe deine Eingaben.");
+              }
+            })
+            .catch(function () {
+              showKontoError(
+                "Das Formular konnte nicht geprüft werden. Prüfe, ob kunden-submit.php im gleichen Ordner wie kunden.html liegt und über localhost geöffnet wird.",
+              );
+            })
+            .finally(function () {
+              submitBtn.disabled = false;
+              submitBtn.textContent = "Konto anlegen →";
+            });
         });
     </script>
   </body>
