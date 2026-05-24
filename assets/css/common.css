@@ -1,800 +1,1665 @@
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;700&display=swap");
 
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 :root {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     --green-dark: #2d4a2d;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     --green-mid: #4a7c4a;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     --green-light: #c8d8c0;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     --green-pale: #e8efe4;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     --cream: #f7f4ee;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     --warm-white: #fdfcf9;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     --text-dark: #1a1a1a;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     --text-muted: #6b6b6b;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     --border: #d4d9cc;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     --footer-bg: #c8d8be;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     --font-display: "Playfair Display", serif;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     --font-body: "DM Sans", Arial, sans-serif;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     --radius: 8px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     --transition: 0.25s ease;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     --shadow: 0 14px 35px rgba(45, 74, 45, 0.12);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 *, *::before, *::after {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     box-sizing: border-box;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin: 0;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 0;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 html { scroll-behavior: smooth; }
 
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 body {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-family: var(--font-body);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: var(--warm-white);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--text-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 16px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     line-height: 1.6;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     min-height: 100vh;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     flex-direction: column;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 main { flex: 1; }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 a { color: inherit; text-decoration: none; }
 
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 /* grüner Game-Balken wie beim Quiz */
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .game-bar {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: var(--green-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: #fff;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     text-align: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 13px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 8px 16px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     letter-spacing: 0.02em;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .game-bar a {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: #fff;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     text-decoration: none;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-weight: 500;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .game-bar a span {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     text-decoration: underline;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     text-underline-offset: 3px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .site-header {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     position: sticky;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     top: 0;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     z-index: 100;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: var(--warm-white);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-bottom: 1px solid var(--border);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .main-nav {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     align-items: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     justify-content: space-between;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     height: 64px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 0 48px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 24px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .nav-logo {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     align-items: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 10px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     flex-shrink: 0;
-}
-.nav-logo-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: var(--green-dark);
-    color: var(--green-light);
-    display: grid;
-    place-items: center;
-    font-size: 18px;
-    transition: transform var(--transition);
-}
-.nav-logo:hover .nav-logo-icon { transform: rotate(-8deg) scale(1.08); }
-.nav-logo-text {
-    font-family: var(--font-display);
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--green-dark);
-    white-space: nowrap;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 36px;
-    align-items: center;
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+.nav-logo-img {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    height: 42px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    width: auto;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    display: block;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
-.nav-links a {
-    font-size: 15px;
-    font-weight: 400;
-    color: var(--text-dark);
-    transition: color var(--transition);
-    position: relative;
-}
-.nav-links a::after,
-.nav-icon-btn::after {
-    content: "";
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+.nav-logo-icon {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    width: 32px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    height: 32px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    border-radius: 50%;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: var(--green-dark);
-    transition: width var(--transition);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    color: var(--green-light);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    display: grid;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    place-items: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    font-size: 18px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    transition: transform var(--transition);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+.nav-logo:hover .nav-logo-icon { transform: rotate(-8deg) scale(1.08); }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+.nav-logo-text {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    font-family: var(--font-display);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    font-size: 22px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    font-weight: 700;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    color: var(--green-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    white-space: nowrap;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
+}
+
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+.nav-links {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    list-style: none;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    gap: 36px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    align-items: center;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
+}
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+.nav-links a {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    font-size: 15px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    font-weight: 400;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    color: var(--text-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    transition: color var(--transition);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    position: relative;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
+}
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+.nav-links a::after,
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+.nav-icon-btn::after {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    content: "";
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    position: absolute;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    bottom: -4px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    left: 0;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    width: 0;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    height: 2px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    background: var(--green-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    transition: width var(--transition);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
+}
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .nav-links a:hover::after,
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .nav-links a.active::after,
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .nav-icon-btn:hover::after,
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .nav-icon-btn.active::after { width: 100%; }
+
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
+/* Das Personen-Icon soll nie unterstrichen werden, auch nicht wenn die Konto-Seite aktiv ist. */
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+.account-icon::after,
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+.account-icon:hover::after,
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+.account-icon.active::after {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    display: none;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
+}
+
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .nav-links a.active { font-weight: 500; }
 
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .nav-actions {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 20px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     align-items: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     flex-shrink: 0;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .nav-icon-btn {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     position: relative;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     align-items: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--text-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     transition: color var(--transition);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .nav-icon-btn:hover,
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .nav-icon-btn.active { color: var(--green-dark); }
 
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .nav-hamburger {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: none;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: none;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border: none;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     cursor: pointer;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     flex-direction: column;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 5px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 8px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     z-index: 600;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     position: relative;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-left: auto;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .nav-hamburger span {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: block;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     width: 24px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     height: 2px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: var(--text-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     transition: all var(--transition);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .nav-hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .nav-hamburger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .nav-hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .mobile-menu {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: none;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     position: fixed;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     inset: 0;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: var(--warm-white);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     z-index: 500;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     flex-direction: column;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     align-items: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     justify-content: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 28px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 40px 24px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .mobile-menu.is-open { display: flex; }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .mobile-menu a {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-family: var(--font-display);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 28px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--text-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     transition: color var(--transition);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .mobile-menu a:hover,
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .mobile-menu a.active { color: var(--green-dark); }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .mobile-logo {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     align-items: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 10px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-bottom: 10px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+.mobile-logo-img {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    height: 54px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    width: auto;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    display: block;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
+}
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .mobile-menu-close {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     position: absolute;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     top: 20px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     right: 24px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: none;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border: none;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 28px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     cursor: pointer;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--text-dark);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .hero {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     max-width: 1180px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin: 0 auto;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 72px 48px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: grid;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     grid-template-columns: 1fr 440px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     align-items: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 54px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .hero-text h1,
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .page-hero h1 {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-family: var(--font-display);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: clamp(36px, 5vw, 64px);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     line-height: 1.12;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin: 8px 0 18px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--text-dark);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .hero-text p,
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .page-hero p {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--text-muted);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 18px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     max-width: 620px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .eyebrow {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--green-mid);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 13px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-weight: 700;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     letter-spacing: 0.12em;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     text-transform: uppercase;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .hero-buttons {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 14px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     flex-wrap: wrap;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-top: 28px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .btn {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border: 1px solid transparent;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: 999px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 12px 22px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-weight: 700;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     cursor: pointer;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: inline-flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     align-items: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     justify-content: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 10px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     transition: var(--transition);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .btn.primary { background: var(--green-dark); color: white; }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .btn.secondary { background: var(--green-pale); color: var(--green-dark); border-color: var(--border); }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .hero-card {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: var(--green-pale);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border: 1px solid var(--border);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: var(--radius);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 24px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     min-height: 360px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     box-shadow: var(--shadow);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .slider {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     height: 285px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     position: relative;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     overflow: hidden;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: var(--radius);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: rgba(255,255,255,0.65);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .slide {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     position: absolute;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     inset: 0;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: none;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     align-items: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     justify-content: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     flex-direction: column;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 18px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 88px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     text-align: center;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .slide span {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-family: var(--font-display);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 24px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-weight: 700;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--green-dark);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .slide.active { display: flex; animation: fade 0.45s ease; }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .slider-dots {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     justify-content: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 8px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-top: 16px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .slider-dots button {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     width: 9px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     height: 9px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: 50%;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border: 0;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: #b7c2b1;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     cursor: pointer;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .slider-dots button.active { background: var(--green-dark); }
 
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .section {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     max-width: 1180px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin: 0 auto;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 56px 48px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .section-title { text-align: center; margin-bottom: 28px; }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .section-title h2 {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-family: var(--font-display);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 38px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--text-dark);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .info-grid,
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .card-grid {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: grid;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     grid-template-columns: repeat(3, 1fr);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 22px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .info-card,
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .product-card,
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .service-card,
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .about-box,
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .account-form,
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .success-box,
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .game-box {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: #fff;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border: 1px solid var(--border);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: var(--radius);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 24px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     box-shadow: 0 8px 22px rgba(45, 74, 45, 0.08);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .info-card,
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .product-card,
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .service-card { transition: var(--transition); }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .info-card:hover,
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .product-card:hover,
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .service-card:hover {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     transform: translateY(-5px);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     box-shadow: var(--shadow);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .info-card span { font-size: 36px; }
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .info-card h3,
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .product-card h3,
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .service-card h3 {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-family: var(--font-display);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--green-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin: 10px 0;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .page-hero.small {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     max-width: 1180px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin: 0 auto;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 58px 48px 20px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .page-hero.small h1 { font-size: clamp(34px, 5vw, 56px); }
 
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .filter-row {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 10px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     flex-wrap: wrap;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-bottom: 24px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .filter-btn {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border: 1px solid var(--border);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: #fff;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: 999px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 10px 18px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-weight: 700;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     cursor: pointer;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     transition: var(--transition);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .filter-btn:hover,
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .filter-btn.active { background: var(--green-dark); color: white; }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .product-img {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     height: 130px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     align-items: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     justify-content: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 58px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: var(--cream);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: var(--radius);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-bottom: 16px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     overflow: hidden;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .product-img img {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     width: 100%;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     height: 100%;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     object-fit: cover;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .tag {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: inline-block;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: var(--green-pale);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--green-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 5px 10px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: 999px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 13px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-weight: 700;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .product-card,
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .service-card {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     flex-direction: column;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .product-description,
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .service-description {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     flex: 1;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .product-meta {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     align-items: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     justify-content: space-between;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 16px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-top: auto;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding-top: 18px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .product-meta span {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--text-muted);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .product-price {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     white-space: nowrap;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 18px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--green-dark);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .service-meta {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     align-items: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     justify-content: space-between;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 12px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-top: auto;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding-top: 18px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--green-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-weight: 700;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .form-section { max-width: 850px; }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .form-grid {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: grid;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     grid-template-columns: 1fr 1fr;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 18px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .form-field.full { grid-column: 1 / -1; }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 label {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: block;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-weight: 700;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-bottom: 7px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 input {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     width: 100%;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border: 1px solid var(--border);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: var(--radius);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 13px 14px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 16px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     outline: none;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     transition: var(--transition);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-family: var(--font-body);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 input:focus {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-color: var(--green-mid);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     box-shadow: 0 0 0 4px rgba(74, 124, 74, 0.12);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .error {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     min-height: 20px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: block;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-top: 5px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: #b3261e;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 13px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .form-message {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin: 18px 0;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-weight: 700;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .submit-btn { min-width: 190px; }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .spinner {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: none;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     width: 16px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     height: 16px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border: 2px solid rgba(255,255,255,0.4);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-top-color: white;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: 50%;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     animation: spin 0.8s linear infinite;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .submit-btn.loading .spinner { display: inline-block; }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .success-box {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-color: #93c47d;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: #f3faef;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-bottom: 20px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .error-box {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: #fff3f0;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border: 1px solid #f0b2a8;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: #8a1f11;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: var(--radius);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 16px 18px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-bottom: 20px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-weight: 700;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .game-box { text-align: center; }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .game-ground {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     height: 180px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: linear-gradient(#e8f2e3 70%, #9fbc85 70%);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: var(--radius);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     position: relative;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     overflow: hidden;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-bottom: 20px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .player,
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .obstacle {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     position: absolute;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     bottom: 42px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 46px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .player { left: 60px; }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .obstacle { right: 70px; }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .game-box.running .player { animation: jump 0.9s infinite; }
 
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .footer {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: var(--footer-bg);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--text-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-top: 60px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 40px 48px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: grid;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     grid-template-columns: 2fr 1fr 1.2fr 1.2fr;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 28px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-top: 1px solid var(--border);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .footer h3,
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .footer h4 {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-family: var(--font-display);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--green-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-bottom: 8px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .footer p { color: var(--text-muted); }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .social-links {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     align-items: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 10px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .social-icon {
-    width: 38px;
-    height: 38px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    width: 40px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    height: 40px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: 50%;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: inline-flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     align-items: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     justify-content: center;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 18px;
-    box-shadow: 0 8px 18px rgba(43, 74, 43, 0.18);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    background: #ffffff;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    box-shadow: 0 8px 18px rgba(43, 74, 43, 0.16);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     transition: transform var(--transition), box-shadow var(--transition);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    overflow: hidden;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+.social-icon img {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    width: 24px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    height: 24px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    object-fit: contain;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    display: block;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
+}
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .social-icon:hover {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     transform: translateY(-3px);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     box-shadow: 0 12px 24px rgba(43, 74, 43, 0.24);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
-.social-icon.instagram {
-    background: radial-gradient(circle at 30% 110%, #feda75 0%, #fa7e1e 25%, #d62976 50%, #962fbf 75%, #4f5bd5 100%);
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+.icon-credits {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    margin-top: 8px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    font-size: 11px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    color: var(--text-muted);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    line-height: 1.4;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
-.social-icon.tiktok {
-    background: #111111;
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+.icon-credits a {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    color: var(--text-muted);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    text-decoration: none;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
-.social-icon.pinterest {
-    background: #bd081c;
-    font-family: Georgia, serif;
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+.icon-credits a:hover {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    color: var(--green-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    text-decoration: underline;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .fade-in { animation: fadeUp 0.7s ease both; }
+/* Kommentar: Definiert eine CSS-Animation. */
 @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+/* Kommentar: Definiert eine CSS-Animation. */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+/* Kommentar: Definiert eine CSS-Animation. */
 @keyframes spin { to { transform: rotate(360deg); } }
+/* Kommentar: Definiert eine CSS-Animation. */
 @keyframes jump { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-45px); } }
 
+/* Kommentar: Startet Regeln für responsive Darstellung bei bestimmten Bildschirmgrössen. */
 @media (max-width: 900px) {
+    /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
     .main-nav {
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
         height: 64px;
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
         padding: 0 24px;
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+        gap: 12px;
+    /* Kommentar: Beendet den aktuellen CSS-Block. */
     }
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     .nav-links { display: none; }
-    .nav-actions { margin-left: auto; }
-    .nav-hamburger { display: flex; }
+
+    /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
+    /* In der Mobile-Ansicht sitzt das Personen-Icon direkt links neben dem Burger-Menü. */
+    /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+    .nav-actions {
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+        margin-left: auto;
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+        gap: 12px;
+    /* Kommentar: Beendet den aktuellen CSS-Block. */
+    }
+
+    /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+    .nav-icon-btn {
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+        width: 40px;
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+        height: 40px;
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+        justify-content: center;
+    /* Kommentar: Beendet den aktuellen CSS-Block. */
+    }
+
+    /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+    .nav-logo-img {
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+        height: 36px;
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+        max-width: 150px;
+    /* Kommentar: Beendet den aktuellen CSS-Block. */
+    }
+
+    /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+    .nav-hamburger {
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+        display: flex;
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+        margin-left: 0;
+    /* Kommentar: Beendet den aktuellen CSS-Block. */
+    }
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
+/* Kommentar: Startet Regeln für responsive Darstellung bei bestimmten Bildschirmgrössen. */
 @media (max-width: 850px) {
+    /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
     .hero {
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
         grid-template-columns: 1fr;
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
         padding: 48px 24px;
+    /* Kommentar: Beendet den aktuellen CSS-Block. */
     }
+    /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
     .section,
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     .page-hero.small { padding-left: 24px; padding-right: 24px; }
+    /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
     .info-grid,
+    /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
     .card-grid,
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     .footer { grid-template-columns: 1fr; }
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     .form-grid { grid-template-columns: 1fr; }
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
+/* Kommentar: Startet Regeln für responsive Darstellung bei bestimmten Bildschirmgrössen. */
 @media (max-width: 520px) {
+    /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
     .product-meta {
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
         align-items: flex-start;
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
         flex-direction: column;
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
         gap: 8px;
+    /* Kommentar: Beendet den aktuellen CSS-Block. */
     }
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 /* Über-uns-Seite */
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .about-hero {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     max-width: 1180px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin: 0 auto;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 72px 48px 36px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: grid;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     grid-template-columns: 1.35fr 0.8fr;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     align-items: stretch;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 28px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .about-hero-text {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: linear-gradient(135deg, #fdfcf9 0%, #e8efe4 100%);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border: 1px solid var(--border);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: var(--radius);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 42px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     box-shadow: var(--shadow);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .about-hero-text h1 {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-family: var(--font-display);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: clamp(38px, 5vw, 62px);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     line-height: 1.1;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--text-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin: 8px 0 18px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .about-hero-text p {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--text-muted);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 18px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     max-width: 720px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-bottom: 28px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .about-hero-card {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: var(--green-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: #fff;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: var(--radius);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 34px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     flex-direction: column;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     justify-content: flex-end;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     min-height: 340px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     position: relative;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     overflow: hidden;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     box-shadow: var(--shadow);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .about-hero-card::before {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     content: "";
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     position: absolute;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     width: 220px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     height: 220px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     right: -70px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     top: -70px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: 50%;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: rgba(200, 216, 192, 0.22);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .about-hero-card span {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 70px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-bottom: 22px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .about-hero-card h3 {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-family: var(--font-display);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 30px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-bottom: 10px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: #fff;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .about-hero-card p {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: rgba(255,255,255,0.82);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .about-highlight {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: #fff;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border: 1px solid var(--border);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-left: 8px solid var(--green-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: var(--radius);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 30px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: grid;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     grid-template-columns: 0.9fr 1.2fr;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 32px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     box-shadow: 0 8px 22px rgba(45, 74, 45, 0.08);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .about-highlight h2,
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .team-strip h2,
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .about-cta h2 {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-family: var(--font-display);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--green-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: clamp(28px, 4vw, 42px);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     line-height: 1.15;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .about-highlight p {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--text-muted);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .value-grid {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: grid;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     grid-template-columns: repeat(3, 1fr);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 22px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .value-card {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: #fff;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border: 1px solid var(--border);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: var(--radius);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 26px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     box-shadow: 0 8px 22px rgba(45, 74, 45, 0.08);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     transition: var(--transition);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .value-card:hover {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     transform: translateY(-5px);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     box-shadow: var(--shadow);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .value-card span {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-size: 38px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .value-card h3 {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-family: var(--font-display);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--green-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin: 12px 0 8px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .value-card p {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--text-muted);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .team-strip {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: var(--green-pale);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border: 1px solid var(--border);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: var(--radius);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 34px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: grid;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     grid-template-columns: 1.2fr 1fr;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     align-items: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 24px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .team-strip p {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--text-muted);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-top: 12px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .team-badges {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     display: flex;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     flex-wrap: wrap;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     justify-content: flex-end;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     gap: 12px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .team-badges span {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: #fff;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--green-dark);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border: 1px solid var(--border);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: 999px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 12px 18px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     font-weight: 700;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     box-shadow: 0 8px 18px rgba(45, 74, 45, 0.08);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .about-cta {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     text-align: center;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: #fff;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     border-radius: var(--radius);
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin-top: 30px;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .about-cta .eyebrow,
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .about-cta h2 {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: #fff;
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .about-cta p {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     max-width: 620px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     margin: 12px auto 24px;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: rgba(255,255,255,0.82);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .about-cta .btn.primary {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     background: #fff;
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     color: var(--green-dark);
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
+/* Kommentar: Startet Regeln für responsive Darstellung bei bestimmten Bildschirmgrössen. */
 @media (max-width: 850px) {
+    /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
     .about-hero,
+    /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
     .about-highlight,
+    /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
     .team-strip,
+    /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
     .value-grid {
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
         grid-template-columns: 1fr;
+    /* Kommentar: Beendet den aktuellen CSS-Block. */
     }
+    /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
     .about-hero {
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
         padding-left: 24px;
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
         padding-right: 24px;
+    /* Kommentar: Beendet den aktuellen CSS-Block. */
     }
+    /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
     .about-hero-text {
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
         padding: 30px;
+    /* Kommentar: Beendet den aktuellen CSS-Block. */
     }
+    /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
     .about-hero-card {
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
         min-height: 260px;
+    /* Kommentar: Beendet den aktuellen CSS-Block. */
     }
+    /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
     .team-badges {
+        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
         justify-content: flex-start;
+    /* Kommentar: Beendet den aktuellen CSS-Block. */
     }
+/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
