@@ -2,11 +2,8 @@
 // Kommentar: Startet den PHP-Bereich der Datei.
 // Kommentar: Speichert einen Zugangswert für die Datenbankverbindung.
 $host   = "growease.wildsphere-praktika-mma23.bbzwinf.ch";
-// Kommentar: Speichert einen Zugangswert für die Datenbankverbindung.
 $dbname = "growease_db";
-// Kommentar: Speichert einen Zugangswert für die Datenbankverbindung.
 $user   = "growease";
-// Kommentar: Speichert einen Zugangswert für die Datenbankverbindung.
 $pass   = "Z&o1crh2VcH*i7pt";
 
 // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
