@@ -22,18 +22,14 @@ include 'includes/header.php';
 
 <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 <section class="page-hero small">
-    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <p class="eyebrow">Service</p>
-    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <h1>Dienstleistungen</h1>
-    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <p>Praktische Gartenhilfe für Zuhause, Balkon und Terrasse.</p>
 <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 </section>
 
 <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 <section class="section">
-    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <div class="card-grid">
         <!-- Kommentar: Startet den PHP-Bereich der Datei. -->
         <?php foreach ($dienstleistungen as $dienstleistung): ?>
@@ -41,23 +37,19 @@ include 'includes/header.php';
             <article class="service-card">
                 <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                 <h3><?= htmlspecialchars($dienstleistung['Name']) ?></h3>
-                <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                 <p class="service-description"><?= htmlspecialchars($dienstleistung['Beschreibung']) ?></p>
                 <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <div class="service-meta">
                     <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                     <span>CHF <?= htmlspecialchars($dienstleistung['Preis']) ?>.–</span>
-                    <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                     <span><?= htmlspecialchars($dienstleistung['Dauer']) ?></span>
                 <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 </div>
-            <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             </article>
         <!-- Kommentar: Startet den PHP-Bereich der Datei. -->
         <?php endforeach; ?>
     <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     </div>
-<!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 </section>
 
 <!-- Kommentar: Startet den PHP-Bereich der Datei. -->

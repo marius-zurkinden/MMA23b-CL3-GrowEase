@@ -42,20 +42,14 @@ include 'includes/header.php';
 
 <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 <section class="page-hero small">
-    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <p class="eyebrow">Sortiment</p>
-    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <h1>Unsere Produkte</h1>
-    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <p>Entdecke unser Sortiment und filtere die Produkte nach Kategorie.</p>
-<!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 </section>
 
 <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 <section class="section">
-    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <div class="filter-row" id="productFilter">
-        <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
         <button class="filter-btn active" data-filter="Alle">Alle</button>
         <!-- Kommentar: Startet den PHP-Bereich der Datei. -->
         <?php foreach ($kategorien as $kategorie): ?>
@@ -92,9 +86,7 @@ include 'includes/header.php';
                 </div>
                 <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                 <div class="tag"><?= htmlspecialchars($produkt['KategorieName'] ?? 'Ohne Kategorie') ?></div>
-                <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                 <h3><?= htmlspecialchars($produkt['Name']) ?></h3>
-                <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                 <p class="product-description"><?= htmlspecialchars($produkt['Beschreibung']) ?></p>
                 <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <div class="product-meta">
@@ -102,15 +94,12 @@ include 'includes/header.php';
                     <span><strong>Bestand:</strong> <?= htmlspecialchars($produkt['Bestand']) ?></span>
                     <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                     <strong class="product-price">CHF <?= number_format((float)$produkt['Preis'], 2, '.', '') ?></strong>
-                <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 </div>
-            <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             </article>
         <!-- Kommentar: Startet den PHP-Bereich der Datei. -->
         <?php endforeach; ?>
     <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     </div>
-<!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 </section>
 
 <!-- Kommentar: Startet den PHP-Bereich der Datei. -->

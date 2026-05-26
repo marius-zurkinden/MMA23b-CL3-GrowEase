@@ -10,39 +10,26 @@ require_once 'db.php';
 
 // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
 $success = false;
-// Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
 $error = '';
 
 // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
 $vorname = '';
-// Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
 $nachname = '';
-// Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
 $adresse = '';
-// Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
 $postleitzahl = '';
-// Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
 $stadt = '';
-// Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
 $telefon = '';
-// Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
 $email = '';
 
 // Kommentar: Prüft eine Bedingung und führt den folgenden Block nur dann aus.
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Kommentar: Liest einen Formularwert aus und entfernt unnötige Leerzeichen.
     $vorname = trim($_POST['vorname'] ?? '');
-    // Kommentar: Liest einen Formularwert aus und entfernt unnötige Leerzeichen.
     $nachname = trim($_POST['nachname'] ?? '');
-    // Kommentar: Liest einen Formularwert aus und entfernt unnötige Leerzeichen.
     $adresse = trim($_POST['adresse'] ?? '');
-    // Kommentar: Liest einen Formularwert aus und entfernt unnötige Leerzeichen.
     $postleitzahl = trim($_POST['postleitzahl'] ?? '');
-    // Kommentar: Liest einen Formularwert aus und entfernt unnötige Leerzeichen.
     $stadt = trim($_POST['stadt'] ?? '');
-    // Kommentar: Liest einen Formularwert aus und entfernt unnötige Leerzeichen.
     $telefon = trim($_POST['telefon'] ?? '');
-    // Kommentar: Liest einen Formularwert aus und entfernt unnötige Leerzeichen.
     $email = trim($_POST['email'] ?? '');
 
     // Kommentar: Prüft eine Bedingung und führt den folgenden Block nur dann aus.
@@ -108,19 +95,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->execute([
                 // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
                 ':vorname' => $vorname,
-                // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
                 ':nachname' => $nachname,
-                // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
                 ':adresse' => $adresse,
-                // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
                 ':plz' => $postleitzahl,
-                // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
                 ':stadt' => $stadt,
-                // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
                 ':telefonnummer' => $telefon,
-                // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
                 ':email' => $email
-            // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
             ]);
 
             // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
@@ -128,17 +108,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
             $vorname = '';
-            // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
             $nachname = '';
-            // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
             $adresse = '';
-            // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
             $postleitzahl = '';
-            // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
             $stadt = '';
-            // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
             $telefon = '';
-            // Kommentar: Führt eine PHP-Anweisung für diese Seite aus.
             $email = '';
         // Kommentar: Beendet den aktuellen Codeblock oder die Schleife.
         }
@@ -154,13 +128,9 @@ include 'includes/header.php';
 
 <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 <section class="page-hero small">
-    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <p class="eyebrow">Mein Konto</p>
-    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <h1>Konto erstellen</h1>
-    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <p>Erstelle ein Konto, damit du später einfacher bestellen kannst.</p>
-<!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 </section>
 
 <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
@@ -169,11 +139,8 @@ include 'includes/header.php';
     <?php if ($success): ?>
         <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
         <div class="success-box">
-            <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             <h2>Konto wurde erstellt ✅</h2>
-            <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             <p>Deine Daten wurden erfolgreich in der Datenbank gespeichert.</p>
-        <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
         </div>
     <!-- Kommentar: Startet den PHP-Bereich der Datei. -->
     <?php endif; ?>
@@ -191,77 +158,62 @@ include 'includes/header.php';
 
     <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <form class="account-form" id="accountForm" method="post" action="konto-erstellen.php" novalidate>
-        <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
         <div class="form-grid">
-            <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             <div class="form-field">
-                <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <label for="vorname">Vorname</label>
                 <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                 <input type="text" id="vorname" name="vorname" autocomplete="given-name" value="<?= htmlspecialchars($vorname) ?>">
                 <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <small class="error"></small>
-            <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             </div>
 
             <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             <div class="form-field">
-                <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <label for="nachname">Nachname</label>
                 <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                 <input type="text" id="nachname" name="nachname" autocomplete="family-name" value="<?= htmlspecialchars($nachname) ?>">
                 <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <small class="error"></small>
-            <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             </div>
 
             <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             <div class="form-field full">
-                <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <label for="adresse">Adresse</label>
                 <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                 <input type="text" id="adresse" name="adresse" autocomplete="street-address" value="<?= htmlspecialchars($adresse) ?>">
                 <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <small class="error"></small>
-            <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             </div>
 
             <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             <div class="form-field">
-                <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <label for="postleitzahl">Postleitzahl</label>
                 <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                 <input type="text" id="postleitzahl" name="postleitzahl" inputmode="numeric" maxlength="4" value="<?= htmlspecialchars($postleitzahl) ?>">
                 <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <small class="error"></small>
-            <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             </div>
 
             <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             <div class="form-field">
-                <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <label for="stadt">Stadt</label>
                 <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                 <input type="text" id="stadt" name="stadt" value="<?= htmlspecialchars($stadt) ?>">
                 <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <small class="error"></small>
-            <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             </div>
 
             <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             <div class="form-field">
-                <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <label for="telefon">Telefonnummer</label>
                 <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                 <input type="text" id="telefon" name="telefon" placeholder="041 000 00 00" value="<?= htmlspecialchars($telefon) ?>">
                 <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <small class="error"></small>
-            <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             </div>
 
             <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             <div class="form-field">
-                <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <label for="email">E-Mail</label>
                 <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                 <input type="email" id="email" name="email" autocomplete="email" value="<?= htmlspecialchars($email) ?>">
@@ -269,23 +221,18 @@ include 'includes/header.php';
                 <small class="error"></small>
             <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             </div>
-        <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
         </div>
 
         <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
         <div class="form-message" id="formMessage"></div>
 
-        <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
         <button class="btn primary submit-btn" type="submit">
-            <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             <span class="spinner" id="spinner"></span>
             <!-- Kommentar: Führt eine PHP-Anweisung für diese Seite aus. -->
             Konto erstellen
         <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
         </button>
-    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     </form>
-<!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 </section>
 
 <!-- Kommentar: Startet den PHP-Bereich der Datei. -->
