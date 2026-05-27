@@ -1,675 +1,407 @@
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht die gesamte Spielseite an */
+/* Definiert Abstand und den Hintergrundverlauf der Seite */
 .game-page {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   padding: 60px 20px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: linear-gradient(135deg, #f3f8ed, #dceccf);
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht den Hauptcontainer des Spiels an */
+/* Erstellt eine Karte mit Hintergrund, Rundung, Schatten und Rahmen */
 .game-wrapper {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   width: 100%;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   max-width: 900px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   margin: 0 auto;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: #fffaf0;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border-radius: 28px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   box-shadow: 0 18px 45px rgba(36, 59, 37, 0.18);
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   overflow: hidden;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border: 2px solid rgba(79, 121, 66, 0.18);
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht den oberen Informationsbereich des Spiels an - Zentriert Titel und Beschreibung */
 .game-header-card {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   padding: 34px 28px 20px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   text-align: center;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht das kleine Label oberhalb des Titels an - Erstellt eine pillenförmige Hervorhebung */
 .game-header-card span {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   display: inline-block;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: #d9edc2;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   color: #315b2d;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   padding: 7px 14px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border-radius: 999px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   font-size: 14px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   font-weight: 700;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   margin-bottom: 12px;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht den Haupttitel des Spiels an - Definiert Schriftgrösse, Farbe und Abstand */
 .game-header-card h1 {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   font-size: clamp(32px, 5vw, 56px);
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   color: #254522;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   margin-bottom: 10px;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht den Beschreibungstext unter dem Titel an - Begrenzte Breite für bessere Lesbarkeit */
 .game-header-card p {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   max-width: 560px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   margin: 0 auto;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   color: #5b6b58;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   line-height: 1.5;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht die Informationsboxen unter dem Titel an - Ordnet Score, Level oder Hinweise nebeneinander an */
 .game-info {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   display: flex;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   justify-content: center;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   gap: 16px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   padding: 0 20px 20px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   flex-wrap: wrap;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+ /* Spricht einzelne Info-Boxen an - Erstellt kleine Karten mit Rahmen und Hintergrund */
 .game-info-box {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: #ffffff;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border: 1px solid #dbe9d2;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border-radius: 16px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   padding: 10px 16px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   font-weight: 700;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   color: #315b2d;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   min-width: 130px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   text-align: center;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht das eigentliche Spielfeld an - Definiert Grösse, Hintergrund und sichtbaren Spielbereich */
 .grow-game {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   position: relative;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   width: calc(100% - 40px);
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   height: 320px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   margin: 0 auto 24px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border: 3px solid #315b2d;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border-radius: 24px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   overflow: hidden;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: linear-gradient(
-    /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
     #bfe7ff 0%,
-    /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
     #dff6ff 45%,
-    /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
     #9ccc78 46%,
-    /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
     #7caf5c 100%
-  /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
   );
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Erstellt den animierten Boden im Spiel - Simuliert Bewegung durch eine verschobene Hintergrundgrafik */
 .grow-game::before {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   content: "";
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   position: absolute;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   left: 0;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   bottom: 0;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   width: 200%;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   height: 95px;
   /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background-image: repeating-linear-gradient(
     /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
     90deg,
-    /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
     rgba(255, 255, 255, 0.16) 0 20px,
-    /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
     transparent 20px 60px
-  /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
   );
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   animation: moveGround 4s linear infinite;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+ /* Spricht die Wolken im Hintergrund an - Erstellt animierte Wolken */
 .cloud {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   position: absolute;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   width: 85px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   height: 32px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: rgba(255, 255, 255, 0.85);
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border-radius: 999px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   top: 45px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   animation: moveCloud 14s linear infinite;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+ /* Erstellt zusätzliche Wolken-Teile - Macht die Wolken runder und realistischer */
 .cloud::before,
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .cloud::after {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   content: "";
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   position: absolute;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: rgba(255, 255, 255, 0.9);
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border-radius: 50%;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .cloud::before {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   width: 35px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   height: 35px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   left: 12px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   top: -16px;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .cloud::after {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   width: 42px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   height: 42px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   right: 12px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   top: -22px;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+ /* Spricht die zweite Wolke an - Verändert Position und Geschwindigkeit */
 .cloud.two {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   top: 82px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   animation-duration: 20s;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   animation-delay: -7s;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht die Spielfigur (Pflanze) an - Positioniert die Figur im Spielfeld */
 .player-plant {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   position: absolute;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   left: 70px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   bottom: 48px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   width: 58px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   height: 72px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   z-index: 5;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht den Blumentopf der Spielfigur an - Erstellt Form, Farbe und Rahmen des Topfes */
 .pot {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   position: absolute;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   left: 9px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   bottom: 0;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   width: 40px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   height: 34px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: #c56d3a;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border-radius: 5px 5px 12px 12px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border: 3px solid #8f4625;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht den Pflanzenstiel an - Erstellt den grünen Stängel */
 .plant-stem {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   position: absolute;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   left: 27px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   bottom: 32px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   width: 5px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   height: 34px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: #315b2d;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border-radius: 10px;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht alle Blätter der Pflanze an - Erstellt Form und Farbe der Blätter */
 .leaf {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   position: absolute;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   width: 26px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   height: 16px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: #4f7942;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border-radius: 50% 0 50% 0;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht das linke Blatt an - Positioniert und dreht das Blatt */
 .leaf.left {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   left: 6px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   bottom: 45px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   transform: rotate(-18deg);
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht das rechte Blatt an - Positioniert und dreht das Blatt */
 .leaf.right {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   right: 4px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   bottom: 52px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   transform: rotate(45deg);
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+ /* Spricht die Blume oben auf der Pflanze an - Erstellt den Blütenkopf */
 .flower {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   position: absolute;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   left: 18px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   top: 0;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   width: 24px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   height: 24px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: #f2c94c;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border-radius: 50%;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border: 4px solid #f58fa8;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht die Pflanze während des Sprungs an - Führt die Sprunganimation aus */
 .player-plant.jump {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   animation: jump 0.75s ease-out;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht das Hindernis (Schnecke) an - Positioniert die Schnecke ausserhalb des Spielfelds */
 .snail {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   position: absolute;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   right: -60px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   bottom: 50px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   width: 50px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   height: 48px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   z-index: 4;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   display: none;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht die aktive Schnecke an - Zeigt die Schnecke an und bewegt sie durchs Spielfeld */
 .snail.run {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   display: block;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   animation: obstacleMove 1.65s linear infinite;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht den Körper der Schnecke an - Erstellt Form und Farbe */
 .snail-body {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   position: absolute;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   left: 6px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   bottom: 0;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   width: 42px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   height: 20px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: #8d6e63;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border-radius: 20px 20px 8px 8px;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht das Schneckenhaus an - Erstellt das runde Gehäuse */
 .snail-shell {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   position: absolute;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   left: 3px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   bottom: 12px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   width: 31px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   height: 31px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: #d7a35d;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border: 4px solid #8f5b2d;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border-radius: 50%;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht die Augen der Schnecke an - Positioniert das Augen-Emoji */
 .snail-eye {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   position: absolute;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   right: 2px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   top: 4px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   font-size: 18px;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht das Overlay über dem Spiel an - Verdeckt das Spielfeld für Start- oder Game-Over-Anzeigen */
 .game-overlay {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   position: absolute;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   inset: 0;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: rgba(245, 250, 238, 0.9);
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   display: flex;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   align-items: center;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   justify-content: center;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   text-align: center;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   z-index: 20;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   padding: 20px;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht das versteckte Overlay an - Blendet das Overlay vollständig aus */
 .game-overlay.hidden {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   display: none;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht die Karte innerhalb des Overlays an - Erstellt eine zentrierte Infobox */
 .game-overlay-card {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: #ffffff;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border-radius: 24px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   padding: 28px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   max-width: 420px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   box-shadow: 0 12px 35px rgba(36, 59, 37, 0.16);
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border: 1px solid #dbe9d2;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht die Überschrift im Overlay an - Definiert Schriftgrösse und Farbe */
 .game-overlay-card h2 {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   font-size: 30px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   margin-bottom: 10px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   color: #254522;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht den Text im Overlay an - Definiert Farbe und Abstand */
 .game-overlay-card p {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   color: #5b6b58;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   line-height: 1.5;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   margin-bottom: 18px;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht die Buttons im Spiel an - Definiert Form, Farbe und Hover-Effekt */
 .game-button {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border: none;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: #315b2d;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   color: #ffffff;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   padding: 13px 22px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   border-radius: 999px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   font-weight: 800;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   cursor: pointer;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   transition: 0.2s ease;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht Buttons beim Darüberfahren mit der Maus an - Hebt den Button leicht an und verstärkt den Schatten */
 .game-button:hover {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background: #244621;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   transform: translateY(-2px);
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   box-shadow: 0 10px 22px rgba(36, 70, 33, 0.22);
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Spricht die Steuerungshinweise unter dem Spiel an - Zentriert den Text */
 .game-controls {
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   text-align: center;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   padding: 0 20px 28px;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   color: #5b6b58;
-  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   font-size: 15px;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Definiert eine CSS-Animation. */
+/* Definiert die Sprunganimation der Pflanze - Die Figur bewegt sich nach oben und wieder zurück */
 @keyframes jump {
-  /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
   0% {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     bottom: 48px;
-  /* Kommentar: Beendet den aktuellen CSS-Block. */
   }
-  /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
   50% {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     bottom: 170px;
-  /* Kommentar: Beendet den aktuellen CSS-Block. */
   }
-  /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
   100% {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     bottom: 48px;
-  /* Kommentar: Beendet den aktuellen CSS-Block. */
   }
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Definiert eine CSS-Animation. */
+/* Definiert die Bewegung der Schnecke - Das Hindernis bewegt sich von rechts nach links */
 @keyframes obstacleMove {
-  /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
   from {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     right: -60px;
-  /* Kommentar: Beendet den aktuellen CSS-Block. */
   }
-  /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
   to {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     right: 100%;
-  /* Kommentar: Beendet den aktuellen CSS-Block. */
   }
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Definiert eine CSS-Animation. */
+/* Definiert die Bodenanimation - Simuliert laufende Bewegung des Untergrunds */
 @keyframes moveGround {
-  /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
   from {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     transform: translateX(0);
-  /* Kommentar: Beendet den aktuellen CSS-Block. */
   }
-  /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
   to {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     transform: translateX(-50%);
-  /* Kommentar: Beendet den aktuellen CSS-Block. */
   }
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
-/* Kommentar: Definiert eine CSS-Animation. */
+/* Definiert die Wolkenbewegung - Lässt die Wolken durchs Bild wandern */
 @keyframes moveCloud {
-  /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
   from {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     left: 100%;
-  /* Kommentar: Beendet den aktuellen CSS-Block. */
   }
-  /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
   to {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     left: -120px;
-  /* Kommentar: Beendet den aktuellen CSS-Block. */
   }
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
 /* Kommentar: Startet Regeln für responsive Darstellung bei bestimmten Bildschirmgrössen. */
 @media (max-width: 650px) {
-  /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+
+/* Verkleinert den Abstand auf mobilen Geräten */
   .game-page {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 32px 12px;
-  /* Kommentar: Beendet den aktuellen CSS-Block. */
   }
 
-  /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Verkleinert das Spielfeld auf mobilen Geräten */
   .grow-game {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     width: calc(100% - 22px);
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     height: 280px;
-  /* Kommentar: Beendet den aktuellen CSS-Block. */
   }
 
-  /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Verschiebt die Spielfigur etwas weiter nach links */
   .player-plant {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     left: 45px;
-  /* Kommentar: Beendet den aktuellen CSS-Block. */
   }
 
-  /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+/* Verkleinert den Innenabstand des Headers */
   .game-header-card {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
     padding: 24px 18px 16px;
-  /* Kommentar: Beendet den aktuellen CSS-Block. */
   }
-/* Kommentar: Beendet den aktuellen CSS-Block. */
 }
