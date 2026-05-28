@@ -8,7 +8,7 @@ include 'includes/header.php';
 
 <section class="hero">
     <div class="hero-text fade-in">
-        <p class="eyebrow">Promotion Website</p>
+        <p class="eyebrow">Unsere Website</p>
         <h1>Natürlich wachsen mit GrowEase</h1>
         <p>Entdecke Produkte und Dienstleistungen rund ums Gärtnern. Unser Online-Shop ist bald verfügbar.</p>
         <div class="hero-buttons">

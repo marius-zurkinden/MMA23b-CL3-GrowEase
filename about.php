@@ -10,7 +10,7 @@ include 'includes/header.php';
     <div class="about-hero-text fade-in">
         <p class="eyebrow">Über GrowEase</p>
         <h1>Wir bringen mehr Grün in deinen Alltag.</h1>
-        <p>GrowEase ist eine moderne Promotion-Website für einen kommenden Garten-Online-Shop. Wir zeigen Produkte, Dienstleistungen und Ideen, mit denen Gärtnern einfacher, schöner und zugänglicher wird.</p>
+        <p>GrowEase hilft Menschen dabei, nachhaltiges Gärtnern einfacher in den Alltag zu integrieren. Unser Business verbindet hochwertige Gartenprodukte, praktische Dienstleistungen und einfache Ideen für mehr Grün zuhause – ob auf dem Balkon, im Garten oder in der Wohnung.</p>
         <a href="produkte.php" class="btn primary">Produkte entdecken</a>
     </div>
     <div class="about-hero-card fade-in">
@@ -26,7 +26,7 @@ include 'includes/header.php';
             <p class="eyebrow">Unsere Idee</p>
             <h2>Gärtnern soll nicht kompliziert sein.</h2>
         </div>
-        <p>Wir möchten eine Website gestalten, die clean aussieht, einfach bedienbar ist und wichtige Informationen schnell zeigt. Produkte, Dienstleistungen und das Konto-Formular sind klar getrennt, damit sich Besucherinnen und Besucher sofort zurechtfinden.</p>
+        <p>Unsere Geschäftsidee ist es, Menschen beim nachhaltigen Gärtnern zu unterstützen – egal ob im Garten, auf dem Balkon oder in der Wohnung. Growease bietet passende Produkte, praktische Lösungen und einfache Unterstützung für alle, die ihre Pflanzen gesund pflegen und mehr Grün in ihren Alltag bringen möchten. Dabei legen wir Wert auf Qualität, Nachhaltigkeit und eine einfache Anwendung.</p>
     </div>
 </section>
 
@@ -39,18 +39,18 @@ include 'includes/header.php';
     <div class="value-grid">
         <div class="value-card">
             <span>🌱</span>
-            <h3>Einfachheit</h3>
-            <p>Klare Inhalte, einfache Navigation und keine unnötigen Ablenkungen.</p>
+            <h3>Nachhaltigkeit im Alltag</h3>
+            <p>Growease steht für bewusstes Gärtnern mit hochwertigen Produkten, die Natur und Umwelt schonen. Wir möchten zeigen, dass nachhaltiges Wachstum einfach, modern und für jeden zugänglich sein kann.</p>
         </div>
         <div class="value-card">
             <span>🪴</span>
-            <h3>Natürlichkeit</h3>
-            <p>Ein ruhiges Design mit Farben, die zu Pflanzen und Garten passen.</p>
+            <h3>Einfache Lösungen für Zuhause</h3>
+            <p>Growease unterstützt Menschen dabei, Pflanzen unkompliziert zu pflegen und den eigenen Garten oder Balkon schöner zu gestalten. Unsere Produkte und Tipps helfen dabei, mit wenig Aufwand mehr Grün in den Alltag zu bringen.</p>
         </div>
         <div class="value-card">
             <span>✨</span>
-            <h3>Modernes UI</h3>
-            <p>Produkte und Dienstleistungen werden übersichtlich und benutzerfreundlich dargestellt.</p>
+            <h3>Qualität, die mitwächst</h3>
+            <p>Growease steht für verlässliche Qualität, persönliche Unterstützung und Produkte, die langfristig Freude machen. Ob Anfänger oder Pflanzenprofi – bei uns findet jeder passende Lösungen für gesundes Wachstum.</p>
         </div>
     </div>
 </section>
