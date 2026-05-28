@@ -3,154 +3,163 @@
 
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. Speichert wiederverwendbare Farben, Schriften und Abstände für die ganze Webseite */
 :root {
-    --green-dark: #2d4a2d;
-    --green-mid: #4a7c4a;
-    --green-light: #c8d8c0;
-    --green-pale: #e8efe4;
-    --cream: #f7f4ee;
-    --warm-white: #fdfcf9;
-    --text-dark: #1a1a1a;
-    --text-muted: #6b6b6b;
-    --border: #d4d9cc;
-    --footer-bg: #c8d8be;
-    --font-display: "Playfair Display", serif;
-    --font-body: "DM Sans", Arial, sans-serif;
-    --radius: 8px;
-    --transition: 0.25s ease;
-    --shadow: 0 14px 35px rgba(45, 74, 45, 0.12);
+  --green-dark: #2d4a2d;
+  --green-mid: #4a7c4a;
+  --green-light: #c8d8c0;
+  --green-pale: #e8efe4;
+  --cream: #f7f4ee;
+  --warm-white: #fdfcf9;
+  --text-dark: #1a1a1a;
+  --text-muted: #6b6b6b;
+  --border: #d4d9cc;
+  --footer-bg: #c8d8be;
+  --font-display: "Playfair Display", serif;
+  --font-body: "DM Sans", Arial, sans-serif;
+  --radius: 8px;
+  --transition: 0.25s ease;
+  --shadow: 0 14px 35px rgba(45, 74, 45, 0.12);
 }
 
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Spricht den gesamten sichtbaren Seiteninhalt an - Legt Schrift, Hintergrundfarbe, Textfarbe und Grundlayout fest*/
 body {
-    font-family: var(--font-body);
-    background: var(--warm-white);
-    color: var(--text-dark);
-    font-size: 16px;
-    line-height: 1.6;
-    /* Kommentar: vh = Viewport Height - 100vh =100 % der Fensterhöhe. */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
+  font-family: var(--font-body);
+  background: var(--warm-white);
+  color: var(--text-dark);
+  font-size: 16px;
+  line-height: 1.6;
+  /* Kommentar: vh = Viewport Height - 100vh =100 % der Fensterhöhe. */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
 /* Spricht den Hauptinhalt der Webseite an - Sorgt dafür, dass der Inhalt den verfügbaren Platz einnimmt */
- /* Links übernehmen die normale Textfarbe und werden nicht unterstrichen */
-main { flex: 1; }
-a { color: inherit; text-decoration: none; }
-
+/* Links übernehmen die normale Textfarbe und werden nicht unterstrichen */
+main {
+  flex: 1;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 /* grüner Game-Balken wie beim Quiz */
 /* Definiert Hintergrundfarbe, Textfarbe, Abstand und Ausrichtung */
 .game-bar {
-    background: var(--green-dark);
-    color: #fff;
-    text-align: center;
-    font-size: 13px;
-    padding: 8px 16px;
-    letter-spacing: 0.02em;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
+  background: var(--green-dark);
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  padding: 8px 16px;
+  letter-spacing: 0.02em;
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .game-bar a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
-
 
 /* Spricht das <span>-Element innerhalb eines Links im grünen Balken (.game-bar) an */
 .game-bar a span {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
 /* Spricht den Header / Navigationsbereich an - Bleibt beim Scrollen oben sichtbar*/
 .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--warm-white);
-    border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
 }
 
 /* Spricht die Hauptnavigation an - Ordnet Logo, Links und Icons nebeneinander an */
 .main-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px;
-    padding: 0 48px;
-    gap: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 48px;
+  gap: 24px;
 }
 
 /* Spricht den Logo-Bereich an - Positioniert Logo-Icon und Logo-Text nebeneinander */
 .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 /* xxx */
 .nav-logo-img {
-    height: 42px;
-    width: auto;
-    display: block;
+  height: 42px;
+  width: auto;
+  display: block;
 }
 
 /* xxx */
 .nav-logo-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: var(--green-dark);
-    color: var(--green-light);
-    display: grid;
-    place-items: center;
-    font-size: 18px;
-    transition: transform var(--transition);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--green-dark);
+  color: var(--green-light);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  transition: transform var(--transition);
 }
 
 /* xxx */
-.nav-logo:hover .nav-logo-icon { transform: rotate(-8deg) scale(1.08); }
+.nav-logo:hover .nav-logo-icon {
+  transform: rotate(-8deg) scale(1.08);
+}
 .nav-logo-text {
-    font-family: var(--font-display);
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--green-dark);
-    white-space: nowrap;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--green-dark);
+  white-space: nowrap;
 }
 
 /* Spricht die Navigationslinks an - Stellt die Links horizontal dar */
 .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 36px;
-    align-items: center;
+  display: flex;
+  list-style: none;
+  gap: 36px;
+  align-items: center;
 }
 
 /* Spricht einzelne Links in der Navigation an - Definiert Schriftgrösse, Farbe und Hover-Verhalten */
 .nav-links a {
-    font-size: 15px;
-    font-weight: 400;
-    color: var(--text-dark);
-    transition: color var(--transition);
-    position: relative;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-dark);
+  transition: color var(--transition);
+  position: relative;
 }
 
 /* Erstellt die kleine Linie unter einem Link */
@@ -158,316 +167,349 @@ a { color: inherit; text-decoration: none; }
 .nav-links a::after,
 /* Erstellt die Unterstreichung unter Navigationslinks und Icons */
 .nav-icon-btn::after {
-    content: "";
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--green-dark);
-    transition: width var(--transition);
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--green-dark);
+  transition: width var(--transition);
 }
 
 /* Zeigt die Unterstreichung beim Hover oder aktiven Zustand an */
 .nav-links a:hover::after,
 .nav-links a.active::after,
 .nav-icon-btn:hover::after,
-.nav-icon-btn.active::after { width: 100%; }
+.nav-icon-btn.active::after {
+  width: 100%;
+}
 
 /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 /* Das Personen-Icon soll nie unterstrichen werden, auch nicht wenn die Konto-Seite aktiv ist. */
 .account-icon::after,
 .account-icon:hover::after,
 .account-icon.active::after {
-    display: none;
+  display: none;
 }
 
 /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-.nav-links a.active { font-weight: 500; }
+.nav-links a.active {
+  font-weight: 500;
+}
 
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 /* Spricht die Icons rechts in der Navigation an - Ordnet Konto-Icon und Hamburger-Menü an*/
 .nav-actions {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    flex-shrink: 0;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-shrink: 0;
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
 /* Kommentar: Startet einen CSS-Block für diesen Selektor.  - Navigation Icon Button*/
 /* Gestaltet die Navigations-Icons und verändert deren Farbe bei Hover oder aktiver Seite. */
 .nav-icon-btn {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    position: relative;
-    display: flex;
-    align-items: center;
-    color: var(--text-dark);
-    transition: color var(--transition);
-/* Kommentar: Beendet den aktuellen CSS-Block. */
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--text-dark);
+  transition: color var(--transition);
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .nav-icon-btn:hover,
-.nav-icon-btn.active { color: var(--green-dark); }
+.nav-icon-btn.active {
+  color: var(--green-dark);
+}
 
 /* Spricht das Burger-Menü für die mobile Ansicht an - Ist auf Desktop ausgeblendet und wird mobil eingeblendet */
 .nav-hamburger {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-    padding: 8px;
-    z-index: 600;
-    position: relative;
-    margin-left: auto;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  z-index: 600;
+  position: relative;
+  margin-left: auto;
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .nav-hamburger span {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: var(--text-dark);
-    transition: all var(--transition);
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-dark);
+  transition: all var(--transition);
 }
 
-
 /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-.nav-hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-hamburger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.nav-hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-hamburger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.nav-hamburger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 
 /* Spricht das mobile Menü (Selektor) an - Öffnet sich über den ganzen Bildschirm, wenn die Klasse .is-open aktiv ist */
 .mobile-menu {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: var(--warm-white);
-    z-index: 500;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-    padding: 40px 24px;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--warm-white);
+  z-index: 500;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 40px 24px;
 }
 
 /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-.mobile-menu.is-open { display: flex; }
+.mobile-menu.is-open {
+  display: flex;
+}
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .mobile-menu a {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    font-family: var(--font-display);
-    font-size: 28px;
-    color: var(--text-dark);
-    transition: color var(--transition);
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--text-dark);
+  transition: color var(--transition);
 }
 
 /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .mobile-menu a:hover,
-.mobile-menu a.active { color: var(--green-dark); }
+.mobile-menu a.active {
+  color: var(--green-dark);
+}
 
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .mobile-logo {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .mobile-logo-img {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    height: 54px;
-    width: auto;
-    display: block;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  height: 54px;
+  width: auto;
+  display: block;
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .mobile-menu-close {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    position: absolute;
-    top: 20px;
-    right: 24px;
-    background: none;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: var(--text-dark);
-/* Kommentar: Beendet den aktuellen CSS-Block. */
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--text-dark);
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
 /* Spricht den Hero-Bereich der Startseite an */
 /* Teilt den Bereich in Text und Bild-/Slider-Karte auf */
 .hero {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 72px 48px;
-    display: grid;
-    grid-template-columns: 1fr 440px;
-    align-items: center;
-    gap: 54px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 72px 48px;
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  align-items: center;
+  gap: 54px;
 }
 
 /* Spricht die grossen Haupttitel an */
 /* Definiert Schriftart, Grösse, Zeilenhöhe und Farbe */
 .hero-text h1,
 .page-hero h1 {
-    font-family: var(--font-display);
-    font-size: clamp(36px, 5vw, 64px);
-    line-height: 1.12;
-    margin: 8px 0 18px;
-    color: var(--text-dark);
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.12;
+  margin: 8px 0 18px;
+  color: var(--text-dark);
 }
-
 
 .hero-text p,
 .page-hero p {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    color: var(--text-muted);
-    font-size: 18px;
-    max-width: 620px;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  color: var(--text-muted);
+  font-size: 18px;
+  max-width: 620px;
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
 /* Gestaltet kleine Überschriften bzw. Untertitel oberhalb von Haupttiteln. */
 .eyebrow {
-    color: var(--green-mid);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+  color: var(--green-mid);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .hero-buttons {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-top: 28px;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
 /* Spricht alle Buttons an - Definiert Form, Abstand, Schrift und Hover-Animation */
 .btn {
-    border: 1px solid transparent;
-    border-radius: 999px;
-    padding: 12px 22px;
-    font-weight: 700;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    transition: var(--transition);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: var(--transition);
 }
 
 /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-.btn.primary { background: var(--green-dark); color: white; }
-.btn.secondary { background: var(--green-pale); color: var(--green-dark); border-color: var(--border); }
-.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.btn.primary {
+  background: var(--green-dark);
+  color: white;
+}
+.btn.secondary {
+  background: var(--green-pale);
+  color: var(--green-dark);
+  border-color: var(--border);
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
 
 /* Spricht die Karte im Hero-Bereich an */
 /* Gibt ihr Hintergrund, Rahmen, Schatten und Innenabstand */
 .hero-card {
-    background: var(--green-pale);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 24px;
-    min-height: 360px;
-    box-shadow: var(--shadow);
+  background: var(--green-pale);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  min-height: 360px;
+  box-shadow: var(--shadow);
 }
 
 /* Spricht den Slider-Bereich an - Versteckt Inhalte ausserhalb des Sliders */
 .slider {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    height: 285px;
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--radius);
-    background: rgba(255,255,255,0.65);
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  height: 285px;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.65);
 }
 
 /* Spricht einzelne Slides im Slider an */
 /* Standardmässig sind sie ausgeblendet */
 .slide {
-    position: absolute;
-    inset: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 18px;
-    font-size: 88px;
-    text-align: center;
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 18px;
+  font-size: 88px;
+  text-align: center;
 }
 
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .slide span {
-    font-family: var(--font-display);
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--green-dark);
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--green-dark);
 }
 
 /* Spricht den aktuell sichtbaren Slide an */
 /* Zeigt ihn an und fügt eine Fade-Animation hinzu */
-.slide.active { display: flex; animation: fade 0.45s ease; }
+.slide.active {
+  display: flex;
+  animation: fade 0.45s ease;
+}
 
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .slider-dots {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 16px;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
 }
 
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .slider-dots button {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    border: 0;
-    background: #b7c2b1;
-    cursor: pointer;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 0;
+  background: #b7c2b1;
+  cursor: pointer;
 }
 
 /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-.slider-dots button.active { background: var(--green-dark); }
+.slider-dots button.active {
+  background: var(--green-dark);
+}
 
 /* allgemeine Inhaltsabschnitte - Definiert maximale Breite, Zentrierung und Abstand */
 .section {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 56px 48px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 56px 48px;
 }
 
 /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-.section-title { text-align: center; margin-bottom: 28px; }
+.section-title {
+  text-align: center;
+  margin-bottom: 28px;
+}
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .section-title h2 {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    font-family: var(--font-display);
-    font-size: 38px;
-    color: var(--text-dark);
-/* Kommentar: Beendet den aktuellen CSS-Block. */
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  font-family: var(--font-display);
+  font-size: 38px;
+  color: var(--text-dark);
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
 /* Spricht Kartenraster an - Ordnet Karten in drei Spalten an */
 .info-grid,
 .card-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
 
 /* Spricht verschiedene Karten an - Definiert weissen Hintergrund, Rahmen, Rundung und Schatten */
@@ -478,614 +520,704 @@ a { color: inherit; text-decoration: none; }
 .account-form,
 .success-box,
 .game-box {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 24px;
-    box-shadow: 0 8px 22px rgba(45, 74, 45, 0.08);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 8px 22px rgba(45, 74, 45, 0.08);
 }
 
 /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .info-card,
 .product-card,
-.service-card { transition: var(--transition); }
+.service-card {
+  transition: var(--transition);
+}
 
 /* Spricht Karten beim Darüberfahren mit der Maus an - Hebt die Karte leicht an und verstärkt den Schatten */
 .info-card:hover,
 .product-card:hover,
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
 }
 
 /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-.info-card span { font-size: 36px; }
+.info-card span {
+  font-size: 36px;
+}
 /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .info-card h3,
 .product-card h3,
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .service-card h3 {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    font-family: var(--font-display);
-    color: var(--green-dark);
-    margin: 10px 0;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  font-family: var(--font-display);
+  color: var(--green-dark);
+  margin: 10px 0;
 }
 
 .page-hero.small {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 58px 48px 20px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 58px 48px 20px;
 }
 
-.page-hero.small h1 { font-size: clamp(34px, 5vw, 56px); }
-
- /* Spricht die Filterleiste bei Produkten an - Ordnet Filterbuttons nebeneinander an */
- .filter-row {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 24px;
+.page-hero.small h1 {
+  font-size: clamp(34px, 5vw, 56px);
 }
 
-/* Spricht einzelne Filterbuttons an - Definiert Pillenform, Rahmen und Hover-Zustand */
+.filter-row {
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  display: flex;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  gap: 10px;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  flex-wrap: wrap;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  margin-bottom: 24px;
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
+}
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .filter-btn {
-    border: 1px solid var(--border);
-    background: #fff;
-    border-radius: 999px;
-    padding: 10px 18px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: var(--transition);
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  border: 1px solid var(--border);
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  background: #fff;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  border-radius: 999px;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  padding: 10px 18px;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  font-weight: 700;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  cursor: pointer;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  transition: var(--transition);
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
-
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
 .filter-btn:hover,
-.filter-btn.active { background: var(--green-dark); color: white; }
+/* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+.filter-btn.active {
+  background: var(--green-dark);
+  color: white;
+}
+/* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .product-img {
-    height: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 58px;
-    background: var(--cream);
-    border-radius: var(--radius);
-    margin-bottom: 16px;
-    overflow: hidden;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  height: 130px;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  display: flex;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  align-items: center;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  justify-content: center;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  font-size: 58px;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  background: var(--cream);
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  border-radius: var(--radius);
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  margin-bottom: 16px;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  overflow: hidden;
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
 /* Spricht den Bildbereich einer Produktkarte an - Legt Bildhöhe, Hintergrund und Rundung fest */
 .product-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .tag {
-    display: inline-block;
-    background: var(--green-pale);
-    color: var(--green-dark);
-    padding: 5px 10px;
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: 700;
+  display: inline-block;
+  background: var(--green-pale);
+  color: var(--green-dark);
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .product-card,
 .service-card {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-description,
 .service-description {
-    flex: 1;
+  flex: 1;
 }
 
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 .product-meta {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    margin-top: auto;
-    padding-top: 18px;
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 18px;
 }
 
 .product-meta span {
-    color: var(--text-muted);
+  color: var(--text-muted);
 }
 
 .product-price {
-    white-space: nowrap;
-    font-size: 18px;
-    color: var(--green-dark);
+  white-space: nowrap;
+  font-size: 18px;
+  color: var(--green-dark);
 }
 
 .service-meta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-top: auto;
-    padding-top: 18px;
-    color: var(--green-dark);
-    font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 18px;
+  color: var(--green-dark);
+  font-weight: 700;
 }
 
-.form-section { max-width: 850px; }
+.form-section {
+  max-width: 850px;
+}
 
 /* Spricht das Formularlayout an - Ordnet Formularfelder in zwei Spalten an */
 .form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-.form-field.full { grid-column: 1 / -1; }
+.form-field.full {
+  grid-column: 1 / -1;
+}
 /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
 label {
-    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-    display: block;
-    font-weight: 700;
-    margin-bottom: 7px;
-/* Kommentar: Beendet den aktuellen CSS-Block. */
+  /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+  display: block;
+  font-weight: 700;
+  margin-bottom: 7px;
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 /* Spricht alle Eingabefelder an - Definiert Rahmen, Abstand, Schrift und Fokus-Verhalten */
 input {
-    width: 100%;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 13px 14px;
-    font-size: 16px;
-    outline: none;
-    transition: var(--transition);
-    font-family: var(--font-body);
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 13px 14px;
+  font-size: 16px;
+  outline: none;
+  transition: var(--transition);
+  font-family: var(--font-body);
 }
 
- /* Spricht ein aktives Eingabefeld an - Markiert es visuell mit grünem Rahmen und Schatten */
+/* Spricht ein aktives Eingabefeld an - Markiert es visuell mit grünem Rahmen und Schatten */
 input:focus {
-    border-color: var(--green-mid);
-    box-shadow: 0 0 0 4px rgba(74, 124, 74, 0.12);
+  border-color: var(--green-mid);
+  box-shadow: 0 0 0 4px rgba(74, 124, 74, 0.12);
 }
 
- /* Spricht ein aktives Eingabefeld an - Markiert es visuell mit grünem Rahmen und Schatten */
+/* Spricht ein aktives Eingabefeld an - Markiert es visuell mit grünem Rahmen und Schatten */
 .error {
-    min-height: 20px;
-    display: block;
-    margin-top: 5px;
-    color: #b3261e;
-    font-size: 13px;
+  min-height: 20px;
+  display: block;
+  margin-top: 5px;
+  color: #b3261e;
+  font-size: 13px;
 }
 
 .form-message {
-    margin: 18px 0;
-    font-weight: 700;
+  margin: 18px 0;
+  font-weight: 700;
 }
 
 /* Spricht den Lade-Kreis beim Absenden an - Ist zuerst ausgeblendet und erscheint beim Loading-Zustand */
-.submit-btn { min-width: 190px; }
+.submit-btn {
+  min-width: 190px;
+}
 .spinner {
-    display: none;
-    width: 16px;
-    height: 16px;
-    border: 2px solid rgba(255,255,255,0.4);
-    border-top-color: white;
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
+  display: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
 }
 
-.submit-btn.loading .spinner { display: inline-block; }
+.submit-btn.loading .spinner {
+  display: inline-block;
+}
 .success-box {
-    border-color: #93c47d;
-    background: #f3faef;
-    margin-bottom: 20px;
+  border-color: #93c47d;
+  background: #f3faef;
+  margin-bottom: 20px;
 }
 
 .error-box {
-    background: #fff3f0;
-    border: 1px solid #f0b2a8;
-    color: #8a1f11;
-    border-radius: var(--radius);
-    padding: 16px 18px;
-    margin-bottom: 20px;
-    font-weight: 700;
+  background: #fff3f0;
+  border: 1px solid #f0b2a8;
+  color: #8a1f11;
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
 /* Spricht den Spielbereich an - Zentriert den Inhalt */
-.game-box { text-align: center; }
+.game-box {
+  text-align: center;
+}
 
 /* Spricht den Hintergrund des Spiels an - Erstellt Boden und Spielfläche */
 .game-ground {
-    height: 180px;
-    background: linear-gradient(#e8f2e3 70%, #9fbc85 70%);
-    border-radius: var(--radius);
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 20px;
+  height: 180px;
+  background: linear-gradient(#e8f2e3 70%, #9fbc85 70%);
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 /* Spricht Spielfigur und Hindernis an - Positioniert beide im Spielbereich */
 .player,
 .obstacle {
-    position: absolute;
-    bottom: 42px;
-    font-size: 46px;
+  position: absolute;
+  bottom: 42px;
+  font-size: 46px;
 }
 
-.player { left: 60px; }
-.obstacle { right: 70px; }
-.game-box.running .player { animation: jump 0.9s infinite; }
+.player {
+  left: 60px;
+}
+.obstacle {
+  right: 70px;
+}
+.game-box.running .player {
+  animation: jump 0.9s infinite;
+}
 
 /* Spricht den Footer an - Ordnet Footer-Inhalte in Spalten an */
 .footer {
-    background: var(--footer-bg);
-    color: var(--text-dark);
-    margin-top: 60px;
-    padding: 40px 48px;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1.2fr 1.2fr;
-    gap: 28px;
-    border-top: 1px solid var(--border);
+  background: var(--footer-bg);
+  color: var(--text-dark);
+  margin-top: 60px;
+  padding: 40px 48px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr 1.2fr;
+  gap: 28px;
+  border-top: 1px solid var(--border);
 }
 
 .footer h3,
 .footer h4 {
-    font-family: var(--font-display);
-    color: var(--green-dark);
-    margin-bottom: 8px;
+  font-family: var(--font-display);
+  color: var(--green-dark);
+  margin-bottom: 8px;
 }
 
-.footer p { color: var(--text-muted); }
+.footer p {
+  color: var(--text-muted);
+}
 
 .social-links {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Spricht Social-Media-Icons an - Macht sie rund und fügt Schatten hinzu */
 .social-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: #ffffff;
-    box-shadow: 0 8px 18px rgba(43, 74, 43, 0.16);
-    transition: transform var(--transition), box-shadow var(--transition);
-    overflow: hidden;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(43, 74, 43, 0.16);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+  overflow: hidden;
 }
 
 .social-icon img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
 }
 
 .social-icon:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 24px rgba(43, 74, 43, 0.24);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(43, 74, 43, 0.24);
 }
 
 .icon-credits {
-    margin-top: 8px;
-    font-size: 11px;
-    color: var(--text-muted);
-    line-height: 1.4;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.4;
 }
 
 .icon-credits a {
-    color: var(--text-muted);
-    text-decoration: none;
+  color: var(--text-muted);
+  text-decoration: none;
 }
 
 .icon-credits a:hover {
-    color: var(--green-dark);
-    text-decoration: underline;
+  color: var(--green-dark);
+  text-decoration: underline;
 }
 
- /* Spricht Elemente mit Fade-in-Animation an - Lässt sie sanft erscheinen */
-.fade-in { animation: fadeUp 0.7s ease both; }
+/* Spricht Elemente mit Fade-in-Animation an - Lässt sie sanft erscheinen */
+.fade-in {
+  animation: fadeUp 0.7s ease both;
+}
 
 /* Kommentar: Definiert eine CSS-Animation. */
-@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
-@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes jump { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-45px); } }
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-45px);
+  }
+}
 
 /* Kommentar: Startet Regeln für responsive Darstellung bei bestimmten Bildschirmgrössen. */
 /* Regeln für kleinere Bildschirme - Navigation wird angepasst, Links werden versteckt und Burger-Menü erscheint */
 @media (max-width: 900px) {
-    .main-nav {
-        height: 64px;
-        padding: 0 24px;
-        gap: 12px;
-    }
+  .main-nav {
+    height: 64px;
+    padding: 0 24px;
+    gap: 12px;
+  }
 
-    /* Blendet die normalen Navigationslinks in der Mobile-Ansicht aus. */
-    .nav-links { display: none; }
+  /* Blendet die normalen Navigationslinks in der Mobile-Ansicht aus. */
+  .nav-links {
+    display: none;
+  }
 
-    /* In der Mobile-Ansicht sitzt das Personen-Icon direkt links neben dem Burger-Menü. */
-    /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
-    .nav-actions {
-        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-        margin-left: auto;
-        gap: 12px;
-    }
+  /* In der Mobile-Ansicht sitzt das Personen-Icon direkt links neben dem Burger-Menü. */
+  /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+  .nav-actions {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    margin-left: auto;
+    gap: 12px;
+  }
 
-    .nav-icon-btn {
-        width: 40px;
-        height: 40px;
-        justify-content: center;
-    }
+  .nav-icon-btn {
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+  }
 
-    .nav-logo-img {
-        height: 36px;
-        max-width: 150px;
-    }
+  .nav-logo-img {
+    height: 36px;
+    max-width: 150px;
+  }
 
-    .nav-hamburger {
-        display: flex;
-        margin-left: 0;
-    }
+  .nav-hamburger {
+    display: flex;
+    margin-left: 0;
+  }
 }
 
 /* Regeln für Tablet/Mobile - Layouts wechseln von mehreren Spalten auf eine Spalte */
-    @media (max-width: 850px) {
-    .hero {
-        grid-template-columns: 1fr;
-        padding: 48px 24px;
-    }
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 48px 24px;
+  }
 
-    /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
-    .section,
-    .page-hero.small { padding-left: 24px; padding-right: 24px; }
+  /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
+  .section,
+  .page-hero.small {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 
-    .info-grid,
-    .card-grid,
-    .footer { grid-template-columns: 1fr; }
+  .info-grid,
+  .card-grid,
+  .footer {
+    grid-template-columns: 1fr;
+  }
 
-    .form-grid { grid-template-columns: 1fr; }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Kommentar: Startet Regeln für responsive Darstellung bei bestimmten Bildschirmgrössen. */
 @media (max-width: 520px) {
-    /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
-    .product-meta {
-        /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 8px;
+  /* Kommentar: Startet einen CSS-Block für diesen Selektor. */
+  .product-meta {
+    /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
     /* Kommentar: Beendet den aktuellen CSS-Block. */
-    }
-/* Kommentar: Beendet den aktuellen CSS-Block. */
+  }
+  /* Kommentar: Beendet den aktuellen CSS-Block. */
 }
 
 /* Spricht den Hero-Bereich der Über-uns-Seite an - Erstellt ein zweispaltiges Layout mit Text und Karte */
 .about-hero {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 72px 48px 36px;
-    display: grid;
-    grid-template-columns: 1.35fr 0.8fr;
-    align-items: stretch;
-    gap: 28px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 72px 48px 36px;
+  display: grid;
+  grid-template-columns: 1.35fr 0.8fr;
+  align-items: stretch;
+  gap: 28px;
 }
 
 .about-hero-text {
-    background: linear-gradient(135deg, #fdfcf9 0%, #e8efe4 100%);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 42px;
-    box-shadow: var(--shadow);
+  background: linear-gradient(135deg, #fdfcf9 0%, #e8efe4 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 42px;
+  box-shadow: var(--shadow);
 }
 
 .about-hero-text h1 {
-    font-family: var(--font-display);
-    font-size: clamp(38px, 5vw, 62px);
-    line-height: 1.1;
-    color: var(--text-dark);
-    margin: 8px 0 18px;
+  font-family: var(--font-display);
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.1;
+  color: var(--text-dark);
+  margin: 8px 0 18px;
 }
 
 .about-hero-text p {
-    color: var(--text-muted);
-    font-size: 18px;
-    max-width: 720px;
-    margin-bottom: 28px;
+  color: var(--text-muted);
+  font-size: 18px;
+  max-width: 720px;
+  margin-bottom: 28px;
 }
 
 .about-hero-card {
-    background: var(--green-dark);
-    color: #fff;
-    border-radius: var(--radius);
-    padding: 34px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    min-height: 340px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: var(--shadow);
+  background: var(--green-dark);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 340px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
 .about-hero-card::before {
-    content: "";
-    position: absolute;
-    width: 220px;
-    height: 220px;
-    right: -70px;
-    top: -70px;
-    border-radius: 50%;
-    background: rgba(200, 216, 192, 0.22);
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -70px;
+  top: -70px;
+  border-radius: 50%;
+  background: rgba(200, 216, 192, 0.22);
 }
 
 .about-hero-card span {
-    font-size: 70px;
-    margin-bottom: 22px;
+  font-size: 70px;
+  margin-bottom: 22px;
 }
 
 .about-hero-card h3 {
-    font-family: var(--font-display);
-    font-size: 30px;
-    margin-bottom: 10px;
-    color: #fff;
+  font-family: var(--font-display);
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
 .about-hero-card p {
-    color: rgba(255,255,255,0.82);
+  color: rgba(255, 255, 255, 0.82);
 }
 /* Spricht den hervorgehobenen Infobereich der Über-uns-Seite an  - Nutzt Rahmen, linke grüne Linie und Grid-Layout */
 .about-highlight {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-left: 8px solid var(--green-dark);
-    border-radius: var(--radius);
-    padding: 30px;
-    display: grid;
-    grid-template-columns: 0.9fr 1.2fr;
-    gap: 32px;
-    box-shadow: 0 8px 22px rgba(45, 74, 45, 0.08);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 8px solid var(--green-dark);
+  border-radius: var(--radius);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr;
+  gap: 32px;
+  box-shadow: 0 8px 22px rgba(45, 74, 45, 0.08);
 }
 /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
 .about-highlight h2,
 .team-strip h2,
 .about-cta h2 {
-    font-family: var(--font-display);
-    color: var(--green-dark);
-    font-size: clamp(28px, 4vw, 42px);
-    line-height: 1.15;
+  font-family: var(--font-display);
+  color: var(--green-dark);
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.15;
 }
-
 
 .about-highlight p {
-    color: var(--text-muted);
+  color: var(--text-muted);
 }
 
- /* Spricht das Raster der Werte-Karten an - Ordnet die Werte in drei Spalten an */
+/* Spricht das Raster der Werte-Karten an - Ordnet die Werte in drei Spalten an */
 .value-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
 
 .value-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 26px;
-    box-shadow: 0 8px 22px rgba(45, 74, 45, 0.08);
-    transition: var(--transition);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: 0 8px 22px rgba(45, 74, 45, 0.08);
+  transition: var(--transition);
 }
 
 .value-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
 }
 
 .value-card span {
-    font-size: 38px;
+  font-size: 38px;
 }
 
 .value-card h3 {
-    font-family: var(--font-display);
-    color: var(--green-dark);
-    margin: 12px 0 8px;
+  font-family: var(--font-display);
+  color: var(--green-dark);
+  margin: 12px 0 8px;
 }
 
 .value-card p {
-    color: var(--text-muted);
+  color: var(--text-muted);
 }
 
 /* Spricht den Team-Bereich an - Teilt Text und Badges in zwei Spalten auf */
 .team-strip {
-    background: var(--green-pale);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 34px;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    align-items: center;
-    gap: 24px;
+  background: var(--green-pale);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 34px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 24px;
 }
 
 /* Spricht den Team-Bereich an - Text */
 .team-strip p {
-    color: var(--text-muted);
-    margin-top: 12px;
+  color: var(--text-muted);
+  margin-top: 12px;
 }
 
 /* Spricht den Team-Bereich an - Badges */
 .team-badges {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
 }
 
 /* Spricht den Team-Bereich an - Badges */
 .team-badges span {
-    background: #fff;
-    color: var(--green-dark);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 12px 18px;
-    font-weight: 700;
-    box-shadow: 0 8px 18px rgba(45, 74, 45, 0.08);
+  background: #fff;
+  color: var(--green-dark);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(45, 74, 45, 0.08);
 }
 
 /* Spricht den Call-to-Action auf der Über-uns-Seite an */
 /* Erstellt einen grünen Abschlussbereich mit zentriertem Inhalt */
 .about-cta {
-    text-align: center;
-    background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
-    color: #fff;
-    border-radius: var(--radius);
-    margin-top: 30px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+  color: #fff;
+  border-radius: var(--radius);
+  margin-top: 30px;
 }
 
 .about-cta .eyebrow,
 .about-cta h2 {
-    color: #fff;
+  color: #fff;
 }
 
 .about-cta p {
-    max-width: 620px;
-    margin: 12px auto 24px;
-    color: rgba(255,255,255,0.82);
+  max-width: 620px;
+  margin: 12px auto 24px;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .about-cta .btn.primary {
-    background: #fff;
-    color: var(--green-dark);
+  background: #fff;
+  color: var(--green-dark);
 }
 
 /* Kommentar: Startet Regeln für responsive Darstellung bei bestimmten Bildschirmgrössen. */
 @media (max-width: 850px) {
-    .about-hero,
-    .about-highlight,
-    .team-strip,
-    .value-grid {
-        grid-template-columns: 1fr;
-    }
+  .about-hero,
+  .about-highlight,
+  .team-strip,
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .about-hero {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
+  .about-hero {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 
-    .about-hero-text {
-        padding: 30px;
-    }
+  .about-hero-text {
+    padding: 30px;
+  }
 
-    .about-hero-card {
-        min-height: 260px;
-    }
+  .about-hero-card {
+    min-height: 260px;
+  }
 
-    .team-badges {
-        justify-content: flex-start;
-    }
+  .team-badges {
+    justify-content: flex-start;
+  }
 }

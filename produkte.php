@@ -1,12 +1,14 @@
 <?php
+// Kommentar: Startet den PHP-Bereich der Datei.
+// Kommentar: Setzt den Titel der aktuellen Seite.
 $pageTitle = 'GrowEase – Produkte';
-//Speichert, welche Seite in der Navigation aktiv ist.
+// Kommentar: Speichert, welche Seite in der Navigation aktiv ist.
 $activePage = 'produkte';
 
-//Bindet eine andere PHP-Datei in diese Seite ein.
+// Kommentar: Bindet eine andere PHP-Datei in diese Seite ein.
 require_once 'db.php';
 
-//Bereitet eine SQL-Abfrage sicher vor.
+// Kommentar: Bereitet eine SQL-Abfrage sicher vor.
 $stmt = $conn->prepare("
     SELECT
         Produkt.id,
@@ -21,66 +23,95 @@ $stmt = $conn->prepare("
     LEFT JOIN Kategorie ON Produkt.KategorieID = Kategorie.id
     ORDER BY Produkt.id
 ");
-//Führt die vorbereitete SQL-Abfrage aus.
+// Kommentar: Führt die vorbereitete SQL-Abfrage aus.
 $stmt->execute();
-//Holt alle gefundenen Datensätze als Array.
+// Kommentar: Holt alle gefundenen Datensätze als Array.
 $produkte = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-//Bereitet eine SQL-Abfrage sicher vor.
+// Kommentar: Bereitet eine SQL-Abfrage sicher vor.
 $stmt = $conn->prepare("SELECT id, name FROM Kategorie ORDER BY name");
-//Führt die vorbereitete SQL-Abfrage aus.
+// Kommentar: Führt die vorbereitete SQL-Abfrage aus.
 $stmt->execute();
-//Holt alle gefundenen Datensätze als Array.
+// Kommentar: Holt alle gefundenen Datensätze als Array.
 $kategorien = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-//Bindet eine andere PHP-Datei in diese Seite ein.
+// Kommentar: Bindet eine andere PHP-Datei in diese Seite ein.
 include 'includes/header.php';
-//Beendet den PHP-Bereich und wechselt zurück zu HTML.
+// Kommentar: Beendet den PHP-Bereich und wechselt zurück zu HTML.
 ?>
 
-
+<!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 <section class="page-hero small">
+    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <p class="eyebrow">Sortiment</p>
+    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <h1>Unsere Produkte</h1>
+    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <p>Entdecke unser Sortiment und filtere die Produkte nach Kategorie.</p>
+    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 </section>
 
+<!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 <section class="section">
+    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <div class="filter-row" id="productFilter">
+        <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
         <button class="filter-btn active" data-filter="Alle">Alle</button>
+        <!-- Kommentar: Startet den PHP-Bereich der Datei. -->
         <?php foreach ($kategorien as $kategorie): ?>
-            <!-- Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
+            <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
             <button class="filter-btn" data-filter="<?= htmlspecialchars($kategorie['name']) ?>">
-                <!-- Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
+                <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                 <?= htmlspecialchars($kategorie['name']) ?>
+                <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             </button>
+            <!-- Kommentar: Startet den PHP-Bereich der Datei. -->
         <?php endforeach; ?>
+        <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     </div>
 
+    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <div class="card-grid products">
+        <!-- Kommentar: Startet den PHP-Bereich der Datei. -->
         <?php foreach ($produkte as $produkt): ?>
-            <!-- Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
+            <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
             <article class="product-card" data-category="<?= htmlspecialchars($produkt['KategorieName']) ?>">
+                <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <div class="product-img">
+                    <!-- Kommentar: Startet den PHP-Bereich der Datei. -->
                     <?php if ($produkt['HatBild']): ?>
-                        <!-- Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
+                        <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                         <img src="produkt-bild.php?id=<?= (int)$produkt['id'] ?>" alt="<?= htmlspecialchars($produkt['Name']) ?>" loading="lazy">
+                        <!-- Kommentar: Startet den PHP-Bereich der Datei. -->
                     <?php else: ?>
-                        <!-- Führt eine PHP-Anweisung für diese Seite aus. -->
+                        <!-- Kommentar: Führt eine PHP-Anweisung für diese Seite aus. -->
                         🌿
+                        <!-- Kommentar: Startet den PHP-Bereich der Datei. -->
                     <?php endif; ?>
+                    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 </div>
-                <!-- Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
+                <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                 <div class="tag"><?= htmlspecialchars($produkt['KategorieName'] ?? 'Ohne Kategorie') ?></div>
+                <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                 <h3><?= htmlspecialchars($produkt['Name']) ?></h3>
+                <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                 <p class="product-description"><?= htmlspecialchars($produkt['Beschreibung']) ?></p>
+                <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 <div class="product-meta">
-                    <!-- Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
+                    <!-- Kommentar: Gibt Text sicher aus, damit kein HTML-Code ausgeführt wird. -->
                     <span><strong>Bestand:</strong> <?= htmlspecialchars($produkt['Bestand']) ?></span>
+                    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                     <strong class="product-price">CHF <?= number_format((float)$produkt['Preis'], 2, '.', '') ?></strong>
+                    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
                 </div>
+                <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
             </article>
+            <!-- Kommentar: Startet den PHP-Bereich der Datei. -->
         <?php endforeach; ?>
+        <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     </div>
+    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 </section>
+
+<!-- Kommentar: Startet den PHP-Bereich der Datei. -->
 <?php include 'includes/footer.php'; ?>
