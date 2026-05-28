@@ -21,7 +21,7 @@ include 'includes/header.php';
         <div class="slider" id="slider">
             <div class="slide active">🌸<span>Blumen-Sets für Zuhause</span></div>
             <div class="slide">🌿<span>Bio-Samen & Kräuter</span></div>
-            ^ <div class="slide">🪴<span>Gartenhilfe einfach buchen</span></div>
+            <div class="slide">🪴<span>Gartenhilfe einfach buchen</span></div>
         </div>
         <div class="slider-dots" id="sliderDots">
             <button class="active" data-slide="0"></button>
