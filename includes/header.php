@@ -24,7 +24,8 @@ if (!isset($activePage)) {
 </head>
 
 <body>
-    <a href="game.php">🌿 <span>Garten-Game</span> spielen</a>
+    <div class="game-bar">
+        <a href="game.php">🌿 <span>Garten-Game</span> spielen</a>
     </div>
 
     <header class="site-header">
