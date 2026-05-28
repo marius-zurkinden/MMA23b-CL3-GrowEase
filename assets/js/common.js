@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = 'hidden';
     }
 
-    // Kommentar: Schliesst das mobile Menü
+    // Schliesst das mobile Menü
     function closeMenu() {
         // Kommentar: Fügt eine CSS-Klasse hinzu oder entfernt sie.
         mobileMenu.classList.remove('is-open');
