@@ -1,15 +1,11 @@
 <?php
-// Kommentar: Startet den PHP-Bereich der Datei.
-// Kommentar: Setzt den Titel der aktuellen Seite.
 $pageTitle = 'GrowEase – Startseite';
-// Kommentar: Speichert, welche Seite in der Navigation aktiv ist.
+// Speichert, welche Seite in der Navigation aktiv ist.
 $activePage = 'home';
-// Kommentar: Bindet eine andere PHP-Datei in diese Seite ein.
+// Bindet eine andere PHP-Datei in diese Seite ein.
 include 'includes/header.php';
-// Kommentar: Beendet den PHP-Bereich und wechselt zurück zu HTML.
 ?>
 
-<!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 <section class="hero">
     <div class="hero-text fade-in">
         <p class="eyebrow">Promotion Website</p>
@@ -25,7 +21,7 @@ include 'includes/header.php';
         <div class="slider" id="slider">
             <div class="slide active">🌸<span>Blumen-Sets für Zuhause</span></div>
             <div class="slide">🌿<span>Bio-Samen & Kräuter</span></div>
-^            <div class="slide">🪴<span>Gartenhilfe einfach buchen</span></div>
+            ^ <div class="slide">🪴<span>Gartenhilfe einfach buchen</span></div>
         </div>
         <div class="slider-dots" id="sliderDots">
             <button class="active" data-slide="0"></button>
@@ -35,14 +31,12 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 <section class="section">
     <div class="section-title">
         <p class="eyebrow">Was wir anbieten</p>
         <h2>Alles für deinen grünen Alltag</h2>
     </div>
 
-    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <div class="info-grid">
         <article class="info-card">
             <span>🌱</span>
@@ -62,5 +56,5 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Kommentar: Startet den PHP-Bereich der Datei. -->
+<!-- Startet den PHP-Bereich der Datei. -->
 <?php include 'includes/footer.php'; ?>

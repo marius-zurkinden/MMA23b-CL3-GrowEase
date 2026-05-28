@@ -1,15 +1,11 @@
 <?php
-// Kommentar: Startet den PHP-Bereich der Datei.
-// Kommentar: Titel der aktuellen Seite.
 $pageTitle = 'GrowEase – Über uns';
-// Kommentar: Speichert, welche Seite in der Navigation aktiv ist.
+// Speichert, welche Seite in der Navigation aktiv ist.
 $activePage = 'about';
-// Kommentar: Bindet eine andere PHP-Datei in diese Seite ein.
+// Bindet eine andere PHP-Datei in diese Seite ein.
 include 'includes/header.php';
-// Kommentar: Beendet den PHP-Bereich und wechselt zurück zu HTML.
 ?>
 
-<!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 <section class="about-hero">
     <div class="about-hero-text fade-in">
         <p class="eyebrow">Über GrowEase</p>
@@ -17,7 +13,6 @@ include 'includes/header.php';
         <p>GrowEase ist eine moderne Promotion-Website für einen kommenden Garten-Online-Shop. Wir zeigen Produkte, Dienstleistungen und Ideen, mit denen Gärtnern einfacher, schöner und zugänglicher wird.</p>
         <a href="produkte.php" class="btn primary">Produkte entdecken</a>
     </div>
-    <!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
     <div class="about-hero-card fade-in">
         <span>🌿</span>
         <h3>Einfach starten</h3>
@@ -25,7 +20,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 <section class="section">
     <div class="about-highlight">
         <div>
@@ -36,7 +30,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 <section class="section">
     <div class="section-title">
         <p class="eyebrow">Was uns wichtig ist</p>
@@ -62,7 +55,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 <section class="section">
     <div class="team-strip">
         <div>
@@ -78,7 +70,6 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Kommentar: Erstellt ein HTML-Element für den Seitenaufbau. -->
 <section class="section about-cta">
     <p class="eyebrow">Bereit?</p>
     <h2>Erstelle dein Konto und bleib auf dem Laufenden.</h2>
@@ -86,5 +77,4 @@ include 'includes/header.php';
     <a href="konto-erstellen.php" class="btn primary">Konto erstellen</a>
 </section>
 
-<!-- Kommentar: Startet den PHP-Bereich der Datei. -->
 <?php include 'includes/footer.php'; ?>

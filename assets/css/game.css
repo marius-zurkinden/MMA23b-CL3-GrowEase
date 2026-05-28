@@ -1,4 +1,3 @@
-/* Spricht die gesamte Spielseite an */
 /* Definiert Abstand und den Hintergrundverlauf der Seite */
 .game-page {
   padding: 60px 20px;
@@ -60,7 +59,7 @@
   flex-wrap: wrap;
 }
 
- /* Spricht einzelne Info-Boxen an - Erstellt kleine Karten mit Rahmen und Hintergrund */
+/* Spricht einzelne Info-Boxen an - Erstellt kleine Karten mit Rahmen und Hintergrund */
 .game-info-box {
   background: #ffffff;
   border: 1px solid #dbe9d2;
@@ -99,15 +98,14 @@
   height: 95px;
   /* Kommentar: Setzt eine CSS-Eigenschaft für das Styling. */
   background-image: repeating-linear-gradient(
-    /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */
-    90deg,
+    /* Kommentar: Definiert einen Teil des CSS-Stylesheets. */ 90deg,
     rgba(255, 255, 255, 0.16) 0 20px,
     transparent 20px 60px
   );
   animation: moveGround 4s linear infinite;
 }
 
- /* Spricht die Wolken im Hintergrund an - Erstellt animierte Wolken */
+/* Spricht die Wolken im Hintergrund an - Erstellt animierte Wolken */
 .cloud {
   position: absolute;
   width: 85px;
@@ -118,7 +116,7 @@
   animation: moveCloud 14s linear infinite;
 }
 
- /* Erstellt zusätzliche Wolken-Teile - Macht die Wolken runder und realistischer */
+/* Erstellt zusätzliche Wolken-Teile - Macht die Wolken runder und realistischer */
 .cloud::before,
 .cloud::after {
   content: "";
@@ -141,7 +139,7 @@
   top: -22px;
 }
 
- /* Spricht die zweite Wolke an - Verändert Position und Geschwindigkeit */
+/* Spricht die zweite Wolke an - Verändert Position und Geschwindigkeit */
 .cloud.two {
   top: 82px;
   animation-duration: 20s;
@@ -204,7 +202,7 @@
   transform: rotate(45deg);
 }
 
- /* Spricht die Blume oben auf der Pflanze an - Erstellt den Blütenkopf */
+/* Spricht die Blume oben auf der Pflanze an - Erstellt den Blütenkopf */
 .flower {
   position: absolute;
   left: 18px;
@@ -383,24 +381,23 @@
 
 /* Kommentar: Startet Regeln für responsive Darstellung bei bestimmten Bildschirmgrössen. */
 @media (max-width: 650px) {
-
-/* Verkleinert den Abstand auf mobilen Geräten */
+  /* Verkleinert den Abstand auf mobilen Geräten */
   .game-page {
     padding: 32px 12px;
   }
 
-/* Verkleinert das Spielfeld auf mobilen Geräten */
+  /* Verkleinert das Spielfeld auf mobilen Geräten */
   .grow-game {
     width: calc(100% - 22px);
     height: 280px;
   }
 
-/* Verschiebt die Spielfigur etwas weiter nach links */
+  /* Verschiebt die Spielfigur etwas weiter nach links */
   .player-plant {
     left: 45px;
   }
 
-/* Verkleinert den Innenabstand des Headers */
+  /* Verkleinert den Innenabstand des Headers */
   .game-header-card {
     padding: 24px 18px 16px;
   }
